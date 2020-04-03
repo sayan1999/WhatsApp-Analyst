@@ -20,10 +20,11 @@ def curtime():
 
 class Mailer:
 
-    def __init__(self):
+    def __init__(self, filepath):
 
-        self.__USER  = "annabelleconjuring11@gmail.com"
-        self.__PASSWORD = "con1ann1"
+        jsonobj = json.load(open(filepath))
+        self.USER  = jsonobj['USER']
+        self.PASSWORD = jsonobj['PASSWORD']
         self.__SMTP_SERVER = "imap.gmail.com"
         self.__SMTP_PORT = 993
         self.__mail = None
