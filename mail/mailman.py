@@ -33,9 +33,9 @@ class Mailer:
         self.USER  = jsonobj['USER']
         self.PASSWORD = jsonobj['PASSWORD']
 
-class MailReader(Mailer, filepath):
+class MailReader(Mailer):
 
-    def __init__(self):
+    def __init__(self, filepath):
 
         Mailer.__init__(self, filepath)
         self.__IMAP4_SERVER = "imap.gmail.com"
@@ -104,9 +104,9 @@ class MailReader(Mailer, filepath):
             self.__mail.store(id,'+FLAGS', '(\\SEEN)')
         return True
 
-class MailSender(Mailer, filepath):
+class MailSender(Mailer):
 
-    def __init__(self):
+    def __init__(self, filepath):
 
         Mailer.__init__(self, filepath)
         self.__SMTPconn = "smtp.gmail.com"
