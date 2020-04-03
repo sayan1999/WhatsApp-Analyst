@@ -14,6 +14,7 @@ from email.mime.image import MIMEImage
 from email import encoders
 from os import listdir
 import smtplib
+import json
 
 def checkORmake_dir_file(cd, dirname, filename):
     if not isdir('./' + cd + '/' + dirname):
@@ -26,16 +27,17 @@ def curtime():
 
 class Mailer:
 
+    def __init__(self, filepath):
+
+        jsonobj = json.load(open(filepath))
+        self.USER  = jsonobj['USER']
+        self.PASSWORD = jsonobj['PASSWORD']
+
+class MailReader(Mailer, filepath):
+
     def __init__(self):
 
-        self.USER  = "annabelleconjuring11@gmail.com"
-        self.PASSWORD = "con1ann1"
-
-class MailReader(Mailer):
-
-    def __init__(self):
-
-        Mailer.__init__(self)
+        Mailer.__init__(self, filepath)
         self.__IMAP4_SERVER = "imap.gmail.com"
         self.__IMAP4_PORT = 993
         self.__IMAPlogin()
@@ -102,11 +104,11 @@ class MailReader(Mailer):
             self.__mail.store(id,'+FLAGS', '(\\SEEN)')
         return True
 
-class MailSender(Mailer):
+class MailSender(Mailer, filepath):
 
     def __init__(self):
 
-        Mailer.__init__(self)
+        Mailer.__init__(self, filepath)
         self.__SMTPconn = "smtp.gmail.com"
         self.__SMTP_PORT = 587
         self.__SMTPlogin()

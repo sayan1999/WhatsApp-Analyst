@@ -55,7 +55,7 @@ class Analyst:
         for t in threads:
             t.start() 
             t.join() 
-        m=MailSender()
+        m=MailSender('./mail/mail.json')
         m.sendmail(self.__user, self.__mailid, self.__directry)                
     
     def __plotChatperDay(self):

@@ -5,3 +5,4 @@ __pycache__
 .vscode
 backup
 test
+mail.json
