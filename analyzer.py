@@ -1,47 +1,54 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-from data_loader.attachment_loader import Chat_loader
-from matplotlib import pyplot as plt
-from collections import Counter
-import matplotlib
-import datetime
-import numpy as np
 from utils.promptnessUtils import penaltyForDelay, pointsForMsg, getbonusForRec, getlen
 from utils.plotUtils import gradientbars, getTimeNum
+from data_loader.attachment_loader import Chat_loader
 from utils.wordcloudUtils import preprocess
+from utils.fileReadUtils import makedirectory
+from utils.datetimeUtils import dateTodtime
+import matplotlib, datetime, numpy as np
+from matplotlib import pyplot as plt
 from wordcloud import WordCloud
-import datetime
-from os import mkdir
+from collections import Counter
+from random import randint
+from threading import Thread
 
 # datetime converter for a matplotlib plotting method
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
+
+def grey_color_func(word, font_size, position, orientation, random_state=None,
+                    **kwargs):
+    return "hsl(0, 0%%, %d%%)" % randint(60, 100)
 
 class Analyst:
     
     def __init__(self):
         self.__content = Chat_loader().getData()
         self.__user = self.__content["User"]
-        self.__directry = './images/'+self.__user+'_'+str(datetime.datetime.now())
-        mkdir(self.__directry)
+        self.__directry = makedirectory('./images/'+self.__user+'_'+str(datetime.datetime.now()))
         self.__friends = self.__content["Friends"]
         self.__data = []
         for data in self.__content["Data"].values():
             self.__data += data
-        self.__datetime= [row['DateTime'] for row in self.__data]
-        self.__timestamps = [row['Time'] for row in self.__data]
-        self.__onlyDates = [row['Date'] for row in self.__data]
-        self.__dateMonths = [datetime.datetime.strptime(row['Date'].strftime("%m %y"), "%m %y").date() for row in self.__data]
+        self.__datetime= sorted([row['DateTime'] for row in self.__data])
 
-        
+    def start(self):
+        threads=[]
+        threads.append(Thread(target=self.__plotChatperDay)) 
+        threads.append(Thread(target=self.__plotChatperMonth)) 
+        threads.append(Thread(target=self.__plotChatperSlot)) 
+        threads.append(Thread(target=self.__plotPromptness)) 
+        threads.append(Thread(target=self.__plotWordCloud)) 
+        for t in threads:
+            t.start() 
+            t.join()                 
     
-    def plotChatperDay(self):
+    def __plotChatperDay(self):
 
 #         Scale x-axis according to num of days
-        numOfDays = (max(self.__onlyDates).date()-min(self.__onlyDates).date()).days
+        onlyDates = [dateTodtime(dtime.date()) for dtime in self.__datetime]
+        numOfDays = (max(onlyDates).date()-min(onlyDates).date()).days
         xl = int(max((numOfDays)/20, 10))
-        xlim=(matplotlib.dates.date2num(min(self.__onlyDates)), matplotlib.dates.date2num(max(self.__onlyDates)))
+        xlim=(matplotlib.dates.date2num(min(onlyDates)), matplotlib.dates.date2num(max(onlyDates)))
                 
         
 #         Configurations
@@ -57,7 +64,7 @@ class Analyst:
         plt.xlim=xlim 
 
 #         plot 
-        plt.hist(self.__onlyDates, bins=numOfDays, color='black', edgecolor=edgecolor)
+        plt.hist(onlyDates, bins=numOfDays, color='black', edgecolor=edgecolor)
         
 #         Label graph
         title=ax.set_title('Your WhatsApp chat frequency with ' + ", ".join(self.__friends) + ' versus day since you started', color='white', size = 15)
@@ -66,15 +73,15 @@ class Analyst:
         plt.tick_params(axis='x', which='both', bottom=False, labelcolor='white')
         plt.tick_params(axis='y', which='both', left=False, labelcolor = 'white')
         plt.grid(b=True, axis= 'y', color='green')
-        plt.savefig(self.__directry+'/'+'_'+str(datetime.datetime.now())+'_'+str(title)+'.png')
-        plt.show()
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png')
+        plt.show()      
         
         
-        
-    def plotChatperMonth(self):
+    def __plotChatperMonth(self):
         
 #         Scale x-axis according to num of months        
-        xlim=(matplotlib.dates.date2num(min(self.__dateMonths)), matplotlib.dates.date2num(max(self.__dateMonths)))
+        dateMonths = [datetime.datetime(dtime.year, dtime.month, 1) for dtime in self.__datetime]
+        xlim=(matplotlib.dates.date2num(min(dateMonths)), matplotlib.dates.date2num(max(dateMonths)))
         
 #         Configurations
         fig=plt.figure(figsize=(15, 10))
@@ -87,8 +94,8 @@ class Analyst:
         plt.xlim=xlim 
                 
 #         Plot
-        barMap = Counter(self.__dateMonths)
-        barDict={ month : barMap.get(month, 0) for month in set(self.__dateMonths)}
+        barMap = Counter(dateMonths)
+        barDict={ month : barMap.get(month, 0) for month in set(dateMonths)}
         bars=ax.bar(barDict.keys(), barDict.values(), width=20)
         gradientbars(bars, ax, max(barDict.values()))
 
@@ -98,19 +105,22 @@ class Analyst:
         plt.ylabel("Chats Per Month", color='white', size = 14)
         plt.tick_params(axis='x', which='both', bottom=False, labelcolor='white')
         plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
-        plt.savefig(self.__directry+'/'+str(datetime.datetime.now())+'_'+str(title)+'.png')
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png')
         plt.show()
         
         
-    def plotChatperSlot(self):
+    def __plotChatperSlot(self):
+
+        DEFAULTDATE= (1900, 1, 1)
+        LASTMINOFDAY= (23, 59)
         
 #         Categorize chats into timeslots
-        self.__timestamps=sorted(self.__timestamps)
+        timestamps = [datetime.datetime(*DEFAULTDATE, dtime.hour, dtime.minute) for dtime in self.__datetime]
         slots=[0, 3, 5, 7, 9, 12, 15, 17, 19, 21]
-        bins=[getTimeNum(e) for e in slots] + [datetime.datetime(1900, 1, 1, 23, 59)]
+        bins=[getTimeNum(e) for e in slots] + [datetime.datetime(*DEFAULTDATE, *LASTMINOFDAY)]
         
         timedict={}
-        for time in self.__timestamps:
+        for time in timestamps:
             for i in range(len(bins)-1):
                 if time>=bins[i] and time<bins[i+1]:
                     timedict[i] = timedict.get(i, 0) + 1
@@ -143,77 +153,52 @@ class Analyst:
         plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
         ax.set_xticks(range(len(timeticks)))
         ax.set_xticklabels(timetickstr)
-        plt.savefig(self.__directry+'/'+str(datetime.datetime.now())+'_'+str(title)+'.png')
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png')
         plt.show()
 
-    def promptPlot(self, friendname, plotlist):                
-        
-#         Configurations
-        plt.style.use('dark_background')
-        fig=plt.figure(figsize=(20, 10))
-        ax=plt.axes()
-        backgorund_col='#1e272e'
-        ax.set_facecolor(backgorund_col)
-        fig.set_facecolor(backgorund_col)
-        for spine in ax.spines.values():
-            spine.set_visible(False)
-
-#         plot 
-        
-        plt.plot(list(plotlist[1][0].keys()), list(plotlist[1][0].values()), label=plotlist[0][0], color='yellow', linewidth=2)
-        plt.plot(list(plotlist[1][1].keys()), list(plotlist[1][1].values()), label=plotlist[0][1], color='blue', linewidth=1)
     
-        
-#         Label graph
-        title=ax.set_title('Your WhatsApp chat response promptness with '+plotlist[0][1], color='white', size = 15)
-        plt.xlabel("Months", color='white', size = 10)
-        plt.ylabel("Promptness coofficient", color='white', size = 10)
-        plt.tick_params(axis='x', which='both', labelcolor='white')
-        plt.tick_params(axis='y', which='both', left=False, labelcolor = 'white')
-        plt.grid(b=True, axis= 'y', color='green')
-        ax.legend()
-        plt.savefig(self.__directry+'/'+str(datetime.datetime.now())+'_'+str(title)+'.png')
-        plt.show()
+    def __readNEvalConvWith(self, friend):
 
-
-    def __getPromptness(self, friend):
-
+        # constant
         THRESHHOLDDELAYFORCONVO = 300
+
         chatdata=self.__content['Data'][friend]
         person=self.__user
-        sdate=chatdata[0]['Date']
-        edate=chatdata[-1]['Date']
-        oneday=datetime.timedelta(days=1)
-        rangeofdays=(edate-sdate).days
+        
+        # setting variables before iteration
+        sdate=dateTodtime(chatdata[0]['DateTime'].date())
+        edate=dateTodtime(chatdata[-1]['DateTime'].date())
+        
         userInteraction={}
         userInteraction[person]={}
         userInteraction[friend]={}
         
+        #  initial conditions
         conversation=False
-        lastgotreply=actuallastdatetime=lastdatetime=chatdata[0]['DateTime']
+        lastgotreply=actuallastDtime=lastDtimeToCalcDelayFrom=chatdata[0]['DateTime']
         pastuser=chatdata[0]['Author']
         recurrency=rotation=0
         messageOverhead=0
-        # reward for the very first message in chat
-        userInteraction[pastuser][sdate]=100
-        self.__vocab=chatdata[0]['Message']
+    
         for chat in chatdata[1:]:
-            self.__vocab += " " + (chat['Message'])
+            
+            # setting var for current iteration
             curuser=chat['Author']
-            curdate=chat['Date']
+            curdate=dateTodtime(chat['DateTime'].date())
             curdatetime=chat['DateTime']
-            diffromreply=(curdatetime-lastgotreply).seconds
+            diffromlastgotreply=(curdatetime-lastgotreply).seconds
 
             if curuser==pastuser:
                 
                 if conversation:
-                    lastdatetime=curdatetime
+                    lastDtimeToCalcDelayFrom = curdatetime
 
-                if diffromreply > THRESHHOLDDELAYFORCONVO :
-                    conversation=False
+                if diffromlastgotreply > THRESHHOLDDELAYFORCONVO :
+                    conversation = False
 
                 messageOverhead += getlen(chat['Message'])
                 recurrency += 1
+
                 if not(conversation):
                     rotation = 0
             
@@ -221,15 +206,16 @@ class Analyst:
                 if recurrency:
                     userInteraction[pastuser][curdate]=(userInteraction[pastuser].get(curdate, 0) + 
                                         pointsForMsg(messageOverhead) * getbonusForRec(recurrency))
+                
                 if conversation:
-                    penaltydelay=0
+                    delay=0
                 else:
-                    penaltydelay=min(15, (curdatetime-lastdatetime).seconds/60)
+                    delay=(curdatetime-lastDtimeToCalcDelayFrom).seconds/60
 
-                actualdelay=(curdatetime-actuallastdatetime).seconds
+                actualdelay=(curdatetime-actuallastDtime).seconds
                 userInteraction[curuser][curdate]=(userInteraction[curuser].get(curdate, 0) + 
                                         pointsForMsg(getlen(chat['Message'])) * getbonusForRec(rotation) - 
-                                        penaltyForDelay(conversation, penaltydelay, recurrency))
+                                        penaltyForDelay(conversation, delay, recurrency))
 
                 if actualdelay < THRESHHOLDDELAYFORCONVO:
                     conversation = True
@@ -239,66 +225,100 @@ class Analyst:
                 messageOverhead=0
                 recurrency = 0
                 rotation += 1
-                lastdatetime=curdatetime
+                lastDtimeToCalcDelayFrom=curdatetime
                 pastuser=curuser
-                lastgotreply=actuallastdatetime
+                lastgotreply=actuallastDtime
 
-            actuallastdatetime=curdatetime         
+            actuallastDtime=curdatetime         
 
-        tempcurdate=sdate
+        
+        # those days without chat don't have keys, so insert them with value = 0
+        oneday=datetime.timedelta(days=1)
+        rangeofdays=(edate-sdate).days
+        tempdate=sdate
         for _ in range(rangeofdays+1):
-            userInteraction[person][tempcurdate]=userInteraction[person].get(tempcurdate, 0)
-            userInteraction[friend][tempcurdate]=userInteraction[friend].get(tempcurdate, 0)
-            tempcurdate+=oneday            
+            userInteraction[person][tempdate]=userInteraction[person].get(tempdate, 0)
+            userInteraction[friend][tempdate]=userInteraction[friend].get(tempdate, 0)
+            tempdate+=oneday            
+        
+        # Normalize first day interaction to the mean of all days
         for person in userInteraction:
             userInteraction[person][sdate]=sum(list(userInteraction[person].values()))/len(userInteraction[person])
             
-        return userInteraction
+        return userInteraction        
 
-    def __calcPromptness(self):
-        self.__promptdata={}
+    def __calcPromptness(self, friend):
+        
+        promptnessDataInConvWithaFriend=self.__readNEvalConvWith(friend)
+
+        BETA=0.9
+        persons=[]
+        plotdata=[]
+        # turn day-to-day promptness to exponentially weighted promptness
+        for person, evaledConv in promptnessDataInConvWithaFriend.items():
+            
+            persons.append(person)
+            avgdata={}
+            evaledConv={key:evaledConv[key] for key in sorted(evaledConv.keys())}
+            sortedkeys, sorteddata=list(evaledConv.keys()), list(evaledConv.values())
+            avgdata[sortedkeys[0]]=sorteddata[0]
+            for i in range(1, len(evaledConv)):
+                avgdata[sortedkeys[i]]=avgdata[sortedkeys[i-1]]*BETA+sorteddata[i]*BETA 
+            plotdata.append(avgdata)               
+
+        return [persons, plotdata]
+
+
+    def __plotPromptness(self): 
+
         for friend in self.__friends:
-            self.__promptdata[friend]=self.__getPromptness(friend)
+            persons, plotdata =  self.__calcPromptness(friend)             
+        
+    #         Configurations
+            plt.style.use('dark_background')
+            fig=plt.figure(figsize=(20, 10))
+            ax=plt.axes()
+            backgorund_col='#1e272e'
+            ax.set_facecolor(backgorund_col)
+            fig.set_facecolor(backgorund_col)
+            for spine in ax.spines.values():
+                spine.set_visible(False)
 
-    def plotPromptness(self):
-        self.__calcPromptness()
+    #         plot 
+            
+            plt.plot(list(plotdata[0].keys()), list(plotdata[0].values()), label=persons[0], color='yellow', linewidth=2)
+            plt.plot(list(plotdata[1].keys()), list(plotdata[1].values()), label=persons[1], color='blue', linewidth=1)
+        
+            
+    #         Label graph
+            title=ax.set_title('Your WhatsApp chat response promptness with '+friend, color='white', size = 15)
+            plt.xlabel("Months", color='white', size = 10)
+            plt.ylabel("Promptness coofficient", color='white', size = 10)
+            plt.tick_params(axis='x', which='both', labelcolor='white')
+            plt.tick_params(axis='y', which='both', left=False, labelcolor = 'white')
+            plt.grid(b=True, axis= 'y', color='green')
+            ax.legend()
+            plt.savefig(self.__directry+'/'+title.get_text()+'.png')
+            plt.show()
 
-        for friendname, promptWithFriend in self.__promptdata.items():
-            persons=[]
-            plotdata=[]
-            for p, data in promptWithFriend.items():
-                avgdata={}
-                persons.append(p)
-                temp={key:data[key] for key in sorted(data.keys())}
-                sortedkeys, sorteddata=list(temp.keys()), list(temp.values())
-                avgdata[sortedkeys[0]]=sorteddata[0]
-                for i in range(1, len(data)):
-                    avgdata[sortedkeys[i]]=avgdata[sortedkeys[i-1]]*0.5+sorteddata[i]*0.5
-                plotdata.append(avgdata)
+    def __plotWordCloud(self):
 
-            self.promptPlot(friendname, [persons, plotdata])
+        self.__vocab = preprocess(" ".join([d['Message'] for d in self.__data]))
 
-    def plotWordCloud(self):
-
-        self.__vocab = preprocess(self.__vocab)
-
-        wordcloud = WordCloud(width = 800, height = 800,
-                background_color ='black', 
-                min_font_size = 10).generate(self.__vocab)
-  
+        background_col='#1e272e'
+        wordcloud = WordCloud(width = 1024, height = 1024,
+                background_color = background_col, 
+                min_font_size = 10, margin=1).generate(self.__vocab)  
                 
-        plt.figure(figsize = (8, 8), facecolor = None) 
-        plt.imshow(wordcloud) 
+        plt.title('WordCloud with most used words', color='white', size = 15) 
+        plt.imshow(wordcloud.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
         plt.axis("off") 
         plt.tight_layout(pad = 0) 
-        plt.savefig(self.__directry+'/'+str(datetime.datetime.now())+'_Wordcloud.png')        
-        plt.show() 
+        plt.savefig(self.__directry+'/'+'Wordcloud.png')        
+        plt.show()     
 
 if __name__ == '__main__':
     
-    a=Analyst()
-    a.plotChatperDay()
-    a.plotChatperMonth()
-    a.plotChatperSlot()
-    a.plotPromptness()
-    a.plotWordCloud()
+    analyzer=Analyst()
+    analyzer.start()
+    

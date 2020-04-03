@@ -88,7 +88,7 @@ class Mailer:
 
             self.__log(id, curmsg)
             self.__extractTXT(curmsg)
-            # self.__mail.store(id,'+FLAGS', '(\\SEEN)')
+            self.__mail.store(id,'+FLAGS', '(\\SEEN)')
         return True
 
 

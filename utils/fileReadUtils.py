@@ -1,4 +1,5 @@
 import datetime
+from os import makedirs
 
 def readfile(textfile):
     file = open(textfile, 'r')
@@ -26,10 +27,10 @@ def format(line):
         
         author = linemessage[0]
         message = linemessage[1]
-        newdate=datetime.datetime.strptime(date, '%m/%d/%y')
-        newtime=datetime.datetime.strptime(time, '%I:%S %p')
+        # newdate=datetime.datetime.strptime(date, '%m/%d/%y')
+        # newtime=datetime.datetime.strptime(time, '%I:%S %p')
         dateNtime=datetime.datetime.strptime(date+' '+time, '%m/%d/%y %I:%S %p')
-        return {'Date' : newdate, 'Time' : newtime, 'DateTime': dateNtime, 'Author' : author, 'Message' : message}
+        return {'DateTime': dateNtime, 'Author' : author, 'Message' : message}
     return None    
 
 def elementsOf(textfile):
@@ -40,3 +41,7 @@ def elementsOf(textfile):
             if formatted['Message'] != '':
                 data.append(formatted)
     return data
+
+def makedirectory(path):
+    makedirs(path)
+    return path

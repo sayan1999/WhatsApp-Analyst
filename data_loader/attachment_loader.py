@@ -13,7 +13,7 @@ class Chat_loader:
 
         self.__clientName = ''
         self.__friends = []
-        self.__dir = './attachments/' + '31:03:2020_12:56:29.210371_Sayan Dey <mr.sayan.dey@gmail.com>'
+        self.__dir = './attachments/' + '03:04:2020_10:29:20.918717_Sayan Dey <mr.sayan.dey@gmail.com>'
         self.__data = {}
         self.__getFiles()
         self.__readDir()        
