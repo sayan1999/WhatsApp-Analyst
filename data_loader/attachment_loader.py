@@ -9,11 +9,11 @@ from utils.fileReadUtils import elementsOf
 
 class Chat_loader:
 
-    def __init__(self):
+    def __init__(self, dirname):
 
         self.__clientName = ''
         self.__friends = []
-        self.__dir = './attachments/' + '03:04:2020_10:29:20.918717_Sayan Dey <mr.sayan.dey@gmail.com>'
+        self.__dir = './attachments/' + dirname
         self.__data = {}
         self.__getFiles()
         self.__readDir()        
@@ -53,8 +53,6 @@ class Chat_loader:
                 self.__data[friend] = data
 
     def getData(self):
-        return {"User" : self.__clientName, "Friends" : self.__friends, "Data" :self.__data}
+        return {"MailID": self.__dir, "User" : self.__clientName, "Friends" : self.__friends, "Data" :self.__data}
 
-if __name__ == '__main__':
-
-    print(Chat_loader().getData())
+# if __name__ == '__main__':

@@ -10,6 +10,10 @@ from wordcloud import WordCloud
 from collections import Counter
 from random import randint
 from threading import Thread
+from sys import argv
+from os.path import isfile, isdir
+from time import sleep
+from mail.mailman import MailSender
 
 # datetime converter for a matplotlib plotting method
 from pandas.plotting import register_matplotlib_converters
@@ -21,8 +25,9 @@ def grey_color_func(word, font_size, position, orientation, random_state=None,
 
 class Analyst:
     
-    def __init__(self):
-        self.__content = Chat_loader().getData()
+    def __init__(self, path):
+        self.__content = Chat_loader(path).getData()
+        self.__mailid=self.__content["MailID"]
         self.__user = self.__content["User"]
         self.__directry = makedirectory('./images/'+self.__user+'_'+str(datetime.datetime.now()))
         self.__friends = self.__content["Friends"]
@@ -30,7 +35,16 @@ class Analyst:
         for data in self.__content["Data"].values():
             self.__data += data
         self.__datetime= sorted([row['DateTime'] for row in self.__data])
+        self.__endAck()
 
+    def getdir(self):
+        return self.__directry
+    
+    def __endAck(self):
+
+        if isdir(self.__directry):
+            open(self.__directry+'/ends', 'w+')
+        
     def start(self):
         threads=[]
         threads.append(Thread(target=self.__plotChatperDay)) 
@@ -40,7 +54,9 @@ class Analyst:
         threads.append(Thread(target=self.__plotWordCloud)) 
         for t in threads:
             t.start() 
-            t.join()                 
+            t.join() 
+        m=MailSender()
+        m.sendmail(self.__user, self.__mailid, self.__directry)                
     
     def __plotChatperDay(self):
 
@@ -74,7 +90,7 @@ class Analyst:
         plt.tick_params(axis='y', which='both', left=False, labelcolor = 'white')
         plt.grid(b=True, axis= 'y', color='green')
         plt.savefig(self.__directry+'/'+title.get_text()+'.png')
-        plt.show()      
+        # plt.show()      
         
         
     def __plotChatperMonth(self):
@@ -106,7 +122,7 @@ class Analyst:
         plt.tick_params(axis='x', which='both', bottom=False, labelcolor='white')
         plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
         plt.savefig(self.__directry+'/'+title.get_text()+'.png')
-        plt.show()
+        # plt.show()
         
         
     def __plotChatperSlot(self):
@@ -115,7 +131,7 @@ class Analyst:
         LASTMINOFDAY= (23, 59)
         
 #         Categorize chats into timeslots
-        timestamps = [datetime.datetime(*DEFAULTDATE, dtime.hour, dtime.minute) for dtime in self.__datetime]
+        timestamps = sorted([datetime.datetime(*DEFAULTDATE, dtime.hour, dtime.minute) for dtime in self.__datetime])
         slots=[0, 3, 5, 7, 9, 12, 15, 17, 19, 21]
         bins=[getTimeNum(e) for e in slots] + [datetime.datetime(*DEFAULTDATE, *LASTMINOFDAY)]
         
@@ -154,7 +170,7 @@ class Analyst:
         ax.set_xticks(range(len(timeticks)))
         ax.set_xticklabels(timetickstr)
         plt.savefig(self.__directry+'/'+title.get_text()+'.png')
-        plt.show()
+        # plt.show()
 
     
     def __readNEvalConvWith(self, friend):
@@ -299,7 +315,7 @@ class Analyst:
             plt.grid(b=True, axis= 'y', color='green')
             ax.legend()
             plt.savefig(self.__directry+'/'+title.get_text()+'.png')
-            plt.show()
+            # plt.show()
 
     def __plotWordCloud(self):
 
@@ -315,10 +331,22 @@ class Analyst:
         plt.axis("off") 
         plt.tight_layout(pad = 0) 
         plt.savefig(self.__directry+'/'+'Wordcloud.png')        
-        plt.show()     
+        # plt.show()     
 
 if __name__ == '__main__':
     
-    analyzer=Analyst()
-    analyzer.start()
     
+    if len(argv) != 2:
+        print("Correct Usage: script 'path to directory'")
+        exit()
+
+    if not(argv[1].startswith('./attachments/ CREATE,ISDIR ')):
+        print('not a folder')
+        exit()
+    
+    dirpath=argv[1].split('./attachments/ CREATE,ISDIR ')[1]
+    while(not(isfile('./attachments/'+dirpath+'/ends'))):
+        print('./attachments/'+dirpath+'/ends')
+        sleep(5)
+    analyzer=Analyst(dirpath)
+    analyzer.start()

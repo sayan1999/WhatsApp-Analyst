@@ -1,5 +1,5 @@
-import imaplib
-import string, random
+import imaplib, string, random
+from time import sleep
 from io import StringIO
 import email, mailparser
 from datetime import datetime
@@ -8,6 +8,12 @@ from json import dump as dumpjson
 from os import mkdir as makedir
 from os.path import isdir
 from email.header import decode_header
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email import encoders
+from os import listdir
+import smtplib
 
 def checkORmake_dir_file(cd, dirname, filename):
     if not isdir('./' + cd + '/' + dirname):
@@ -16,24 +22,27 @@ def checkORmake_dir_file(cd, dirname, filename):
     return './' + cd + '/' + dirname + '/' + filename
 
 def curtime():
-    return datetime.now().strftime("%d:%m:%Y_%H:%M:%S.%f")
+    return datetime.now().strftime("%Y:%m:%d_%H:%M:%S.%f")
 
 class Mailer:
 
     def __init__(self):
 
-        self.__USER  = "annabelleconjuring11@gmail.com"
-        self.__PASSWORD = "con1ann1"
-        self.__SMTP_SERVER = "imap.gmail.com"
-        self.__SMTP_PORT = 993
-        self.__mail = None
-        self.__login()
+        self.USER  = "annabelleconjuring11@gmail.com"
+        self.PASSWORD = "con1ann1"
 
-    def __login(self):
+class MailReader(Mailer):
 
-        self.__mail = imaplib.IMAP4_SSL(self.__SMTP_SERVER)
-        self.__mail.login(self.__USER, self.__PASSWORD)
-        self.__mail.select('inbox')
+    def __init__(self):
+
+        Mailer.__init__(self)
+        self.__IMAP4_SERVER = "imap.gmail.com"
+        self.__IMAP4_PORT = 993
+        self.__IMAPlogin()
+
+    def __IMAPlogin(self):
+        self.__mail = imaplib.IMAP4_SSL(self.__IMAP4_SERVER)
+        self.__mail.login(self.USER, self.PASSWORD)
 
     def __log(self, id, msg):
         print(id.decode('utf-8') + '-> From : ' + msg["From"] + ' Subject : ' + msg["Subject"])
@@ -75,10 +84,12 @@ class Mailer:
         
     def readmail(self):        
 
+        self.__mail.select('inbox')
         _, data = self.__mail.search(None, '(UNSEEN)')
         mail_ids = data[0].split()
 
         if len(mail_ids) == 0:
+            sleep(5)
             return False
 
         for id in mail_ids:
@@ -91,7 +102,53 @@ class Mailer:
             self.__mail.store(id,'+FLAGS', '(\\SEEN)')
         return True
 
+class MailSender(Mailer):
+
+    def __init__(self):
+
+        Mailer.__init__(self)
+        self.__SMTPconn = "smtp.gmail.com"
+        self.__SMTP_PORT = 587
+        self.__SMTPlogin()
+
+    def __SMTPlogin(self):
+        self.__session = smtplib.SMTP('smtp.gmail.com') #use gmail with port
+        self.__session.starttls() #enable security
+        self.__session.login(self.USER, self.PASSWORD) #login with mail_id and password
+
+    def sendmail(self, recipient, recvAddr, directory):
+        
+        addr=recvAddr.split('<')[1].split('>')[0]
+        message=self.constrMail(recipient, recvAddr, directory)
+        text = message.as_string()
+        self.__session.sendmail(self.USER, addr, text)
+        self.__session.quit()
+
+    def constrMail(self, recipient, recvAddr, directory):
+        
+        mail_content = "Hello "+recipient+'''
+Greetings from Instantinopaul.
+Your chat was very tasty.... kidding :)
+Find out the attachments.
+Have a nice day :)
+    '''
+        
+        message = MIMEMultipart()
+        message['From'] = self.USER
+        message['To'] = recvAddr
+        message['Subject'] = 'Results from Instantinopaul Your Personal Data Analyzer'
+        
+        message.attach(MIMEText(mail_content, 'plain')) 
+
+        attach_files = [(filename, directory+'/'+filename) for filename in listdir(directory) if filename.endswith('.png')]
+        for attach_file_name, filepath in attach_files:
+
+            data = open(filepath, 'rb').read()
+            attachment=MIMEImage(data, name=attach_file_name)
+            message.attach(attachment)
+        
+        return message
 
 if __name__ == '__main__':
-    
-    Mailer().readmail()
+    m=MailSender()
+    m.sendmail('./images/Sayan Dey_2020-04-03 10:56:57.422103', '<mr.sayan.dey@gmail.com>')
