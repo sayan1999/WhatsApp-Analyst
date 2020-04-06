@@ -68,8 +68,12 @@ class MailReader(Mailer):
     def __leave_trace(self, sender):
         
         endAckFilepath=pathjoin(self.__dirpath, 'ends')
-        open(endAckFilepath, 'w+')
-        log.info("Dummy file for completion acknowledgement created")
+        try:
+            open(endAckFilepath, 'w+')
+        except FileNotFoundError:
+            log.info("No suitable attachment found, dummy file not created")
+        else:
+            log.info("Dummy file for completion acknowledgement created")
 
 
     def __extractTXT(self, msg): 
@@ -93,7 +97,7 @@ class MailReader(Mailer):
                     else:
                         log.info("The file was rejected for not matching with naming conventions of WhatsApp chat exports")
         
-        self.__leave_trace(msg["From"])
+            self.__leave_trace(msg["From"])
 
         
     def readmail(self):        

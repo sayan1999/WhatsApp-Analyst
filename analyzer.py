@@ -392,7 +392,7 @@ if __name__ == '__main__':
     
     dirpath=argv[1].split('./attachments/ CREATE,ISDIR ')[1]
     while(not(isfile('./attachments/'+dirpath+'/ends'))):
-        print('./attachments/'+dirpath+'/ends')
+        print("...")
         sleep(5)
     analyzer=Analyst(dirpath)
     analyzer.start()
