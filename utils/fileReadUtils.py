@@ -1,5 +1,7 @@
 import datetime
 from os import makedirs
+from logger.log import log
+from Message_Class.msg_class import Msg
 
 def readfile(textfile):
     file = open(textfile, 'r')
@@ -7,7 +9,7 @@ def readfile(textfile):
     file.close()
     return text    
 
-def format(line):
+def format(line, dtimefmt):
     
     if ' - ' not in line or ', ' not in line or ': ' not in line:
         return None
@@ -16,8 +18,8 @@ def format(line):
         datetimestr, raw = line.split(' - ', 1)
         date, time = datetimestr.split(', ', 1)
     
-    except ValueError:
-        print(line)
+    except ValueError as e:
+        log.error(e)
         return None
     
     if ': ' in raw:
@@ -29,18 +31,31 @@ def format(line):
         message = linemessage[1]
         # newdate=datetime.datetime.strptime(date, '%m/%d/%y')
         # newtime=datetime.datetime.strptime(time, '%I:%S %p')
-        dateNtime=datetime.datetime.strptime(date+' '+time, '%m/%d/%y %I:%S %p')
-        return {'DateTime': dateNtime, 'Author' : author, 'Message' : message}
+        try:
+            dateNtime=datetime.datetime.strptime(date+' '+time, dtimefmt)
+        except ValueError:
+            return "changed"
+        else:
+            return {'DateTime': dateNtime, 'Author' : author, 'Message' : message}
     return None    
 
-def elementsOf(textfile):
+def elementsOf(textfile, msg, dtimefmt='%m/%d/%y %I:%S %p', trial=False):
+    opt_dtimefmt='%d/%m/%y %I:%S %p'
     data=[]
     for line in readfile(textfile):
-        formatted = format(line)
+        formatted = format(line, dtimefmt)
+        if formatted == 'changed':
+            if not trial:
+                log.info("Trying deprecated dtimeformat")
+                return elementsOf(textfile, msg, opt_dtimefmt, True)
+            else:
+                msg.new_msg("Could not understand data format")
+                return []
         if formatted != None:
             if formatted['Message'] != '':
                 data.append(formatted)
-    return data
+    log.info("Successfully read "+ textfile)
+    return data 
 
 def makedirectory(path):
     makedirs(path)

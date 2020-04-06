@@ -5,7 +5,7 @@ import email, mailparser
 from datetime import datetime
 from json import loads as loadjson
 from json import dump as dumpjson
-from os import mkdir as makedir
+from os import makedirs
 from os.path import isdir
 from email.header import decode_header
 from email.mime.multipart import MIMEMultipart
@@ -15,71 +15,83 @@ from email import encoders
 from os import listdir
 import smtplib
 import json
+from logger.log import log
+from os.path import join as pathjoin
 
-def checkORmake_dir_file(cd, dirname, filename):
-    if not isdir('./' + cd + '/' + dirname):
-        makedir('./' + cd + '/' + dirname)
-    
-    return './' + cd + '/' + dirname + '/' + filename
+def extractAddr(fullAddr):
+    if '<' in fullAddr:
+        fullAddr=fullAddr.split('<')[1]
+    if '>' in fullAddr:
+        fullAddr=fullAddr.split('<')[0]
+
+    return fullAddr
 
 def curtime():
     return datetime.now().strftime("%Y:%m:%d_%H:%M:%S.%f")
 
 class Mailer:
 
-    def __init__(self, filepath):
-
-        jsonobj = json.load(open(filepath))
+    def __init__(self, config):
+        
+        jsonobj = json.load(open(config))
         self.USER  = jsonobj['USER']
         self.PASSWORD = jsonobj['PASSWORD']
+        self.IMAP4_SERVER = jsonobj["IMAP4_SERVER"]
+        self.IMAP4_PORT = jsonobj["IMAP4_PORT"]  
+        self.SMTP_SERVER = jsonobj["SMTP_SERVER"]
+        self.SMTP_PORT = jsonobj["SMTP_PORT"]   
+        self.TIMEOUT = jsonobj["TIMEOUT"]     
 
 class MailReader(Mailer):
 
-    def __init__(self, filepath):
+    def __init__(self, config):
 
-        Mailer.__init__(self, filepath)
-        self.__IMAP4_SERVER = "imap.gmail.com"
-        self.__IMAP4_PORT = 993
+        Mailer.__init__(self, config=config)        
         self.__IMAPlogin()
 
     def __IMAPlogin(self):
-        self.__mail = imaplib.IMAP4_SSL(self.__IMAP4_SERVER)
+        
+        self.__mail = imaplib.IMAP4_SSL(self.IMAP4_SERVER, self.IMAP4_PORT)
         self.__mail.login(self.USER, self.PASSWORD)
+        log.info("Logged into IMAP4 server successfully")
 
-    def __log(self, id, msg):
-        print(id.decode('utf-8') + '-> From : ' + msg["From"] + ' Subject : ' + msg["Subject"])
+    def __storeIntoFile(self, filename, content):
 
-    def __storeIntoFile(self, filename, sender, content):
-
-        directoryName=self.__timestampForThisMsg+'_'+sender
-        filename=curtime()+'_with_'+filename+'.txt'
-
-        filepath=checkORmake_dir_file('attachments', directoryName.replace('/', ':'), filename.replace('/', ':'))
-
+        if not isdir(self.__dirpath):
+            makedirs(self.__dirpath)
+        
+        filepath=pathjoin(self.__dirpath, filename)
         with open(filepath, 'wb+') as outfile:
-            outfile.write(content)        
+            outfile.write(content)
+        log.info("Contents written in " + filepath)        
 
     def __leave_trace(self, sender):
-
-        if isdir('./attachments/' + self.__timestampForThisMsg+'_'+sender):
-            endAckFilepath='./attachments/' + self.__timestampForThisMsg+'_'+sender+'/ends'
-            open(endAckFilepath, 'w+')
+        
+        endAckFilepath=pathjoin(self.__dirpath, 'ends')
+        open(endAckFilepath, 'w+')
+        log.info("Dummy file for completion acknowledgement created")
 
 
     def __extractTXT(self, msg): 
         
         if msg.is_multipart():
             self.__timestampForThisMsg=curtime()
+            self.__dirpath=pathjoin('attachments', self.__timestampForThisMsg+'_'+msg['From'].replace('/', ':'))
             for part in msg.walk():
                 ctype, filename = part.get_content_type(), part.get_filename()
                 if (ctype == 'text/plain') and not(filename == None):
+                    log.info("Got a file attachment: "+filename)
                     filename, encoding=decode_header(filename)[0]
                     if encoding:
                         filename=filename.decode(encoding)
-                    print(filename)
                     if (filename.endswith('.txt') and filename.startswith('WhatsApp Chat with ')):
-                        filename=filename[19:-4]
-                        self.__storeIntoFile(filename, msg["From"], part.get_payload(decode=True))
+                        log.info("The file attachment as per naming conventions of WhatsApp chat exports")
+                        chatFileWith=filename[19:]
+                        filename=(curtime()+'_with_'+chatFileWith).replace('/', ':')
+                        self.__storeIntoFile(filename, part.get_payload(decode=True))
+
+                    else:
+                        log.info("The file was rejected for not matching with naming conventions of WhatsApp chat exports")
         
         self.__leave_trace(msg["From"])
 
@@ -91,66 +103,81 @@ class MailReader(Mailer):
         mail_ids = data[0].split()
 
         if len(mail_ids) == 0:
-            sleep(5)
-            return False
+            print('...')
+            sleep(self.TIMEOUT)
+            self.readmail()
+        else:
+            log.info("Unread messages in Inbox")
 
         for id in mail_ids:
 
             _, data = self.__mail.fetch(id, '(BODY.PEEK[])')
             curmsg = email.message_from_string(data[0][1].decode('utf-8'))
 
-            self.__log(id, curmsg)
+            log.info("Recived message from " + curmsg["From"] + "with sub: " + curmsg["Subject"] + "\nMessage ID: " + id.decode('utf-8'))
             self.__extractTXT(curmsg)
             self.__mail.store(id,'+FLAGS', '(\\SEEN)')
-        return True
+        
+        self.readmail()
 
 class MailSender(Mailer):
 
-    def __init__(self, filepath):
+    def __init__(self, config):
 
-        Mailer.__init__(self, filepath)
-        self.__SMTPconn = "smtp.gmail.com"
-        self.__SMTP_PORT = 587
+        Mailer.__init__(self, config=config)
         self.__SMTPlogin()
 
     def __SMTPlogin(self):
-        self.__session = smtplib.SMTP('smtp.gmail.com') #use gmail with port
-        self.__session.starttls() #enable security
-        self.__session.login(self.USER, self.PASSWORD) #login with mail_id and password
 
-    def sendmail(self, recipient, recvAddr, directory):
+        self.__session = smtplib.SMTP(self.SMTP_SERVER, self.SMTP_PORT)
+        self.__session.starttls()
+        self.__session.login(self.USER, self.PASSWORD)
+        log.info("Logged into SMTP server successfully")
         
-        addr=recvAddr.split('<')[1].split('>')[0]
-        message=self.constrMail(recipient, recvAddr, directory)
-        text = message.as_string()
+
+    def sendmail(self, recipient, fullAddr, attachment_dir=None, fileExtension='.png', msg=[]):
+        
+        addr=extractAddr(fullAddr)
+        log.info("Mailid extracted: "+addr+" for recipient " + recipient)
+        msg=self.constrMail(recipient, addr, attachment_dir, fileExtension, msg)
+        text = msg.as_string()
+        log.debug("Constructed message: "+text)
+        log.info("Sending...")
         self.__session.sendmail(self.USER, addr, text)
+        log.info("Message has been sent successfully")
         self.__session.quit()
 
-    def constrMail(self, recipient, recvAddr, directory):
-        
-        mail_content = "Hello "+recipient+'''
-Greetings from Instantinopaul.
-Your chat was very tasty.... kidding :)
-Find out the attachments.
-Have a nice day :)
-    '''
-        
+    def init_msg(self, recipient, addr, msg):
+
+        mail_content = "Hello "+recipient+''',
+    Greetings from Instantinopaul.
+    Your chat was very tasty.... kidding :)
+    Find out the attachments.
+    Have a nice day :)
+    '''+'\n'+"\n".join(msg)
         message = MIMEMultipart()
         message['From'] = self.USER
-        message['To'] = recvAddr
+        message['To'] = addr
         message['Subject'] = 'Results from Instantinopaul Your Personal Data Analyzer'
-        
-        message.attach(MIMEText(mail_content, 'plain')) 
+        message.attach(MIMEText(mail_content, 'plain'))
 
-        attach_files = [(filename, directory+'/'+filename) for filename in listdir(directory) if filename.endswith('.png')]
-        for attach_file_name, filepath in attach_files:
-
-            data = open(filepath, 'rb').read()
-            attachment=MIMEImage(data, name=attach_file_name)
-            message.attach(attachment)
-        
         return message
 
-if __name__ == '__main__':
-    m=MailSender()
-    m.sendmail('./images/Sayan Dey_2020-04-03 10:56:57.422103', '<mr.sayan.dey@gmail.com>')
+    def constrMail(self, recipient, addr, attachment_dir, fileExtension, msg):
+        
+        message=self.init_msg(recipient, addr, msg) 
+
+        if  attachment_dir:
+
+            if not (isdir(attachment_dir)):
+                log.error(attachment_dir + "doesn't exist")
+                return message
+
+            attach_files = [(filename, pathjoin(attachment_dir, filename)) for filename in listdir(attachment_dir) if filename.endswith(fileExtension)]
+            for attach_file_name, filepath in attach_files:
+
+                data = open(filepath, 'rb').read()
+                attachment=MIMEImage(data, name=attach_file_name)
+                message.attach(attachment)
+                log.info(filepath+" has been attached")
+        return message

@@ -1,5 +1,4 @@
 from mail.mailman import MailReader
 
-reader=MailReader('./mail/mail.json')
-while True:
-    reader.readmail()
+reader=MailReader(config='./mail/mail.json')
+reader.readmail()

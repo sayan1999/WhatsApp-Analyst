@@ -14,6 +14,9 @@ from sys import argv
 from os.path import isfile, isdir
 from time import sleep
 from mail.mailman import MailSender
+from Message_Class.msg_class import Msg
+from os.path import join as pathjoin
+from logger.log import log
 
 # datetime converter for a matplotlib plotting method
 from pandas.plotting import register_matplotlib_converters
@@ -26,16 +29,17 @@ def grey_color_func(word, font_size, position, orientation, random_state=None,
 class Analyst:
     
     def __init__(self, path):
+        
         self.__content = Chat_loader(path).getData()
-        self.__mailid=self.__content["MailID"]
+        self.__msg = Msg(self.__content["Response"])
+        self.__mailid = self.__content["MailID"]
         self.__user = self.__content["User"]
-        self.__directry = makedirectory('./images/'+self.__user+'_'+str(datetime.datetime.now()))
+        self.__directry = makedirectory(pathjoin('images', self.__user+'_'+str(datetime.datetime.now()) ))
         self.__friends = self.__content["Friends"]
         self.__data = []
         for data in self.__content["Data"].values():
             self.__data += data
-        self.__datetime= sorted([row['DateTime'] for row in self.__data])
-        self.__endAck()
+        self.__datetime = sorted([row['DateTime'] for row in self.__data])
 
     def getdir(self):
         return self.__directry
@@ -43,9 +47,19 @@ class Analyst:
     def __endAck(self):
 
         if isdir(self.__directry):
-            open(self.__directry+'/ends', 'w+')
+            open(pathjoin(self.__directry, 'ends'), 'w+')
+
+    def __mailToUser(self):
+        log.info(self.__msg.get_msg())
+        m=MailSender('mail/mail.json')
+        m.sendmail(self.__user, self.__mailid, self.__directry, msg=self.__msg.get_msg())                
         
     def start(self):
+        if len(self.__data)==0:
+            self.__msg.new_msg("Couldn't retrieve data :(, some error in your file")
+            log.info(self.__directry + ": Data could not be read")
+            self.__mailToUser()
+            return
         threads=[]
         threads.append(Thread(target=self.__plotChatperDay)) 
         threads.append(Thread(target=self.__plotChatperMonth)) 
@@ -55,21 +69,24 @@ class Analyst:
         for t in threads:
             t.start() 
             t.join() 
-        m=MailSender('./mail/mail.json')
-        m.sendmail(self.__user, self.__mailid, self.__directry)                
+        self.__mailToUser()
+        self.__endAck()
     
     def __plotChatperDay(self):
 
 #         Scale x-axis according to num of days
         onlyDates = [dateTodtime(dtime.date()) for dtime in self.__datetime]
-        numOfDays = (max(onlyDates).date()-min(onlyDates).date()).days
-        xl = int(max((numOfDays)/20, 10))
+        if len(onlyDates) == 0:
+            log.info(self.__directry + ": No dates available, unable to plotChatperDay")
+            return
+
+        numOfDays = (max(onlyDates).date()-min(onlyDates).date()).days+1
         xlim=(matplotlib.dates.date2num(min(onlyDates)), matplotlib.dates.date2num(max(onlyDates)))
-                
+        
         
 #         Configurations
         plt.style.use('dark_background')
-        fig=plt.figure(figsize=(xl, 10))
+        fig=plt.figure(figsize=(15, 10))
         ax=plt.axes()
         backgorund_col='#1e272e'
         edgecolor='#b8b7a7'
@@ -90,6 +107,7 @@ class Analyst:
         plt.tick_params(axis='y', which='both', left=False, labelcolor = 'white')
         plt.grid(b=True, axis= 'y', color='green')
         plt.savefig(self.__directry+'/'+title.get_text()+'.png')
+        log.info("Plotted chat per day")
         # plt.show()      
         
         
@@ -97,6 +115,9 @@ class Analyst:
         
 #         Scale x-axis according to num of months        
         dateMonths = [datetime.datetime(dtime.year, dtime.month, 1) for dtime in self.__datetime]
+        if len(dateMonths) == 0:
+            log.info(self.__directry + ": No month data available, unable to plotChatperMonth")
+            return
         xlim=(matplotlib.dates.date2num(min(dateMonths)), matplotlib.dates.date2num(max(dateMonths)))
         
 #         Configurations
@@ -111,7 +132,7 @@ class Analyst:
                 
 #         Plot
         barMap = Counter(dateMonths)
-        barDict={ month : barMap.get(month, 0) for month in set(dateMonths)}
+        barDict={ month : barMap.get(month, 0) for month in set(dateMonths) }
         bars=ax.bar(barDict.keys(), barDict.values(), width=20)
         gradientbars(bars, ax, max(barDict.values()))
 
@@ -122,6 +143,7 @@ class Analyst:
         plt.tick_params(axis='x', which='both', bottom=False, labelcolor='white')
         plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
         plt.savefig(self.__directry+'/'+title.get_text()+'.png')
+        log.info("Plotted chat per month")
         # plt.show()
         
         
@@ -132,14 +154,17 @@ class Analyst:
         
 #         Categorize chats into timeslots
         timestamps = sorted([datetime.datetime(*DEFAULTDATE, dtime.hour, dtime.minute) for dtime in self.__datetime])
+        if len(timestamps) == 0:
+            log.info(self.__directry + ": No slot data available, unable to plotChatperSlot")
+            return
         slots=[0, 3, 5, 7, 9, 12, 15, 17, 19, 21]
         bins=[getTimeNum(e) for e in slots] + [datetime.datetime(*DEFAULTDATE, *LASTMINOFDAY)]
         
-        timedict={}
+        timedict={i : 0 for i in range(10)}
         for time in timestamps:
             for i in range(len(bins)-1):
                 if time>=bins[i] and time<bins[i+1]:
-                    timedict[i] = timedict.get(i, 0) + 1
+                    timedict[i] += 1
                     break
                     
 #         Setting ticklabels
@@ -170,6 +195,7 @@ class Analyst:
         ax.set_xticks(range(len(timeticks)))
         ax.set_xticklabels(timetickstr)
         plt.savefig(self.__directry+'/'+title.get_text()+'.png')
+        log.info("Plotted chat per slot")
         # plt.show()
 
     
@@ -178,7 +204,15 @@ class Analyst:
         # constant
         THRESHHOLDDELAYFORCONVO = 300
 
+        if self.__content['Data'].get(friend, None) == None:
+            log.info(self.__directry + ": No data available with friend" + friend)
+            return []
+
         chatdata=self.__content['Data'][friend]
+        if len(chatdata) == 0:
+            log.info(self.__directry + ": No chatdata available with friend "+friend)
+            return
+
         person=self.__user
         
         # setting variables before iteration
@@ -302,9 +336,15 @@ class Analyst:
 
     #         plot 
             
-            plt.plot(list(plotdata[0].keys()), list(plotdata[0].values()), label=persons[0], color='yellow', linewidth=2)
-            plt.plot(list(plotdata[1].keys()), list(plotdata[1].values()), label=persons[1], color='blue', linewidth=1)
-        
+            if len(plotdata[0]):
+                plt.plot(list(plotdata[0].keys()), list(plotdata[0].values()), label=persons[0], color='yellow', linewidth=2)
+            else:
+                log.info(self.__directry + ": No promptness data available for " + persons[0])
+
+            if len(plotdata[1]):
+                plt.plot(list(plotdata[1].keys()), list(plotdata[1].values()), label=persons[1], color='blue', linewidth=1)
+            else:
+                log.info(self.__directry + ": No promptness data available for " + persons[1])
             
     #         Label graph
             title=ax.set_title('Your WhatsApp chat response promptness with '+friend, color='white', size = 15)
@@ -315,22 +355,28 @@ class Analyst:
             plt.grid(b=True, axis= 'y', color='green')
             ax.legend()
             plt.savefig(self.__directry+'/'+title.get_text()+'.png')
+            log.info("Plotted promptness for " + " ".join(persons))
             # plt.show()
 
     def __plotWordCloud(self):
 
         self.__vocab = preprocess(" ".join([d['Message'] for d in self.__data]))
+        if len(self.__vocab) == 0:
+            log.info(self.__directry + ": No word available, unable to plotWordcloud")
+            return
 
         background_col='#1e272e'
         wordcloud = WordCloud(width = 1024, height = 1024,
                 background_color = background_col, 
                 min_font_size = 10, margin=1).generate(self.__vocab)  
-                
+        ax=plt.axes()
+        ax.legend().remove()
         plt.title('WordCloud with most used words', color='white', size = 15) 
         plt.imshow(wordcloud.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
         plt.axis("off") 
         plt.tight_layout(pad = 0) 
         plt.savefig(self.__directry+'/'+'Wordcloud.png')        
+        log.info("Plotted wordcloud")
         # plt.show()     
 
 if __name__ == '__main__':
@@ -350,3 +396,4 @@ if __name__ == '__main__':
         sleep(5)
     analyzer=Analyst(dirpath)
     analyzer.start()
+    log.info("Ended")
