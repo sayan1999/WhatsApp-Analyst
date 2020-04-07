@@ -2,6 +2,7 @@ import datetime
 from os import makedirs
 from logger.log import log
 from Message_Class.msg_class import Msg
+import emoji
 
 def readfile(textfile):
     file = open(textfile, 'r')
@@ -29,6 +30,7 @@ def format(line, dtimefmt):
         
         author = linemessage[0]
         message = linemessage[1]
+        emojis=[e for e in message if e in emoji.UNICODE_EMOJI]
         # newdate=datetime.datetime.strptime(date, '%m/%d/%y')
         # newtime=datetime.datetime.strptime(time, '%I:%S %p')
         try:
@@ -36,7 +38,7 @@ def format(line, dtimefmt):
         except ValueError:
             return "changed"
         else:
-            return {'DateTime': dateNtime, 'Author' : author, 'Message' : message}
+            return {'DateTime': dateNtime, 'Author' : author, 'Message' : message, 'Emoji' : emojis}
     return None    
 
 def elementsOf(textfile, msg, dtimefmt='%m/%d/%y %I:%S %p', trial=False):

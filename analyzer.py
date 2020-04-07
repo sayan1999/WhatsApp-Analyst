@@ -1,7 +1,7 @@
 from utils.promptnessUtils import penaltyForDelay, pointsForMsg, getbonusForRec, getlen
-from utils.plotUtils import gradientbars, getTimeNum
+from utils.plotUtils import gradientbars, getTimeNum, gradientbarsHor
 from data_loader.attachment_loader import Chat_loader
-from utils.wordcloudUtils import preprocess
+from utils.wordcloudUtils import preprocess, stopwords
 from utils.fileReadUtils import makedirectory
 from utils.datetimeUtils import dateTodtime
 import matplotlib, datetime, numpy as np
@@ -17,6 +17,9 @@ from mail.mailman import MailSender
 from Message_Class.msg_class import Msg
 from os.path import join as pathjoin
 from logger.log import log
+from sklearn.feature_extraction.text import TfidfVectorizer
+from matplotlib.font_manager import FontProperties
+
 
 # datetime converter for a matplotlib plotting method
 from pandas.plotting import register_matplotlib_converters
@@ -34,7 +37,7 @@ class Analyst:
         self.__msg = Msg(self.__content["Response"])
         self.__mailid = self.__content["MailID"]
         self.__user = self.__content["User"]
-        self.__directry = makedirectory(pathjoin('images', self.__user+'_'+str(datetime.datetime.now()) ))
+        self.__directry = makedirectory(pathjoin('images', str(datetime.datetime.now()) +'_'+ self.__user ))
         self.__friends = self.__content["Friends"]
         self.__data = []
         for data in self.__content["Data"].values():
@@ -66,15 +69,22 @@ class Analyst:
         threads.append(Thread(target=self.__plotChatperSlot)) 
         threads.append(Thread(target=self.__plotPromptness)) 
         threads.append(Thread(target=self.__plotWordCloud)) 
+        threads.append(Thread(target=self.__plotChatPerPerson))
+        threads.append(Thread(target=self.__plotLangdiversity))
+        threads.append(Thread(target=self.__plot_tf_idf))
+        threads.append(Thread(target=self.__plotEmoji))
+
         for t in threads:
             t.start() 
             t.join() 
-        self.__mailToUser()
+
         self.__endAck()
+        self.__mailToUser()
+        
     
     def __plotChatperDay(self):
 
-#         Scale x-axis according to num of days
+         #Scale x-axis according to num of days
         onlyDates = [dateTodtime(dtime.date()) for dtime in self.__datetime]
         if len(onlyDates) == 0:
             log.info(self.__directry + ": No dates available, unable to plotChatperDay")
@@ -84,7 +94,7 @@ class Analyst:
         xlim=(matplotlib.dates.date2num(min(onlyDates)), matplotlib.dates.date2num(max(onlyDates)))
         
         
-#         Configurations
+         #Configurations
         plt.style.use('dark_background')
         fig=plt.figure(figsize=(15, 10))
         ax=plt.axes()
@@ -96,31 +106,31 @@ class Analyst:
             spine.set_visible(False)
         plt.xlim=xlim 
 
-#         plot 
+         #plot 
         plt.hist(onlyDates, bins=numOfDays, color='black', edgecolor=edgecolor)
         
-#         Label graph
+         #Label graph
         title=ax.set_title('Your WhatsApp chat frequency with ' + ", ".join(self.__friends) + ' versus day since you started', color='white', size = 15)
         plt.xlabel("Month Start", color='white', size = 10)
         plt.ylabel("Chats Per Day", color='white', size = 10)
         plt.tick_params(axis='x', which='both', bottom=False, labelcolor='white')
         plt.tick_params(axis='y', which='both', left=False, labelcolor = 'white')
         plt.grid(b=True, axis= 'y', color='green')
-        plt.savefig(self.__directry+'/'+title.get_text()+'.png')
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
         log.info("Plotted chat per day")
         # plt.show()      
         
         
     def __plotChatperMonth(self):
         
-#         Scale x-axis according to num of months        
+         #Scale x-axis according to num of months        
         dateMonths = [datetime.datetime(dtime.year, dtime.month, 1) for dtime in self.__datetime]
         if len(dateMonths) == 0:
             log.info(self.__directry + ": No month data available, unable to plotChatperMonth")
             return
         xlim=(matplotlib.dates.date2num(min(dateMonths)), matplotlib.dates.date2num(max(dateMonths)))
         
-#         Configurations
+         #Configurations
         fig=plt.figure(figsize=(15, 10))
         ax=plt.axes()
         backgorund_col='#1e272e'
@@ -130,19 +140,19 @@ class Analyst:
             spine.set_visible(False)
         plt.xlim=xlim 
                 
-#         Plot
+         #Plot
         barMap = Counter(dateMonths)
         barDict={ month : barMap.get(month, 0) for month in set(dateMonths) }
         bars=ax.bar(barDict.keys(), barDict.values(), width=20)
         gradientbars(bars, ax, max(barDict.values()))
 
-#         Label graph        
+         #Label graph        
         title=ax.set_title('Your WhatsApp chat frequency with ' + ", ".join(self.__friends) + ' versus month since you started', color='white', size = 15)
         plt.xlabel("Month", color='white', size = 14)
         plt.ylabel("Chats Per Month", color='white', size = 14)
         plt.tick_params(axis='x', which='both', bottom=False, labelcolor='white')
         plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
-        plt.savefig(self.__directry+'/'+title.get_text()+'.png')
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
         log.info("Plotted chat per month")
         # plt.show()
         
@@ -152,7 +162,7 @@ class Analyst:
         DEFAULTDATE= (1900, 1, 1)
         LASTMINOFDAY= (23, 59)
         
-#         Categorize chats into timeslots
+         #Categorize chats into timeslots
         timestamps = sorted([datetime.datetime(*DEFAULTDATE, dtime.hour, dtime.minute) for dtime in self.__datetime])
         if len(timestamps) == 0:
             log.info(self.__directry + ": No slot data available, unable to plotChatperSlot")
@@ -167,12 +177,12 @@ class Analyst:
                     timedict[i] += 1
                     break
                     
-#         Setting ticklabels
+         #Setting ticklabels
         timeticks=[bins[i] + (bins[i+1]-bins[i])/2 for i in range(10)]
         timetickstr=[bins[i].strftime('%-I %p') + ' - ' + bins[i+1].strftime('%-I %p') for i in range(10)]
         timetickstr[9]='9 PM - 11:59 PM'
         
-#         Configurations
+         #Configurations
         fig=plt.figure(figsize=(15, 10))
         ax=plt.axes()
         backgorund_col='#1e272e'
@@ -182,11 +192,11 @@ class Analyst:
             spine.set_visible(False)
 
                 
-#         Plot
+         #Plot
         bars=ax.bar(range(10), timedict.values(), width=0.7)
         gradientbars(bars, ax, max(timedict.values()))
 
-#         Label graph        
+         #Label graph        
         title=ax.set_title('Your WhatsApp chat frequency with ' + ", ".join(self.__friends) + ' versus per daytime slot since you started', color='white', size = 15)
         plt.xlabel("Timeslot", color='white', size = 14)
         plt.ylabel("Chats Per timeslot", color='white', size = 14)
@@ -194,7 +204,7 @@ class Analyst:
         plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
         ax.set_xticks(range(len(timeticks)))
         ax.set_xticklabels(timetickstr)
-        plt.savefig(self.__directry+'/'+title.get_text()+'.png')
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
         log.info("Plotted chat per slot")
         # plt.show()
 
@@ -324,7 +334,7 @@ class Analyst:
         for friend in self.__friends:
             persons, plotdata =  self.__calcPromptness(friend)             
         
-    #         Configurations
+            # Configurations
             plt.style.use('dark_background')
             fig=plt.figure(figsize=(20, 10))
             ax=plt.axes()
@@ -334,7 +344,7 @@ class Analyst:
             for spine in ax.spines.values():
                 spine.set_visible(False)
 
-    #         plot 
+             #plot 
             
             if len(plotdata[0]):
                 plt.plot(list(plotdata[0].keys()), list(plotdata[0].values()), label=persons[0], color='yellow', linewidth=2)
@@ -346,7 +356,7 @@ class Analyst:
             else:
                 log.info(self.__directry + ": No promptness data available for " + persons[1])
             
-    #         Label graph
+             #Label graph
             title=ax.set_title('Your WhatsApp chat response promptness with '+friend, color='white', size = 15)
             plt.xlabel("Months", color='white', size = 10)
             plt.ylabel("Promptness coofficient", color='white', size = 10)
@@ -354,30 +364,245 @@ class Analyst:
             plt.tick_params(axis='y', which='both', left=False, labelcolor = 'white')
             plt.grid(b=True, axis= 'y', color='green')
             ax.legend()
-            plt.savefig(self.__directry+'/'+title.get_text()+'.png')
+            plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
             log.info("Plotted promptness for " + " ".join(persons))
             # plt.show()
 
     def __plotWordCloud(self):
 
-        self.__vocab = preprocess(" ".join([d['Message'] for d in self.__data]))
-        if len(self.__vocab) == 0:
+        vocab = preprocess(" ".join([d['Message'] for d in self.__data]))
+        if len(vocab) == 0:
             log.info(self.__directry + ": No word available, unable to plotWordcloud")
             return
 
         background_col='#1e272e'
         wordcloud = WordCloud(width = 1024, height = 1024,
                 background_color = background_col, 
-                min_font_size = 10, margin=1).generate(self.__vocab)  
+                min_font_size = 10, margin=1).generate(vocab)  
         ax=plt.axes()
         ax.legend().remove()
         plt.title('WordCloud with most used words', color='white', size = 15) 
         plt.imshow(wordcloud.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
         plt.axis("off") 
         plt.tight_layout(pad = 0) 
-        plt.savefig(self.__directry+'/'+'Wordcloud.png')        
+        plt.savefig(self.__directry+'/'+'Wordcloud.png', facecolor=background_col)      
         log.info("Plotted wordcloud")
-        # plt.show()     
+        # plt.show()   
+      
+    def __plotChatPerPerson(self):
+
+        chatperPerson={}
+
+        for data in self.__data:
+            chatperPerson[data['Author']] = chatperPerson.get(data['Author'], 0) + len(data['Message'].split())
+        no_of_persons = len(chatperPerson.keys())
+
+        if not no_of_persons:
+            log.info(self.__directry + ": No data for chatPerPerson")
+            return
+    
+         #Configurations
+        fig=plt.figure(figsize=(15, 10))
+        ax=plt.axes()
+        backgorund_col='#1e272e'
+        ax.set_facecolor(backgorund_col)
+        fig.set_facecolor(backgorund_col)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+                
+         #Plot
+        bars=ax.bar(list(range(1, no_of_persons+1)), chatperPerson.values(), width=0.7)
+        gradientbars(bars, ax, max(chatperPerson.values()))
+
+         #Label graph        
+        title=ax.set_title('Total weight of chats since you started', color='white', size = 15)
+        # plt.xlabel("Person", color='white', size = 14)
+        plt.ylabel("Chat count", color='white', size = 14)
+        plt.tick_params(axis='x', which='both', bottom=False, labelcolor='white')
+        plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
+        ax.set_xticks(range(1, no_of_persons+1))
+        ax.set_xticklabels(chatperPerson.keys())
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        log.info("Plotted chat per person")
+        # plt.show()      
+
+      
+    def __plotLangdiversity(self):
+
+        wordperPerson={}
+
+        self.__perPersonDoc={}
+
+        for data in self.__data:
+            wordperPerson[data['Author']] = wordperPerson.get(data['Author'],[]) + data['Message'].split()
+            self.__perPersonDoc[data['Author']] = self.__perPersonDoc.get(data['Author'], "") + " " + data['Message']
+        
+        if not len(wordperPerson):
+            log.info(self.__directry + ": No data for plotLangdiversity")
+            return
+
+        for key in wordperPerson:
+            wordperPerson[key] = len(set(wordperPerson[key]))
+            
+        no_of_persons = len(wordperPerson.keys())
+
+        if not no_of_persons:
+            log.info(self.__directry + ": No data for langDiversity")
+            return
+    
+         #Configurations
+        fig=plt.figure(figsize=(15, 10))
+        ax=plt.axes()
+        backgorund_col='#1e272e'
+        ax.set_facecolor(backgorund_col)
+        fig.set_facecolor(backgorund_col)
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+                
+         #Plot
+        bars=ax.bar(list(range(no_of_persons)), wordperPerson.values(), width=0.7)
+        gradientbars(bars, ax, max(wordperPerson.values()))
+
+         #Label graph        
+        title=ax.set_title('Lexical Diversity per person', color='white', size = 15)
+        # plt.xlabel("Person", color='white', size = 14)
+        plt.ylabel("Count of unique words", color='white', size = 14)
+        plt.tick_params(axis='x', which='both', bottom=False, labelcolor='white')
+        plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
+        ax.set_xticks(range(no_of_persons))
+        ax.set_xticklabels(wordperPerson.keys())
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        log.info("Plotted lang_diversity")
+        # plt.show() 
+
+    def __plot_tf_idf(self):
+
+        if not len(self.__perPersonDoc):
+            log.info(self.__directry + ": No data for tf_idf")
+            return
+
+        vectorizer = TfidfVectorizer(stop_words=stopwords)
+        vectors = vectorizer.fit_transform(self.__perPersonDoc.values())
+        features = vectorizer.get_feature_names()
+
+        denseVectors = vectors.todense()
+        persons=list(self.__perPersonDoc.keys())
+        perPersontfidf = {}
+        for i in range(len(persons)):
+
+            numberofwords=min(len(features), 5)
+            indices=denseVectors[i].argsort().tolist()[0][-numberofwords:]            
+            perPersontfidf[persons[i]]={features[j]:denseVectors[i, j] for j in indices}
+
+        
+        no_of_plots=len(persons)
+
+        if not no_of_plots:
+            log.info(self.__directry + ": No data for tf_idf")
+            return
+        fig, ax = plt.subplots(no_of_plots)
+        if no_of_plots==1:
+            ax=np.array([ax])
+        backgorund_col='#1e272e'
+        fig.set_facecolor(backgorund_col)
+
+        for i in range(no_of_plots):
+
+            ax[i].set_facecolor(backgorund_col)
+
+            bars=ax[i].barh(range(len(perPersontfidf[persons[i]])), perPersontfidf[persons[i]].values(), height=0.7)
+            gradientbarsHor(bars, ax[i], max(perPersontfidf[persons[i]].values()), 0.2)
+
+            ax[i].set_yticks(range(len(perPersontfidf[persons[i]])))
+            ax[i].set_yticklabels(perPersontfidf[persons[i]].keys())
+            
+            for spine in ax[i].spines.values():
+                spine.set_visible(False)
+            
+            ax[i].set_title(persons[i], color='white', size=7)
+            plt.sca(ax[i])
+            plt.tick_params(axis='x', bottom=False, labelcolor='white', labelsize=7)
+            plt.tick_params(axis='y', left=False, labelcolor = 'white')
+
+         #Label graph         
+        title=plt.suptitle('Words uniquely used by person significantly more than others', color='white', size = 10)
+        fig.text(0.5, 0.02, s="Coefficient of usage", color='white', size = 14, ha='center')
+                
+        log.info("Plotted tf_ifd")
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        # plt.show() 
+        
+
+    def __plotEmoji(self):
+
+        prop=FontProperties(fname="./Symbola.ttf")
+        plt.rcParams['font.family'] = prop.get_family()
+
+        emojiperperson={}
+
+        for d in self.__data:
+            emojiperperson[d['Author']] = emojiperperson.get(d['Author'], []) + d['Emoji']
+
+        for key in emojiperperson:
+            emojiperperson[key]=Counter(emojiperperson[key])
+
+        if not len(emojiperperson):
+            log.info(self.__directry + ": No data for plot emoji")
+            return
+
+        emojimap={}
+
+        for person, value in emojiperperson.items():
+
+            emojis=list(value.keys())
+            count=np.array(list(value.values()))
+
+            no_of_emojis=min(len(emojis), 6)
+            indices = count.argsort()[-no_of_emojis:]
+            emojimap[person] = { emojis[j] : count[j] for j in indices }
+
+        persons=list(emojimap.keys())
+        no_of_plots=len(persons)
+        if not no_of_plots:
+            log.info(self.__directry + ": No data for tf_idf")
+            return
+        fig, ax = plt.subplots(no_of_plots)
+        if no_of_plots==1:
+            ax=np.array([ax])
+        backgorund_col='#1e272e'
+        fig.set_facecolor(backgorund_col)
+
+        for i in range(no_of_plots):
+
+            ax[i].set_facecolor(backgorund_col)
+
+            if not len(emojimap[persons[i]]):
+                log.info("No emojis from "+person[i])
+                continue
+
+            bars=ax[i].barh(range(len(emojimap[persons[i]])), emojimap[persons[i]].values(), height=0.7)
+            gradientbarsHor(bars, ax[i], max(emojimap[persons[i]].values()), 20)
+
+            ax[i].set_yticks(range(len(emojimap[persons[i]])))
+            ax[i].set_yticklabels(emojimap[persons[i]].keys())
+            
+            for spine in ax[i].spines.values():
+                spine.set_visible(False)
+            
+            ax[i].set_title(persons[i], color='white', size=7)
+            plt.sca(ax[i])
+            plt.yticks(fontsize=30, fontproperties=prop)
+            plt.tick_params(axis='x', bottom=False, labelcolor='white', labelsize=7)
+            plt.tick_params(axis='y', left=False, labelcolor = 'white')
+
+         #Label graph         
+        title=plt.suptitle('Most used emojis per person', color='white', size = 10)
+        fig.text(0.5, 0.02, s="Frequency", color='white', size = 14, ha='center')
+                
+        log.info("Plotted emojiMap")
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        # plt.show()         
+
 
 if __name__ == '__main__':
     
