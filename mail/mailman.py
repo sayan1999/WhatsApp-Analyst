@@ -15,7 +15,7 @@ from email import encoders
 from os import listdir
 import smtplib
 import json
-from logger.log import log
+from maillogger.log import log
 from os.path import join as pathjoin
 
 def extractAddr(fullAddr):
@@ -146,9 +146,9 @@ class MailSender(Mailer):
         msg=self.constrMail(recipient, addr, attachment_dir, fileExtension, msg)
         text = msg.as_string()
         log.debug("Constructed message: "+text)
-        log.info("Sending...")
+        log.info("Sending to " + self.USER + "  at " +addr+".....")
         self.__session.sendmail(self.USER, addr, text)
-        log.info("Message has been sent successfully")
+        log.info("Message has been sent to " + addr " successfully")
         self.__session.quit()
 
     def init_msg(self, recipient, addr, msg):

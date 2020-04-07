@@ -3,7 +3,7 @@ from nltk.corpus import stopwords
 from string import punctuation
 import pandas as pd
 import emoji
-from logger.log import log
+from mainlogger.log import log
 from os import scandir, listdir
 from os.path import isdir
 from utils.fileReadUtils import elementsOf

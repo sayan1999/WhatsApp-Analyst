@@ -16,10 +16,9 @@ from time import sleep
 from mail.mailman import MailSender
 from Message_Class.msg_class import Msg
 from os.path import join as pathjoin
-from logger.log import log
+from mainlogger.log import log
 from sklearn.feature_extraction.text import TfidfVectorizer
 from matplotlib.font_manager import FontProperties
-
 
 # datetime converter for a matplotlib plotting method
 from pandas.plotting import register_matplotlib_converters

@@ -1,0 +1,208 @@
+[2020-04-07 18:12:55,421 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+[2020-04-07 18:12:55,581 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+[2020-04-07 18:12:56,204 {Thread-1    } analyzer.py:120]: Plotted chat per day
+[2020-04-07 18:12:56,494 {Thread-2    } analyzer.py:156]: Plotted chat per month
+[2020-04-07 18:12:56,781 {Thread-3    } analyzer.py:208]: Plotted chat per slot
+[2020-04-07 18:12:57,010 {Thread-4    } analyzer.py:368]: Plotted promptness for Sayan Dey Sonali
+[2020-04-07 18:13:01,243 {Thread-5    } analyzer.py:389]: Plotted wordcloud
+[2020-04-07 18:13:01,421 {Thread-6    } analyzer.py:426]: Plotted chat per person
+[2020-04-07 18:13:01,792 {Thread-7    } analyzer.py:475]: Plotted lang_diversity
+[2020-04-07 18:13:01,873 {Thread-8    } analyzer.py:531]: Plotted tf_ifd
+[2020-04-07 18:13:02,098 {Thread-9    } analyzer.py:602]: Plotted emojiMap
+[2020-04-07 18:13:02,235 {MainThread  } analyzer.py:56]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+[2020-04-07 18:13:05,262 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
+[2020-04-07 18:13:05,264 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+[2020-04-07 18:13:05,273 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Lexical Diversity per person.png has been attached
+[2020-04-07 18:13:05,279 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Most used emojis per person.png has been attached
+[2020-04-07 18:13:05,287 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Total weight of chats since you started.png has been attached
+[2020-04-07 18:13:05,319 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Wordcloud.png has been attached
+[2020-04-07 18:13:05,321 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+[2020-04-07 18:13:05,323 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+[2020-04-07 18:13:05,325 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+[2020-04-07 18:13:05,326 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+[2020-04-07 18:13:05,331 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+[2020-04-07 18:13:05,373 {MainThread  } mailman.py:149]: Sending...
+[2020-04-07 18:13:15,504 {MainThread  } mailman.py:151]: Message has been sent successfully
+[2020-04-07 18:13:15,811 {MainThread  } analyzer.py:624]: Ended
+[2020-04-07 18:19:43,465 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+[2020-04-07 18:19:43,649 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+[2020-04-07 18:19:45,088 {Thread-1    } analyzer.py:120]: Plotted chat per day
+[2020-04-07 18:19:45,344 {Thread-2    } analyzer.py:156]: Plotted chat per month
+[2020-04-07 18:19:45,573 {Thread-3    } analyzer.py:208]: Plotted chat per slot
+[2020-04-07 18:19:45,793 {Thread-4    } analyzer.py:368]: Plotted promptness for Sayan Dey Sonali
+[2020-04-07 18:19:51,102 {Thread-5    } analyzer.py:389]: Plotted wordcloud
+[2020-04-07 18:19:51,275 {Thread-6    } analyzer.py:426]: Plotted chat per person
+[2020-04-07 18:19:51,663 {Thread-7    } analyzer.py:475]: Plotted lang_diversity
+[2020-04-07 18:19:52,015 {Thread-8    } analyzer.py:531]: Plotted tf_ifd
+[2020-04-07 18:19:52,255 {Thread-9    } analyzer.py:602]: Plotted emojiMap
+[2020-04-07 18:19:52,530 {MainThread  } analyzer.py:56]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+[2020-04-07 18:19:55,151 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
+[2020-04-07 18:19:55,155 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+[2020-04-07 18:19:55,168 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Lexical Diversity per person.png has been attached
+[2020-04-07 18:19:55,179 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Most used emojis per person.png has been attached
+[2020-04-07 18:19:55,187 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Total weight of chats since you started.png has been attached
+[2020-04-07 18:19:55,214 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Wordcloud.png has been attached
+[2020-04-07 18:19:55,215 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+[2020-04-07 18:19:55,217 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+[2020-04-07 18:19:55,219 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+[2020-04-07 18:19:55,220 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+[2020-04-07 18:19:55,226 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+[2020-04-07 18:19:55,264 {MainThread  } mailman.py:149]: Sending...
+[2020-04-07 18:20:04,734 {MainThread  } mailman.py:151]: Message has been sent successfully
+[2020-04-07 18:20:05,015 {MainThread  } analyzer.py:624]: Ended
+[2020-04-07 18:20:07,178 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+[2020-04-07 18:20:07,306 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+[2020-04-07 18:20:07,927 {Thread-1    } analyzer.py:120]: Plotted chat per day
+[2020-04-07 18:20:08,203 {Thread-2    } analyzer.py:156]: Plotted chat per month
+[2020-04-07 18:20:08,439 {Thread-3    } analyzer.py:208]: Plotted chat per slot
+[2020-04-07 18:20:08,686 {Thread-4    } analyzer.py:368]: Plotted promptness for Sayan Dey Sonali
+[2020-04-07 18:20:12,749 {Thread-5    } analyzer.py:389]: Plotted wordcloud
+[2020-04-07 18:20:12,926 {Thread-6    } analyzer.py:426]: Plotted chat per person
+[2020-04-07 18:20:13,280 {Thread-7    } analyzer.py:475]: Plotted lang_diversity
+[2020-04-07 18:20:13,371 {Thread-8    } analyzer.py:531]: Plotted tf_ifd
+[2020-04-07 18:20:13,612 {Thread-9    } analyzer.py:602]: Plotted emojiMap
+[2020-04-07 18:20:13,758 {MainThread  } analyzer.py:56]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+[2020-04-07 18:20:16,358 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
+[2020-04-07 18:20:16,361 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+[2020-04-07 18:20:16,370 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Lexical Diversity per person.png has been attached
+[2020-04-07 18:20:16,377 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Most used emojis per person.png has been attached
+[2020-04-07 18:20:16,385 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Total weight of chats since you started.png has been attached
+[2020-04-07 18:20:16,411 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Wordcloud.png has been attached
+[2020-04-07 18:20:16,412 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+[2020-04-07 18:20:16,414 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+[2020-04-07 18:20:16,416 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+[2020-04-07 18:20:16,418 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+[2020-04-07 18:20:16,424 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+[2020-04-07 18:20:16,464 {MainThread  } mailman.py:149]: Sending...
+[2020-04-07 18:20:25,369 {MainThread  } mailman.py:151]: Message has been sent successfully
+[2020-04-07 18:20:25,647 {MainThread  } analyzer.py:624]: Ended
+[2020-04-07 18:31:10,973 {MainThread  } attachment_loader.py:30]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+[2020-04-07 18:31:11,094 {MainThread  } fileReadUtils.py:60]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+[2020-04-07 18:31:11,608 {Thread-1    } analyzer.py:120]: Plotted chat per day
+[2020-04-07 18:31:11,846 {Thread-2    } analyzer.py:156]: Plotted chat per month
+[2020-04-07 18:31:12,074 {Thread-3    } analyzer.py:208]: Plotted chat per slot
+[2020-04-07 18:31:12,296 {Thread-4    } analyzer.py:368]: Plotted promptness for Sayan Dey Sonali
+[2020-04-07 18:31:16,428 {Thread-5    } analyzer.py:389]: Plotted wordcloud
+[2020-04-07 18:31:16,601 {Thread-6    } analyzer.py:426]: Plotted chat per person
+[2020-04-07 18:31:16,937 {Thread-7    } analyzer.py:475]: Plotted lang_diversity
+[2020-04-07 18:31:17,024 {Thread-8    } analyzer.py:531]: Plotted tf_ifd
+[2020-04-07 18:31:17,242 {Thread-9    } analyzer.py:602]: Plotted emojiMap
+[2020-04-07 18:31:17,384 {MainThread  } analyzer.py:56]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+[2020-04-07 18:31:22,989 {MainThread  } mailman.py:140]: Logged into SMTP server successfully
+[2020-04-07 18:31:22,993 {MainThread  } mailman.py:146]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+[2020-04-07 18:31:23,011 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Lexical Diversity per person.png has been attached
+[2020-04-07 18:31:23,020 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Most used emojis per person.png has been attached
+[2020-04-07 18:31:23,025 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Total weight of chats since you started.png has been attached
+[2020-04-07 18:31:23,051 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Wordcloud.png has been attached
+[2020-04-07 18:31:23,053 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+[2020-04-07 18:31:23,055 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+[2020-04-07 18:31:23,057 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+[2020-04-07 18:31:23,059 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+[2020-04-07 18:31:23,067 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+[2020-04-07 18:31:23,106 {MainThread  } mailman.py:150]: Sending...
+[2020-04-07 18:31:34,947 {MainThread  } mailman.py:152]: Message has been sent successfully
+[2020-04-07 18:31:35,277 {MainThread  } analyzer.py:624]: Ended
+[2020-04-07 20:16:12,948 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+[2020-04-07 20:16:13,074 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+[2020-04-07 20:16:13,582 {Thread-1    } analyzer.py:119]: Plotted chat per day
+[2020-04-07 20:16:13,874 {Thread-2    } analyzer.py:155]: Plotted chat per month
+[2020-04-07 20:16:14,118 {Thread-3    } analyzer.py:207]: Plotted chat per slot
+[2020-04-07 20:16:14,345 {Thread-4    } analyzer.py:367]: Plotted promptness for Sayan Dey Sonali
+[2020-04-07 20:16:18,292 {Thread-5    } analyzer.py:388]: Plotted wordcloud
+[2020-04-07 20:16:18,467 {Thread-6    } analyzer.py:425]: Plotted chat per person
+[2020-04-07 20:16:18,804 {Thread-7    } analyzer.py:474]: Plotted lang_diversity
+[2020-04-07 20:16:18,885 {Thread-8    } analyzer.py:530]: Plotted tf_ifd
+[2020-04-07 20:16:19,099 {Thread-9    } analyzer.py:601]: Plotted emojiMap
+[2020-04-07 20:16:19,233 {MainThread  } analyzer.py:55]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+[2020-04-07 20:16:24,048 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
+[2020-04-07 20:16:24,050 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+[2020-04-07 20:16:24,063 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Lexical Diversity per person.png has been attached
+[2020-04-07 20:16:24,071 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Most used emojis per person.png has been attached
+[2020-04-07 20:16:24,077 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Total weight of chats since you started.png has been attached
+[2020-04-07 20:16:24,102 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Wordcloud.png has been attached
+[2020-04-07 20:16:24,104 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+[2020-04-07 20:16:24,106 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+[2020-04-07 20:16:24,108 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+[2020-04-07 20:16:24,110 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+[2020-04-07 20:16:24,115 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+[2020-04-07 20:16:24,155 {MainThread  } mailman.py:149]: Sending...
+[2020-04-07 20:16:43,505 {MainThread  } mailman.py:151]: Message has been sent successfully
+[2020-04-07 20:16:43,812 {MainThread  } analyzer.py:623]: Ended
+[2020-04-07 20:19:02,975 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+[2020-04-07 20:19:03,096 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+[2020-04-07 20:19:03,687 {Thread-1    } analyzer.py:119]: Plotted chat per day
+[2020-04-07 20:19:03,946 {Thread-2    } analyzer.py:155]: Plotted chat per month
+[2020-04-07 20:19:04,190 {Thread-3    } analyzer.py:207]: Plotted chat per slot
+[2020-04-07 20:19:04,424 {Thread-4    } analyzer.py:367]: Plotted promptness for Sayan Dey Sonali
+[2020-04-07 20:19:08,559 {Thread-5    } analyzer.py:388]: Plotted wordcloud
+[2020-04-07 20:19:08,732 {Thread-6    } analyzer.py:425]: Plotted chat per person
+[2020-04-07 20:19:09,072 {Thread-7    } analyzer.py:474]: Plotted lang_diversity
+[2020-04-07 20:19:09,154 {Thread-8    } analyzer.py:530]: Plotted tf_ifd
+[2020-04-07 20:19:09,364 {Thread-9    } analyzer.py:601]: Plotted emojiMap
+[2020-04-07 20:19:09,494 {MainThread  } analyzer.py:55]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+[2020-04-07 20:19:12,255 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
+[2020-04-07 20:19:12,257 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+[2020-04-07 20:19:12,269 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Lexical Diversity per person.png has been attached
+[2020-04-07 20:19:12,277 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Most used emojis per person.png has been attached
+[2020-04-07 20:19:12,286 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Total weight of chats since you started.png has been attached
+[2020-04-07 20:19:12,311 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Wordcloud.png has been attached
+[2020-04-07 20:19:12,312 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+[2020-04-07 20:19:12,314 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+[2020-04-07 20:19:12,316 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+[2020-04-07 20:19:12,318 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+[2020-04-07 20:19:12,324 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+[2020-04-07 20:19:12,364 {MainThread  } mailman.py:149]: Sending...
+[2020-04-07 20:19:22,280 {MainThread  } mailman.py:151]: Message has been sent successfully
+[2020-04-07 20:19:22,689 {MainThread  } analyzer.py:623]: Ended
+[2020-04-07 20:22:55,735 {MainThread  } logger name: Instantinopaul | module: attachment_loader attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+[2020-04-07 20:22:55,861 {MainThread  } logger name: Instantinopaul | module: fileReadUtils fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+[2020-04-07 20:22:56,424 {Thread-1    } logger name: Instantinopaul | module: analyzer analyzer.py:119]: Plotted chat per day
+[2020-04-07 20:22:56,674 {Thread-2    } logger name: Instantinopaul | module: analyzer analyzer.py:155]: Plotted chat per month
+[2020-04-07 20:22:56,910 {Thread-3    } logger name: Instantinopaul | module: analyzer analyzer.py:207]: Plotted chat per slot
+[2020-04-07 20:22:57,137 {Thread-4    } logger name: Instantinopaul | module: analyzer analyzer.py:367]: Plotted promptness for Sayan Dey Sonali
+[2020-04-07 20:23:01,185 {Thread-5    } logger name: Instantinopaul | module: analyzer analyzer.py:388]: Plotted wordcloud
+[2020-04-07 20:23:01,359 {Thread-6    } logger name: Instantinopaul | module: analyzer analyzer.py:425]: Plotted chat per person
+[2020-04-07 20:23:01,698 {Thread-7    } logger name: Instantinopaul | module: analyzer analyzer.py:474]: Plotted lang_diversity
+[2020-04-07 20:23:01,779 {Thread-8    } logger name: Instantinopaul | module: analyzer analyzer.py:530]: Plotted tf_ifd
+[2020-04-07 20:23:01,995 {Thread-9    } logger name: Instantinopaul | module: analyzer analyzer.py:601]: Plotted emojiMap
+[2020-04-07 20:23:02,132 {MainThread  } logger name: Instantinopaul | module: analyzer analyzer.py:55]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+[2020-04-07 20:23:04,870 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:139]: Logged into SMTP server successfully
+[2020-04-07 20:23:04,872 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+[2020-04-07 20:23:04,883 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Lexical Diversity per person.png has been attached
+[2020-04-07 20:23:04,894 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Most used emojis per person.png has been attached
+[2020-04-07 20:23:04,904 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Total weight of chats since you started.png has been attached
+[2020-04-07 20:23:04,930 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Wordcloud.png has been attached
+[2020-04-07 20:23:04,931 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+[2020-04-07 20:23:04,933 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+[2020-04-07 20:23:04,935 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+[2020-04-07 20:23:04,937 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+[2020-04-07 20:23:04,942 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+[2020-04-07 20:23:04,982 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:149]: Sending...
+[2020-04-07 20:23:15,062 {MainThread  } logger name: Instantinopaul | module: mailman mailman.py:151]: Message has been sent successfully
+[2020-04-07 20:23:15,388 {MainThread  } logger name: Instantinopaul | module: analyzer analyzer.py:623]: Ended
+[2020-04-07 20:32:29,166 {MainThread  } attachment_loader:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+[2020-04-07 20:32:29,289 {MainThread  } fileReadUtils:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+[2020-04-07 20:32:29,833 {Thread-1    } analyzer:119]: Plotted chat per day
+[2020-04-07 20:32:30,078 {Thread-2    } analyzer:155]: Plotted chat per month
+[2020-04-07 20:32:30,318 {Thread-3    } analyzer:207]: Plotted chat per slot
+[2020-04-07 20:32:30,547 {Thread-4    } analyzer:367]: Plotted promptness for Sayan Dey Sonali
+[2020-04-07 20:32:34,630 {Thread-5    } analyzer:388]: Plotted wordcloud
+[2020-04-07 20:32:34,800 {Thread-6    } analyzer:425]: Plotted chat per person
+[2020-04-07 20:32:35,138 {Thread-7    } analyzer:474]: Plotted lang_diversity
+[2020-04-07 20:32:35,220 {Thread-8    } analyzer:530]: Plotted tf_ifd
+[2020-04-07 20:32:35,430 {Thread-9    } analyzer:601]: Plotted emojiMap
+[2020-04-07 20:32:35,562 {MainThread  } analyzer:55]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+[2020-04-07 20:32:38,561 {MainThread  } mailman:139]: Logged into SMTP server successfully
+[2020-04-07 20:32:38,563 {MainThread  } mailman:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+[2020-04-07 20:32:38,577 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Lexical Diversity per person.png has been attached
+[2020-04-07 20:32:38,582 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Most used emojis per person.png has been attached
+[2020-04-07 20:32:38,585 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Total weight of chats since you started.png has been attached
+[2020-04-07 20:32:38,608 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Wordcloud.png has been attached
+[2020-04-07 20:32:38,610 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+[2020-04-07 20:32:38,611 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+[2020-04-07 20:32:38,613 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+[2020-04-07 20:32:38,615 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+[2020-04-07 20:32:38,620 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+[2020-04-07 20:32:38,658 {MainThread  } mailman:149]: Sending...
+[2020-04-07 20:32:49,078 {MainThread  } mailman:151]: Message has been sent successfully
+[2020-04-07 20:32:49,432 {MainThread  } analyzer:623]: Ended
