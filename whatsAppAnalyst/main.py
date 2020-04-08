@@ -5,34 +5,57 @@ from _thread import start_new_thread
 import cProfile
 import time
 from lib.mainlogger.log import log
+import sys
+from lib.mail.mailman import MailReader
+from analyzer import Analyst
 
-newentry=True
-TIMEOUT=5
+def mailreader():
+    reader=MailReader(config='lib/mail/mail.json', logger=log)
+    reader.readmail()
 
-attachmentdir = '../data/attachments'
-pastdirs = set(listdir(attachmentdir))
+def analyze(dirpath):
+
+    analyzer=Analyst(dirpath)
+    analyzer.start()
+    log.info("Ended")
+
+def checkNewDir():
+
+    newentry=True
+    TIMEOUT=5
+
+    attachmentdir = '../data/attachments'
+    pastdirs = set(listdir(attachmentdir))
+
+    while True:
+
+        if not newentry:
+            sleep(TIMEOUT)
+            # print('...')
+
+        newentry=False
+        newdirs=set(listdir(attachmentdir))
+
+        for newdir in newdirs:
+            
+            if newdir not in pastdirs:
+                newentry=True
+                print('New entry in ' + attachmentdir + ':   ' + newdir)
+                while(not(isfile(pathjoin(attachmentdir, newdir, 'ends')))):
+                    print("'ends' file not found in " + pathjoin(attachmentdir, newdir))
+                    
+                start = time.time()    
+                analyze(newdir)
+                end = time.time() 
+                print("Time consumed: {} seconds" .format(end-start))
+        pastdirs=newdirs
+
+start_new_thread(mailreader, ())
+start_new_thread(checkNewDir, ())
 
 
 while True:
 
-    if not newentry:
-        sleep(TIMEOUT)
-        # print('...')
+    sleep(999999999)
 
-    newentry=False
 
-    newdirs=set(listdir(attachmentdir))
-
-    for newdir in newdirs:
-        
-        if newdir not in pastdirs:
-            newentry=True
-            print('New entry in ' + attachmentdir + ':   ' + newdir)
-            while(not(isfile(pathjoin(attachmentdir, newdir, 'ends')))):
-                print("'ends' file not found in " + pathjoin(attachmentdir, newdir))
-                  
-            start = time.time()    
-            system("gnome-terminal --wait -- bash -c 'python3 analyzer.py \""  + newdir + "\" && sleep 2'")
-            end = time.time() 
-            print("Time consumed: {} seconds" .format(end-start))
-    pastdirs=newdirs

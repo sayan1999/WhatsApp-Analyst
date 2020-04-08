@@ -48,6 +48,11 @@ class Analyst:
             self.__data += data
         self.__datetime = sorted([row['DateTime'] for row in self.__data])
 
+    def __del__(self):
+
+        plt.clf()
+        log.info("Exiting analyzer.")
+
     def getdir(self):
         return self.__directry
     
@@ -81,6 +86,7 @@ class Analyst:
         for t in threads:
             t.start() 
             t.join() 
+            plt.clf()
 
         self.__endAck()
         self.__mailToUser()
@@ -383,8 +389,7 @@ class Analyst:
         wordcloud = WordCloud(width = 1024, height = 1024,
                 background_color = background_col, 
                 min_font_size = 10, margin=1).generate(vocab)  
-        ax=plt.axes()
-        ax.legend().remove()
+        
         plt.title('WordCloud with most used words', color='white', size = 15) 
         plt.imshow(wordcloud.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
         plt.axis("off") 
@@ -615,13 +620,7 @@ if __name__ == '__main__':
         print("Correct Usage: script 'path to directory'")
         exit()
 
-    # if not(argv[1].startswith('./attachments/ CREATE,ISDIR ')):
-    #     print('not a folder')
-    #     exit()
-    
-    # dirpath=argv[1].split('./attachments/ CREATE,ISDIR ')[1]
     dirpath=argv[1]
     
     analyzer=Analyst(dirpath)
     analyzer.start()
-    log.info("Ended")
