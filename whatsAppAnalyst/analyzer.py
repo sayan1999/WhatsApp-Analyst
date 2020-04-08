@@ -6,10 +6,10 @@ from random import randint
 from threading import Thread
 from sys import argv
 from os.path import isfile, isdir
-from time import sleep
 from sklearn.feature_extraction.text import TfidfVectorizer
 from matplotlib.font_manager import FontProperties
 from os.path import join as pathjoin
+import cProfile
 
 from lib.utils.promptnessUtils import penaltyForDelay, pointsForMsg, getbonusForRec, getlen
 from lib.utils.plotUtils import gradientbars, getTimeNum, gradientbarsHor
@@ -615,14 +615,13 @@ if __name__ == '__main__':
         print("Correct Usage: script 'path to directory'")
         exit()
 
-    if not(argv[1].startswith('./attachments/ CREATE,ISDIR ')):
-        print('not a folder')
-        exit()
+    # if not(argv[1].startswith('./attachments/ CREATE,ISDIR ')):
+    #     print('not a folder')
+    #     exit()
     
-    dirpath=argv[1].split('./attachments/ CREATE,ISDIR ')[1]
-    while(not(isfile('../data/attachments/'+dirpath+'/ends'))):
-        print("...")
-        sleep(5)
+    # dirpath=argv[1].split('./attachments/ CREATE,ISDIR ')[1]
+    dirpath=argv[1]
+    
     analyzer=Analyst(dirpath)
     analyzer.start()
     log.info("Ended")

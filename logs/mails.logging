@@ -55,3 +55,968 @@ ERROR    2020-04-08 12:33:41,510 MainThread     log:20
  sleep(self.TIMEOUT)
 ERROR    2020-04-08 12:33:41,511 MainThread     log:20
  KeyboardInterrupt
+INFO     2020-04-08 15:49:39,409 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 15:49:40,195 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 15:49:40,817 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 15:49:40,817 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 15:49:40,818 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 15:49:40,872 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_15:49:40.817310_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_15:49:40.818923_with_Abhijit Mondal.txt
+INFO     2020-04-08 15:49:40,874 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 15:49:42,243 MainThread     log:20
+ ...
+ERROR    2020-04-08 15:49:48,946 MainThread     log:20
+ Traceback (most recent call last):
+ERROR    2020-04-08 15:49:48,948 MainThread     log:20
+   File "getmail.py", line 5, in <module>
+ERROR    2020-04-08 15:49:48,953 MainThread     log:20
+ reader.readmail()
+ERROR    2020-04-08 15:49:48,959 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 125, in readmail
+ERROR    2020-04-08 15:49:48,965 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 15:49:48,967 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 111, in readmail
+ERROR    2020-04-08 15:49:48,971 MainThread     log:20
+ sleep(self.TIMEOUT)
+ERROR    2020-04-08 15:49:48,972 MainThread     log:20
+ KeyboardInterrupt
+INFO     2020-04-08 15:54:38,606 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 15:54:39,425 MainThread     log:20
+ ...
+INFO     2020-04-08 15:55:00,315 MainThread     log:20
+ ...
+INFO     2020-04-08 15:55:10,761 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 15:55:11,580 MainThread     log:20
+ ...
+INFO     2020-04-08 15:55:32,471 MainThread     log:20
+ ...
+INFO     2020-04-08 15:55:53,362 MainThread     log:20
+ ...
+INFO     2020-04-08 15:56:14,253 MainThread     log:20
+ ...
+INFO     2020-04-08 15:56:17,980 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 15:56:18,758 MainThread     log:20
+ ...
+INFO     2020-04-08 15:56:35,041 MainThread     log:20
+ ...
+INFO     2020-04-08 15:56:55,830 MainThread     log:20
+ ...
+INFO     2020-04-08 15:56:56,444 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 15:56:57,264 MainThread     log:20
+ ...
+INFO     2020-04-08 15:57:16,721 MainThread     log:20
+ ...
+INFO     2020-04-08 15:57:18,094 MainThread     log:20
+ ...
+INFO     2020-04-08 15:57:37,589 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 15:57:38,158 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 15:57:38,160 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 15:57:38,161 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 15:57:38,165 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_15:57:38.159576_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_15:57:38.162198_with_Abhijit Mondal.txt
+INFO     2020-04-08 15:57:38,168 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 15:57:38,840 MainThread     log:20
+ ...
+INFO     2020-04-08 15:57:39,454 MainThread     log:20
+ ...
+INFO     2020-04-08 15:57:59,669 MainThread     log:20
+ ...
+INFO     2020-04-08 15:58:00,164 MainThread     log:20
+ ...
+INFO     2020-04-08 15:58:21,031 MainThread     log:20
+ ...
+INFO     2020-04-08 15:58:41,922 MainThread     log:20
+ ...
+INFO     2020-04-08 15:59:02,814 MainThread     log:20
+ ...
+INFO     2020-04-08 15:59:11,620 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 15:59:12,440 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 15:59:12,953 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 15:59:12,956 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 15:59:12,957 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 15:59:12,967 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_15:59:12.955095_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_15:59:12.963639_with_Abhijit Mondal.txt
+INFO     2020-04-08 15:59:12,969 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 15:59:14,180 MainThread     log:20
+ ...
+INFO     2020-04-08 15:59:23,500 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 15:59:24,004 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 15:59:24,007 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 15:59:24,008 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 15:59:24,013 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_15:59:24.006742_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_15:59:24.011150_with_Abhijit Mondal.txt
+INFO     2020-04-08 15:59:24,017 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 15:59:25,242 MainThread     log:20
+ ...
+INFO     2020-04-08 15:59:35,160 MainThread     log:20
+ ...
+INFO     2020-04-08 15:59:46,094 MainThread     log:20
+ ...
+INFO     2020-04-08 15:59:55,903 MainThread     log:20
+ ...
+INFO     2020-04-08 16:00:06,817 MainThread     log:20
+ ...
+INFO     2020-04-08 16:00:16,750 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:00:17,376 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:00:17,380 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:00:17,381 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:00:17,388 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:00:17.378057_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:00:17.382567_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:00:17,394 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:00:18,798 MainThread     log:20
+ ...
+INFO     2020-04-08 16:00:27,541 MainThread     log:20
+ ...
+INFO     2020-04-08 16:00:39,689 MainThread     log:20
+ ...
+INFO     2020-04-08 16:01:00,580 MainThread     log:20
+ ...
+INFO     2020-04-08 16:01:21,369 MainThread     log:20
+ ...
+INFO     2020-04-08 16:01:42,260 MainThread     log:20
+ ...
+INFO     2020-04-08 16:02:03,252 MainThread     log:20
+ ...
+INFO     2020-04-08 16:02:24,143 MainThread     log:20
+ ...
+INFO     2020-04-08 16:02:44,932 MainThread     log:20
+ ...
+INFO     2020-04-08 16:03:05,925 MainThread     log:20
+ ...
+INFO     2020-04-08 16:03:22,515 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 16:03:23,334 MainThread     log:20
+ ...
+INFO     2020-04-08 16:03:26,816 MainThread     log:20
+ ...
+INFO     2020-04-08 16:03:44,165 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:03:44,654 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:03:44,657 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:03:44,660 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:03:44,669 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:03:44.655833_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:03:44.661863_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:03:44,670 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:03:45,900 MainThread     log:20
+ ...
+INFO     2020-04-08 16:03:47,706 MainThread     log:20
+ ...
+INFO     2020-04-08 16:04:06,652 MainThread     log:20
+ ...
+INFO     2020-04-08 16:04:08,495 MainThread     log:20
+ ...
+INFO     2020-04-08 16:04:27,645 MainThread     log:20
+ ...
+INFO     2020-04-08 16:04:29,283 MainThread     log:20
+ ...
+INFO     2020-04-08 16:04:48,536 MainThread     log:20
+ ...
+INFO     2020-04-08 16:04:50,071 MainThread     log:20
+ ...
+INFO     2020-04-08 16:05:09,324 MainThread     log:20
+ ...
+INFO     2020-04-08 16:05:10,860 MainThread     log:20
+ ...
+INFO     2020-04-08 16:05:30,254 MainThread     log:20
+ ...
+INFO     2020-04-08 16:05:31,649 MainThread     log:20
+ ...
+INFO     2020-04-08 16:05:51,004 MainThread     log:20
+ ...
+INFO     2020-04-08 16:05:52,437 MainThread     log:20
+ ...
+INFO     2020-04-08 16:06:11,894 MainThread     log:20
+ ...
+INFO     2020-04-08 16:06:13,226 MainThread     log:20
+ ...
+INFO     2020-04-08 16:06:32,785 MainThread     log:20
+ ...
+INFO     2020-04-08 16:06:34,014 MainThread     log:20
+ ...
+INFO     2020-04-08 16:06:53,676 MainThread     log:20
+ ...
+INFO     2020-04-08 16:06:54,802 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:13,678 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 16:07:14,464 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:14,464 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:15,591 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:20,240 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:26,036 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:07:26,673 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:07:26,674 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:07:26,675 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:07:26,678 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:07:26.674122_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:07:26.675943_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:07:26,679 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:07:28,084 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:33,819 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:35,154 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:36,298 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:39,679 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:45,493 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:51,228 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:56,144 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:57,168 MainThread     log:20
+ ...
+INFO     2020-04-08 16:07:57,168 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:02,902 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:08,842 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:14,577 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:16,932 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:18,059 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:36,082 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 16:08:36,901 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:08:37,389 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:08:37,391 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:08:37,392 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:08:37,399 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:08:37.390139_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:08:37.393610_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:08:37,402 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:08:37,720 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:08:38,278 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:08:38,279 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:08:38,279 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:08:38,283 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:08:38.278928_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:08:38.280035_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:08:38,284 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:08:38,548 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:38,949 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:39,320 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:44,274 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:49,955 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:55,744 MainThread     log:20
+ ...
+INFO     2020-04-08 16:08:59,666 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:00,160 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:01,683 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:07,428 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:13,187 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:19,093 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:20,526 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:20,936 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:24,827 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:30,766 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:36,531 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:41,417 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:41,781 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:42,441 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:48,225 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:54,115 MainThread     log:20
+ ...
+INFO     2020-04-08 16:09:59,876 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:02,206 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:02,717 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:05,790 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:11,729 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:17,489 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:22,925 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:23,301 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:23,505 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:29,138 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:35,077 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:41,017 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:43,680 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:44,499 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:46,791 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:52,692 MainThread     log:20
+ ...
+INFO     2020-04-08 16:10:58,434 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:10:59,050 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:10:59,053 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:10:59,054 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:10:59,068 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:10:59.051989_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:10:59.055581_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:10:59,074 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:11:00,065 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 16:11:00,474 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:00,883 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:04,468 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:05,237 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:06,164 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:06,618 MainThread     log:20
+ ...
+ERROR    2020-04-08 16:11:11,355 MainThread     log:20
+ Traceback (most recent call last):
+ERROR    2020-04-08 16:11:11,356 MainThread     log:20
+   File "getmail.py", line 5, in <module>
+ERROR    2020-04-08 16:11:11,358 MainThread     log:20
+ reader.readmail()
+ERROR    2020-04-08 16:11:11,360 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:11:11,363 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:11:11,364 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 111, in readmail
+ERROR    2020-04-08 16:11:11,367 MainThread     log:20
+ sleep(self.TIMEOUT)
+ERROR    2020-04-08 16:11:11,368 MainThread     log:20
+ KeyboardInterrupt
+INFO     2020-04-08 16:11:11,944 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:17,679 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:23,413 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:25,461 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:26,076 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:29,148 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:34,883 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:39,881 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 16:11:40,618 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:40,618 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:46,177 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:11:46,557 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:11:46,557 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:11:46,747 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:11:46,748 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:11:46,748 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:11:46,750 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:11:46.748108_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:11:46.749072_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:11:46,752 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:11:46,967 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:11:46,994 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:11:46,995 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:11:46,996 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:11:46,998 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:11:46.994883_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:11:46.996739_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:11:47,000 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:11:47,167 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:11:47,169 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:11:47,170 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:11:47,176 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:11:47.168051_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:11:47.171275_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:11:47,184 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:11:47,431 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:11:47,433 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:11:47,435 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:11:47,492 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:11:47.432569_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:11:47.436023_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:11:47,496 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:11:47,891 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:48,025 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:48,400 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:48,809 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:53,754 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:54,134 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:59,517 MainThread     log:20
+ ...
+INFO     2020-04-08 16:11:59,857 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:05,348 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:05,557 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:08,616 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:09,547 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:11,134 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:11,266 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:16,869 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:17,073 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:22,596 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:22,817 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:28,376 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:28,592 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:29,465 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:30,333 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:34,175 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:34,313 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:39,910 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:40,116 MainThread     log:20
+ ...
+ERROR    2020-04-08 16:12:41,725 MainThread     log:20
+ Traceback (most recent call last):
+ERROR    2020-04-08 16:12:41,727 MainThread     log:20
+   File "getmail.py", line 5, in <module>
+ERROR    2020-04-08 16:12:41,730 MainThread     log:20
+ reader.readmail()
+ERROR    2020-04-08 16:12:41,732 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:12:41,738 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:12:41,739 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 125, in readmail
+ERROR    2020-04-08 16:12:41,742 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:12:41,744 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:12:41,746 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:12:41,747 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:12:41,750 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:12:41,751 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:12:41,752 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:12:41,752 MainThread     log:20
+   [Previous line repeated 6 more times]
+ERROR    2020-04-08 16:12:41,752 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 111, in readmail
+ERROR    2020-04-08 16:12:41,753 MainThread     log:20
+ sleep(self.TIMEOUT)
+ERROR    2020-04-08 16:12:41,754 MainThread     log:20
+ KeyboardInterrupt
+INFO     2020-04-08 16:12:45,748 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:50,398 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:51,117 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:51,482 MainThread     log:20
+ ...
+INFO     2020-04-08 16:12:57,422 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:03,157 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:08,892 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:11,125 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:11,964 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:14,626 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:20,566 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:26,402 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:28,143 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 16:13:28,833 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:31,814 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:32,138 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:32,854 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:13:33,327 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:13:33,328 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:13:33,329 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:13:33,331 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:13:33.327993_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:13:33.329796_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:13:33,332 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:13:34,698 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:34,698 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:37,974 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:40,609 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:43,709 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:46,323 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:49,448 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:52,036 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:52,619 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:55,164 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:55,589 MainThread     log:20
+ ...
+INFO     2020-04-08 16:13:57,841 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:01,112 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:03,545 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:06,880 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:09,260 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:12,585 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:13,334 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:14,970 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:16,289 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:18,322 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:20,725 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:24,262 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:26,515 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:29,996 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:32,204 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:34,133 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:35,936 MainThread     log:20
+ ...
+INFO     2020-04-08 16:14:37,165 MainThread     log:20
+ ...
+INFO     2020-04-08 16:15:11,129 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 16:15:11,881 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:15:12,480 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:15:12,482 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:15:12,484 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:15:12,514 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:15:12.481312_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:15:12.485272_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:15:12,520 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:15:13,827 MainThread     log:20
+ ...
+INFO     2020-04-08 16:15:19,766 MainThread     log:20
+ ...
+INFO     2020-04-08 16:15:25,705 MainThread     log:20
+ ...
+INFO     2020-04-08 16:15:31,441 MainThread     log:20
+ ...
+INFO     2020-04-08 16:15:37,217 MainThread     log:20
+ ...
+INFO     2020-04-08 16:15:42,949 MainThread     log:20
+ ...
+INFO     2020-04-08 16:15:48,662 MainThread     log:20
+ ...
+INFO     2020-04-08 16:15:54,584 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:00,319 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:06,054 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:11,993 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:17,728 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:23,423 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:29,402 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:35,342 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:41,051 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:46,811 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:52,750 MainThread     log:20
+ ...
+INFO     2020-04-08 16:16:58,486 MainThread     log:20
+ ...
+INFO     2020-04-08 16:17:04,291 MainThread     log:20
+ ...
+INFO     2020-04-08 16:17:10,014 MainThread     log:20
+ ...
+INFO     2020-04-08 16:17:16,133 MainThread     log:20
+ ...
+INFO     2020-04-08 16:17:22,039 MainThread     log:20
+ ...
+INFO     2020-04-08 16:17:27,787 MainThread     log:20
+ ...
+INFO     2020-04-08 16:17:33,713 MainThread     log:20
+ ...
+INFO     2020-04-08 16:17:39,653 MainThread     log:20
+ ...
+INFO     2020-04-08 16:17:45,388 MainThread     log:20
+ ...
+INFO     2020-04-08 16:17:51,123 MainThread     log:20
+ ...
+INFO     2020-04-08 16:17:56,837 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:02,592 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:08,327 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:14,051 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:19,796 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:25,531 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:31,266 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:37,000 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:42,734 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:48,470 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:54,205 MainThread     log:20
+ ...
+INFO     2020-04-08 16:18:59,934 MainThread     log:20
+ ...
+INFO     2020-04-08 16:19:05,664 MainThread     log:20
+ ...
+INFO     2020-04-08 16:19:11,613 MainThread     log:20
+ ...
+INFO     2020-04-08 16:19:17,348 MainThread     log:20
+ ...
+INFO     2020-04-08 16:19:23,083 MainThread     log:20
+ ...
+INFO     2020-04-08 16:19:28,788 MainThread     log:20
+ ...
+INFO     2020-04-08 16:19:34,552 MainThread     log:20
+ ...
+INFO     2020-04-08 16:19:40,245 MainThread     log:20
+ ...
+ERROR    2020-04-08 16:19:43,115 MainThread     log:20
+ Traceback (most recent call last):
+ERROR    2020-04-08 16:19:43,117 MainThread     log:20
+   File "getmail.py", line 5, in <module>
+ERROR    2020-04-08 16:19:43,121 MainThread     log:20
+ reader.readmail()
+ERROR    2020-04-08 16:19:43,123 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 125, in readmail
+ERROR    2020-04-08 16:19:43,135 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:19:43,136 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:19:43,140 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:19:43,142 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:19:43,145 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:19:43,155 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:19:43,159 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:19:43,161 MainThread     log:20
+   [Previous line repeated 43 more times]
+ERROR    2020-04-08 16:19:43,162 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 111, in readmail
+ERROR    2020-04-08 16:19:43,164 MainThread     log:20
+ sleep(self.TIMEOUT)
+ERROR    2020-04-08 16:19:43,165 MainThread     log:20
+ KeyboardInterrupt
+INFO     2020-04-08 16:28:32,469 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 16:28:33,288 MainThread     log:20
+ ...
+INFO     2020-04-08 16:28:39,099 MainThread     log:20
+ ...
+INFO     2020-04-08 16:28:44,826 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:28:45,326 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:28:45,327 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:28:45,327 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:28:45,328 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:28:45.326981_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:28:45.327669_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:28:45,329 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:28:46,752 MainThread     log:20
+ ...
+INFO     2020-04-08 16:28:52,568 MainThread     log:20
+ ...
+INFO     2020-04-08 16:28:58,285 MainThread     log:20
+ ...
+INFO     2020-04-08 16:29:04,033 MainThread     log:20
+ ...
+INFO     2020-04-08 16:29:09,793 MainThread     log:20
+ ...
+INFO     2020-04-08 16:29:15,520 MainThread     log:20
+ ...
+INFO     2020-04-08 16:29:21,259 MainThread     log:20
+ ...
+INFO     2020-04-08 16:29:26,997 MainThread     log:20
+ ...
+INFO     2020-04-08 16:29:32,734 MainThread     log:20
+ ...
+INFO     2020-04-08 16:29:38,470 MainThread     log:20
+ ...
+INFO     2020-04-08 16:29:44,206 MainThread     log:20
+ ...
+INFO     2020-04-08 16:29:49,942 MainThread     log:20
+ ...
+INFO     2020-04-08 16:29:55,882 MainThread     log:20
+ ...
+INFO     2020-04-08 16:30:01,821 MainThread     log:20
+ ...
+ERROR    2020-04-08 16:30:06,296 MainThread     log:20
+ Traceback (most recent call last):
+ERROR    2020-04-08 16:30:06,296 MainThread     log:20
+   File "getmail.py", line 5, in <module>
+ERROR    2020-04-08 16:30:06,298 MainThread     log:20
+ reader.readmail()
+ERROR    2020-04-08 16:30:06,299 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:30:06,300 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:30:06,301 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:30:06,302 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:30:06,303 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 125, in readmail
+ERROR    2020-04-08 16:30:06,305 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:30:06,306 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:30:06,307 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:30:06,307 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:30:06,308 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:30:06,309 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 112, in readmail
+ERROR    2020-04-08 16:30:06,310 MainThread     log:20
+ self.readmail()
+ERROR    2020-04-08 16:30:06,310 MainThread     log:20
+   [Previous line repeated 10 more times]
+ERROR    2020-04-08 16:30:06,310 MainThread     log:20
+   File "/media/sayan/New Volume/Documents/Projects/github.com/sayan1999/applications/WhatsAppAnalyst/whatsAppAnalyst/lib/mail/mailman.py", line 111, in readmail
+ERROR    2020-04-08 16:30:06,311 MainThread     log:20
+ sleep(self.TIMEOUT)
+ERROR    2020-04-08 16:30:06,311 MainThread     log:20
+ KeyboardInterrupt
+INFO     2020-04-08 16:34:28,650 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 16:34:29,604 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:34:30,188 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:34:30,190 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:34:30,191 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:34:30,195 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:34:30.189417_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:34:30.192163_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:34:30,197 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:36:50,779 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:36:51,239 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:36:51,242 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:36:51,243 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:36:51,249 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:36:51.240943_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:36:51.244403_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:36:51,257 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:37:08,803 MainThread     mailman:56
+ Logged into IMAP4 server successfully
+INFO     2020-04-08 16:37:09,622 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:37:10,096 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:37:10,098 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:37:10,099 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:37:10,104 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:37:10.097322_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:37:10.100757_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:37:10,106 MainThread     mailman:76
+ Dummy file for completion acknowledgement created
+INFO     2020-04-08 16:37:22,905 MainThread     mailman:114
+ Unread messages in Inbox
+INFO     2020-04-08 16:37:23,354 MainThread     mailman:121
+ Recived message from Sayan Dey <mr.sayan.dey@gmail.com>with sub: WhatsApp Chat with Abhijit Mondal
+Message ID: 66
+INFO     2020-04-08 16:37:23,355 MainThread     mailman:87
+ Got a file attachment: WhatsApp Chat with Abhijit Mondal.txt
+INFO     2020-04-08 16:37:23,355 MainThread     mailman:92
+ The file attachment as per naming conventions of WhatsApp chat exports
+INFO     2020-04-08 16:37:23,356 MainThread     mailman:66
+ Contents written in ../data/attachments/2020:04:08_16:37:23.355074_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:08_16:37:23.355937_with_Abhijit Mondal.txt
+INFO     2020-04-08 16:37:23,357 MainThread     mailman:76
+ Dummy file for completion acknowledgement created

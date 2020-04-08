@@ -107,7 +107,7 @@ class MailReader(Mailer):
         mail_ids = data[0].split()
 
         if len(mail_ids) == 0:
-            print('...')
+            # print('...')
             sleep(self.TIMEOUT)
             self.readmail()
         else:
