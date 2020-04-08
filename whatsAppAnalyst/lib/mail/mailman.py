@@ -1,3 +1,7 @@
+from email.mime.multipart import MIMEMultipart
+from email.header import decode_header
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
 import imaplib, string, random
 from time import sleep
 from io import StringIO
@@ -7,15 +11,10 @@ from json import loads as loadjson
 from json import dump as dumpjson
 from os import makedirs
 from os.path import isdir
-from email.header import decode_header
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
 from email import encoders
 from os import listdir
 import smtplib
 import json
-from maillogger.log import log
 from os.path import join as pathjoin
 
 def extractAddr(fullAddr):
@@ -31,9 +30,10 @@ def curtime():
 
 class Mailer:
 
-    def __init__(self, config):
+    def __init__(self, config, logger):
         
         jsonobj = json.load(open(config))
+        self.log=logger
         self.USER  = jsonobj['USER']
         self.PASSWORD = jsonobj['PASSWORD']
         self.IMAP4_SERVER = jsonobj["IMAP4_SERVER"]
@@ -44,16 +44,16 @@ class Mailer:
 
 class MailReader(Mailer):
 
-    def __init__(self, config):
+    def __init__(self, config, logger):
 
-        Mailer.__init__(self, config=config)        
+        Mailer.__init__(self, config=config, logger=logger)        
         self.__IMAPlogin()
 
     def __IMAPlogin(self):
         
         self.__mail = imaplib.IMAP4_SSL(self.IMAP4_SERVER, self.IMAP4_PORT)
         self.__mail.login(self.USER, self.PASSWORD)
-        log.info("Logged into IMAP4 server successfully")
+        self.log.info("Logged into IMAP4 server successfully")
 
     def __storeIntoFile(self, filename, content):
 
@@ -63,7 +63,7 @@ class MailReader(Mailer):
         filepath=pathjoin(self.__dirpath, filename)
         with open(filepath, 'wb+') as outfile:
             outfile.write(content)
-        log.info("Contents written in " + filepath)        
+        self.log.info("Contents written in " + filepath)        
 
     def __leave_trace(self, sender):
         
@@ -71,31 +71,31 @@ class MailReader(Mailer):
         try:
             open(endAckFilepath, 'w+')
         except FileNotFoundError:
-            log.info("No suitable attachment found, dummy file not created")
+            self.log.info("No suitable attachment found, dummy file not created")
         else:
-            log.info("Dummy file for completion acknowledgement created")
+            self.log.info("Dummy file for completion acknowledgement created")
 
 
     def __extractTXT(self, msg): 
         
         if msg.is_multipart():
             self.__timestampForThisMsg=curtime()
-            self.__dirpath=pathjoin('attachments', self.__timestampForThisMsg+'_'+msg['From'].replace('/', ':'))
+            self.__dirpath=pathjoin('../data/attachments', self.__timestampForThisMsg+'_'+msg['From'].replace('/', ':'))
             for part in msg.walk():
                 ctype, filename = part.get_content_type(), part.get_filename()
                 if (ctype == 'text/plain') and not(filename == None):
-                    log.info("Got a file attachment: "+filename)
+                    self.log.info("Got a file attachment: "+filename)
                     filename, encoding=decode_header(filename)[0]
                     if encoding:
                         filename=filename.decode(encoding)
                     if (filename.endswith('.txt') and filename.startswith('WhatsApp Chat with ')):
-                        log.info("The file attachment as per naming conventions of WhatsApp chat exports")
+                        self.log.info("The file attachment as per naming conventions of WhatsApp chat exports")
                         chatFileWith=filename[19:]
                         filename=(curtime()+'_with_'+chatFileWith).replace('/', ':')
                         self.__storeIntoFile(filename, part.get_payload(decode=True))
 
                     else:
-                        log.info("The file was rejected for not matching with naming conventions of WhatsApp chat exports")
+                        self.log.info("The file was rejected for not matching with naming conventions of WhatsApp chat exports")
         
             self.__leave_trace(msg["From"])
 
@@ -111,14 +111,14 @@ class MailReader(Mailer):
             sleep(self.TIMEOUT)
             self.readmail()
         else:
-            log.info("Unread messages in Inbox")
+            self.log.info("Unread messages in Inbox")
 
         for id in mail_ids:
 
             _, data = self.__mail.fetch(id, '(BODY.PEEK[])')
             curmsg = email.message_from_string(data[0][1].decode('utf-8'))
 
-            log.info("Recived message from " + curmsg["From"] + "with sub: " + curmsg["Subject"] + "\nMessage ID: " + id.decode('utf-8'))
+            self.log.info("Recived message from " + curmsg["From"] + "with sub: " + curmsg["Subject"] + "\nMessage ID: " + id.decode('utf-8'))
             self.__extractTXT(curmsg)
             self.__mail.store(id,'+FLAGS', '(\\SEEN)')
         
@@ -126,9 +126,9 @@ class MailReader(Mailer):
 
 class MailSender(Mailer):
 
-    def __init__(self, config):
+    def __init__(self, config, logger):
 
-        Mailer.__init__(self, config=config)
+        Mailer.__init__(self, config=config, logger=logger)
         self.__SMTPlogin()
 
     def __SMTPlogin(self):
@@ -136,19 +136,19 @@ class MailSender(Mailer):
         self.__session = smtplib.SMTP(self.SMTP_SERVER, self.SMTP_PORT)
         self.__session.starttls()
         self.__session.login(self.USER, self.PASSWORD)
-        log.info("Logged into SMTP server successfully")
+        self.log.info("Logged into SMTP server successfully")
         
 
     def sendmail(self, recipient, fullAddr, attachment_dir=None, fileExtension='.png', msg=[]):
         
         addr=extractAddr(fullAddr)
-        log.info("Mailid extracted: "+addr+" for recipient " + recipient)
+        self.log.info("Mailid extracted: "+addr+" for recipient " + recipient)
         msg=self.constrMail(recipient, addr, attachment_dir, fileExtension, msg)
         text = msg.as_string()
-        log.debug("Constructed message: "+text)
-        log.info("Sending to " + self.USER + "  at " +addr+".....")
+        self.log.debug("Constructed message: "+text)
+        self.log.info("Sending to "+addr+".....")
         self.__session.sendmail(self.USER, addr, text)
-        log.info("Message has been sent to " + addr " successfully")
+        self.log.info("Message has been sent to " + addr + " successfully")
         self.__session.quit()
 
     def init_msg(self, recipient, addr, msg):
@@ -174,7 +174,7 @@ class MailSender(Mailer):
         if  attachment_dir:
 
             if not (isdir(attachment_dir)):
-                log.error(attachment_dir + "doesn't exist")
+                self.log.error(attachment_dir + "doesn't exist")
                 return message
 
             attach_files = [(filename, pathjoin(attachment_dir, filename)) for filename in listdir(attachment_dir) if filename.endswith(fileExtension)]
@@ -183,5 +183,5 @@ class MailSender(Mailer):
                 data = open(filepath, 'rb').read()
                 attachment=MIMEImage(data, name=attach_file_name)
                 message.attach(attachment)
-                log.info(filepath+" has been attached")
+                self.log.info(filepath+" has been attached")
         return message

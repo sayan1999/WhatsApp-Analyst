@@ -1,14 +1,15 @@
 from collections import Counter, OrderedDict
 from nltk.corpus import stopwords
+from lib.mainlogger.log import log
+from os import scandir, listdir
+from os.path import isdir
+from lib.utils.fileReadUtils import elementsOf
+from os.path import join as pathjoin
 from string import punctuation
 import pandas as pd
 import emoji
-from mainlogger.log import log
-from os import scandir, listdir
-from os.path import isdir
-from utils.fileReadUtils import elementsOf
-from os.path import join as pathjoin
-from Message_Class.msg_class import Msg
+
+from lib.message_class.msg_class import Msg
 
 def extractAddr(fullAddr):
     if '<' in fullAddr:
@@ -20,11 +21,11 @@ def extractAddr(fullAddr):
 
 class Chat_loader:
 
-    def __init__(self, dirname):
+    def __init__(self, dirpath):
 
         self.__clientName = 'You'
         self.__friends = []
-        self.__dir = pathjoin('attachments', dirname)
+        self.__dir = dirpath
         log.info("Reading " + self.__dir)
         self.__data = {}
         self.__msg_resp=Msg()

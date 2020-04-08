@@ -1,8 +1,11 @@
 #!/bin/bash
-
+cd ../data
 DIR='./attachments'
 inotifywait -m -e create "$DIR" | while read f
 
 do
+    cd ../whatsAppAnalyst
+    echo $f
     python3 analyzer.py "$f" 
+    cd ../data
 done

@@ -1,9 +1,3 @@
-from utils.promptnessUtils import penaltyForDelay, pointsForMsg, getbonusForRec, getlen
-from utils.plotUtils import gradientbars, getTimeNum, gradientbarsHor
-from data_loader.attachment_loader import Chat_loader
-from utils.wordcloudUtils import preprocess, stopwords
-from utils.fileReadUtils import makedirectory
-from utils.datetimeUtils import dateTodtime
 import matplotlib, datetime, numpy as np
 from matplotlib import pyplot as plt
 from wordcloud import WordCloud
@@ -13,12 +7,20 @@ from threading import Thread
 from sys import argv
 from os.path import isfile, isdir
 from time import sleep
-from mail.mailman import MailSender
-from Message_Class.msg_class import Msg
-from os.path import join as pathjoin
-from mainlogger.log import log
 from sklearn.feature_extraction.text import TfidfVectorizer
 from matplotlib.font_manager import FontProperties
+from os.path import join as pathjoin
+
+from lib.utils.promptnessUtils import penaltyForDelay, pointsForMsg, getbonusForRec, getlen
+from lib.utils.plotUtils import gradientbars, getTimeNum, gradientbarsHor
+from data_loader.attachment_loader import Chat_loader
+from lib.utils.wordcloudUtils import preprocess, stopwords
+from lib.utils.fileReadUtils import makedirectory
+from lib.utils.datetimeUtils import dateTodtime
+from lib.mail.mailman import MailSender
+from lib.message_class.msg_class import Msg
+from lib.mainlogger.log import log
+
 
 # datetime converter for a matplotlib plotting method
 from pandas.plotting import register_matplotlib_converters
@@ -32,12 +34,15 @@ class Analyst:
     
     def __init__(self, path):
         
-        self.__content = Chat_loader(path).getData()
+        self.__directryToAttch=pathjoin('../data/attachments', path)
+                
+        self.__content = Chat_loader(self.__directryToAttch).getData()
         self.__msg = Msg(self.__content["Response"])
         self.__mailid = self.__content["MailID"]
         self.__user = self.__content["User"]
-        self.__directry = makedirectory(pathjoin('images', str(datetime.datetime.now()) +'_'+ self.__user ))
         self.__friends = self.__content["Friends"]
+
+        self.__directry = makedirectory(pathjoin('../data/images', str(datetime.datetime.now()) +'_'+ self.__user ))
         self.__data = []
         for data in self.__content["Data"].values():
             self.__data += data
@@ -53,25 +58,25 @@ class Analyst:
 
     def __mailToUser(self):
         log.info(self.__msg.get_msg())
-        m=MailSender('mail/mail.json')
+        m=MailSender(config='lib/mail/mail.json', logger=log)
         m.sendmail(self.__user, self.__mailid, self.__directry, msg=self.__msg.get_msg())                
         
     def start(self):
         if len(self.__data)==0:
             self.__msg.new_msg("Couldn't retrieve data :(, some error in your file")
-            log.info(self.__directry + ": Data could not be read")
+            log.info(self.__directryToAttch + ": Data could not be read")
             self.__mailToUser()
             return
         threads=[]
-        threads.append(Thread(target=self.__plotChatperDay)) 
-        threads.append(Thread(target=self.__plotChatperMonth)) 
-        threads.append(Thread(target=self.__plotChatperSlot)) 
-        threads.append(Thread(target=self.__plotPromptness)) 
-        threads.append(Thread(target=self.__plotWordCloud)) 
-        threads.append(Thread(target=self.__plotChatPerPerson))
-        threads.append(Thread(target=self.__plotLangdiversity))
-        threads.append(Thread(target=self.__plot_tf_idf))
-        threads.append(Thread(target=self.__plotEmoji))
+        threads.append(Thread(target=self.__plotChatperDay, name="plotChatperDay"))
+        threads.append(Thread(target=self.__plotChatperMonth, name="plotChatperMonth"))
+        threads.append(Thread(target=self.__plotChatperSlot, name="plotChatperSlot"))
+        threads.append(Thread(target=self.__plotPromptness, name="plotPromptness"))
+        threads.append(Thread(target=self.__plotWordCloud, name="plotWordCloud"))
+        threads.append(Thread(target=self.__plotChatPerPerson, name="plotChatPerPerson"))
+        threads.append(Thread(target=self.__plotLangdiversity, name="plotLangdiversity"))
+        threads.append(Thread(target=self.__plot_tf_idf, name="plot_tf_idf"))
+        threads.append(Thread(target=self.__plotEmoji, name="plotEmoji"))
 
         for t in threads:
             t.start() 
@@ -86,7 +91,7 @@ class Analyst:
          #Scale x-axis according to num of days
         onlyDates = [dateTodtime(dtime.date()) for dtime in self.__datetime]
         if len(onlyDates) == 0:
-            log.info(self.__directry + ": No dates available, unable to plotChatperDay")
+            log.info(self.__directryToAttch + ": No dates available, unable to plotChatperDay")
             return
 
         numOfDays = (max(onlyDates).date()-min(onlyDates).date()).days+1
@@ -125,7 +130,7 @@ class Analyst:
          #Scale x-axis according to num of months        
         dateMonths = [datetime.datetime(dtime.year, dtime.month, 1) for dtime in self.__datetime]
         if len(dateMonths) == 0:
-            log.info(self.__directry + ": No month data available, unable to plotChatperMonth")
+            log.info(self.__directryToAttch + ": No month data available, unable to plotChatperMonth")
             return
         xlim=(matplotlib.dates.date2num(min(dateMonths)), matplotlib.dates.date2num(max(dateMonths)))
         
@@ -164,7 +169,7 @@ class Analyst:
          #Categorize chats into timeslots
         timestamps = sorted([datetime.datetime(*DEFAULTDATE, dtime.hour, dtime.minute) for dtime in self.__datetime])
         if len(timestamps) == 0:
-            log.info(self.__directry + ": No slot data available, unable to plotChatperSlot")
+            log.info(self.__directryToAttch + ": No slot data available, unable to plotChatperSlot")
             return
         slots=[0, 3, 5, 7, 9, 12, 15, 17, 19, 21]
         bins=[getTimeNum(e) for e in slots] + [datetime.datetime(*DEFAULTDATE, *LASTMINOFDAY)]
@@ -214,12 +219,12 @@ class Analyst:
         THRESHHOLDDELAYFORCONVO = 300
 
         if self.__content['Data'].get(friend, None) == None:
-            log.info(self.__directry + ": No data available with friend" + friend)
+            log.info(self.__directryToAttch + ": No data available with friend" + friend)
             return []
 
         chatdata=self.__content['Data'][friend]
         if len(chatdata) == 0:
-            log.info(self.__directry + ": No chatdata available with friend "+friend)
+            log.info(self.__directryToAttch + ": No chatdata available with friend "+friend)
             return
 
         person=self.__user
@@ -348,12 +353,12 @@ class Analyst:
             if len(plotdata[0]):
                 plt.plot(list(plotdata[0].keys()), list(plotdata[0].values()), label=persons[0], color='yellow', linewidth=2)
             else:
-                log.info(self.__directry + ": No promptness data available for " + persons[0])
+                log.info(self.__directryToAttch + ": No promptness data available for " + persons[0])
 
             if len(plotdata[1]):
                 plt.plot(list(plotdata[1].keys()), list(plotdata[1].values()), label=persons[1], color='blue', linewidth=1)
             else:
-                log.info(self.__directry + ": No promptness data available for " + persons[1])
+                log.info(self.__directryToAttch + ": No promptness data available for " + persons[1])
             
              #Label graph
             title=ax.set_title('Your WhatsApp chat response promptness with '+friend, color='white', size = 15)
@@ -371,7 +376,7 @@ class Analyst:
 
         vocab = preprocess(" ".join([d['Message'] for d in self.__data]))
         if len(vocab) == 0:
-            log.info(self.__directry + ": No word available, unable to plotWordcloud")
+            log.info(self.__directryToAttch + ": No word available, unable to plotWordcloud")
             return
 
         background_col='#1e272e'
@@ -397,7 +402,7 @@ class Analyst:
         no_of_persons = len(chatperPerson.keys())
 
         if not no_of_persons:
-            log.info(self.__directry + ": No data for chatPerPerson")
+            log.info(self.__directryToAttch + ": No data for chatPerPerson")
             return
     
          #Configurations
@@ -437,7 +442,7 @@ class Analyst:
             self.__perPersonDoc[data['Author']] = self.__perPersonDoc.get(data['Author'], "") + " " + data['Message']
         
         if not len(wordperPerson):
-            log.info(self.__directry + ": No data for plotLangdiversity")
+            log.info(self.__directryToAttch + ": No data for plotLangdiversity")
             return
 
         for key in wordperPerson:
@@ -446,7 +451,7 @@ class Analyst:
         no_of_persons = len(wordperPerson.keys())
 
         if not no_of_persons:
-            log.info(self.__directry + ": No data for langDiversity")
+            log.info(self.__directryToAttch + ": No data for langDiversity")
             return
     
          #Configurations
@@ -477,7 +482,7 @@ class Analyst:
     def __plot_tf_idf(self):
 
         if not len(self.__perPersonDoc):
-            log.info(self.__directry + ": No data for tf_idf")
+            log.info(self.__directryToAttch + ": No data for tf_idf")
             return
 
         vectorizer = TfidfVectorizer(stop_words=stopwords)
@@ -497,7 +502,7 @@ class Analyst:
         no_of_plots=len(persons)
 
         if not no_of_plots:
-            log.info(self.__directry + ": No data for tf_idf")
+            log.info(self.__directryToAttch + ": No data for tf_idf")
             return
         fig, ax = plt.subplots(no_of_plots)
         if no_of_plots==1:
@@ -534,7 +539,7 @@ class Analyst:
 
     def __plotEmoji(self):
 
-        prop=FontProperties(fname="./Symbola.ttf")
+        prop=FontProperties(fname="../data/fonts/Symbola.ttf")
         plt.rcParams['font.family'] = prop.get_family()
 
         emojiperperson={}
@@ -546,7 +551,7 @@ class Analyst:
             emojiperperson[key]=Counter(emojiperperson[key])
 
         if not len(emojiperperson):
-            log.info(self.__directry + ": No data for plot emoji")
+            log.info(self.__directryToAttch + ": No data for plot emoji")
             return
 
         emojimap={}
@@ -563,7 +568,7 @@ class Analyst:
         persons=list(emojimap.keys())
         no_of_plots=len(persons)
         if not no_of_plots:
-            log.info(self.__directry + ": No data for tf_idf")
+            log.info(self.__directryToAttch + ": No data for tf_idf")
             return
         fig, ax = plt.subplots(no_of_plots)
         if no_of_plots==1:
@@ -615,7 +620,7 @@ if __name__ == '__main__':
         exit()
     
     dirpath=argv[1].split('./attachments/ CREATE,ISDIR ')[1]
-    while(not(isfile('./attachments/'+dirpath+'/ends'))):
+    while(not(isfile('../data/attachments/'+dirpath+'/ends'))):
         print("...")
         sleep(5)
     analyzer=Analyst(dirpath)

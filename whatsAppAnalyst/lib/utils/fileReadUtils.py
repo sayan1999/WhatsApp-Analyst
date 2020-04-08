@@ -1,7 +1,7 @@
 import datetime
 from os import makedirs
-from mainlogger.log import log
-from Message_Class.msg_class import Msg
+from ..mainlogger.log import log
+from ..message_class.msg_class import Msg
 import emoji
 
 def readfile(textfile):
@@ -35,23 +35,27 @@ def format(line, dtimefmt):
         # newtime=datetime.datetime.strptime(time, '%I:%S %p')
         try:
             dateNtime=datetime.datetime.strptime(date+' '+time, dtimefmt)
-        except ValueError:
+        except ValueError as e:
+            log.info(e)
+            log.info("Could not readline " + raw)
             return "changed"
         else:
             return {'DateTime': dateNtime, 'Author' : author, 'Message' : message, 'Emoji' : emojis}
     return None    
 
-def elementsOf(textfile, msg, dtimefmt='%m/%d/%y %I:%S %p', trial=False):
-    opt_dtimefmt='%d/%m/%y %I:%S %p'
+def elementsOf(textfile, msg, dtimefmt='%m/%d/%y %I:%M %p', trial=0):
+    opt_dtimefmt=['%d/%m/%y %I:%M %p', '%m/%d/%y %H:%M', '%d/%m/%Y %I:%M %p', '%m/%d/%Y %I:%M %p', '%m/%d/%Y %H:%M']
     data=[]
     for line in readfile(textfile):
         formatted = format(line, dtimefmt)
         if formatted == 'changed':
-            if not trial:
-                log.info("Trying deprecated dtimeformat")
-                return elementsOf(textfile, msg, opt_dtimefmt, True)
+            trial+=1
+            if trial < 5:
+                log.info("Trying deprecated dtimeformat: " + opt_dtimefmt[trial-1])
+                return elementsOf(textfile, msg, opt_dtimefmt[trial-1], trial)
             else:
                 msg.new_msg("Could not understand data format")
+                log.info("Couldn't understand data format")
                 return []
         if formatted != None:
             if formatted['Message'] != '':

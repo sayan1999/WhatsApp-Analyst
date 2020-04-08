@@ -1,261 +1,1082 @@
-[2020-04-07 18:12:55,421 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
-[2020-04-07 18:12:55,581 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
-[2020-04-07 18:12:56,204 {Thread-1    } analyzer.py:120]: Plotted chat per day
-[2020-04-07 18:12:56,494 {Thread-2    } analyzer.py:156]: Plotted chat per month
-[2020-04-07 18:12:56,781 {Thread-3    } analyzer.py:208]: Plotted chat per slot
-[2020-04-07 18:12:57,010 {Thread-4    } analyzer.py:368]: Plotted promptness for Sayan Dey Sonali
-[2020-04-07 18:13:01,243 {Thread-5    } analyzer.py:389]: Plotted wordcloud
-[2020-04-07 18:13:01,421 {Thread-6    } analyzer.py:426]: Plotted chat per person
-[2020-04-07 18:13:01,792 {Thread-7    } analyzer.py:475]: Plotted lang_diversity
-[2020-04-07 18:13:01,873 {Thread-8    } analyzer.py:531]: Plotted tf_ifd
-[2020-04-07 18:13:02,098 {Thread-9    } analyzer.py:602]: Plotted emojiMap
-[2020-04-07 18:13:02,235 {MainThread  } analyzer.py:56]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
-[2020-04-07 18:13:05,262 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
-[2020-04-07 18:13:05,264 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
-[2020-04-07 18:13:05,273 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Lexical Diversity per person.png has been attached
-[2020-04-07 18:13:05,279 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Most used emojis per person.png has been attached
-[2020-04-07 18:13:05,287 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Total weight of chats since you started.png has been attached
-[2020-04-07 18:13:05,319 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Wordcloud.png has been attached
-[2020-04-07 18:13:05,321 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
-[2020-04-07 18:13:05,323 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
-[2020-04-07 18:13:05,325 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
-[2020-04-07 18:13:05,326 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
-[2020-04-07 18:13:05,331 {MainThread  } mailman.py:186]: images/2020-04-07 18:12:55.585255_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
-[2020-04-07 18:13:05,373 {MainThread  } mailman.py:149]: Sending...
-[2020-04-07 18:13:15,504 {MainThread  } mailman.py:151]: Message has been sent successfully
-[2020-04-07 18:13:15,811 {MainThread  } analyzer.py:624]: Ended
-[2020-04-07 18:19:43,465 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
-[2020-04-07 18:19:43,649 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
-[2020-04-07 18:19:45,088 {Thread-1    } analyzer.py:120]: Plotted chat per day
-[2020-04-07 18:19:45,344 {Thread-2    } analyzer.py:156]: Plotted chat per month
-[2020-04-07 18:19:45,573 {Thread-3    } analyzer.py:208]: Plotted chat per slot
-[2020-04-07 18:19:45,793 {Thread-4    } analyzer.py:368]: Plotted promptness for Sayan Dey Sonali
-[2020-04-07 18:19:51,102 {Thread-5    } analyzer.py:389]: Plotted wordcloud
-[2020-04-07 18:19:51,275 {Thread-6    } analyzer.py:426]: Plotted chat per person
-[2020-04-07 18:19:51,663 {Thread-7    } analyzer.py:475]: Plotted lang_diversity
-[2020-04-07 18:19:52,015 {Thread-8    } analyzer.py:531]: Plotted tf_ifd
-[2020-04-07 18:19:52,255 {Thread-9    } analyzer.py:602]: Plotted emojiMap
-[2020-04-07 18:19:52,530 {MainThread  } analyzer.py:56]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
-[2020-04-07 18:19:55,151 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
-[2020-04-07 18:19:55,155 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
-[2020-04-07 18:19:55,168 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Lexical Diversity per person.png has been attached
-[2020-04-07 18:19:55,179 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Most used emojis per person.png has been attached
-[2020-04-07 18:19:55,187 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Total weight of chats since you started.png has been attached
-[2020-04-07 18:19:55,214 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Wordcloud.png has been attached
-[2020-04-07 18:19:55,215 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
-[2020-04-07 18:19:55,217 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
-[2020-04-07 18:19:55,219 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
-[2020-04-07 18:19:55,220 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
-[2020-04-07 18:19:55,226 {MainThread  } mailman.py:186]: images/2020-04-07 18:19:43.652118_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
-[2020-04-07 18:19:55,264 {MainThread  } mailman.py:149]: Sending...
-[2020-04-07 18:20:04,734 {MainThread  } mailman.py:151]: Message has been sent successfully
-[2020-04-07 18:20:05,015 {MainThread  } analyzer.py:624]: Ended
-[2020-04-07 18:20:07,178 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
-[2020-04-07 18:20:07,306 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
-[2020-04-07 18:20:07,927 {Thread-1    } analyzer.py:120]: Plotted chat per day
-[2020-04-07 18:20:08,203 {Thread-2    } analyzer.py:156]: Plotted chat per month
-[2020-04-07 18:20:08,439 {Thread-3    } analyzer.py:208]: Plotted chat per slot
-[2020-04-07 18:20:08,686 {Thread-4    } analyzer.py:368]: Plotted promptness for Sayan Dey Sonali
-[2020-04-07 18:20:12,749 {Thread-5    } analyzer.py:389]: Plotted wordcloud
-[2020-04-07 18:20:12,926 {Thread-6    } analyzer.py:426]: Plotted chat per person
-[2020-04-07 18:20:13,280 {Thread-7    } analyzer.py:475]: Plotted lang_diversity
-[2020-04-07 18:20:13,371 {Thread-8    } analyzer.py:531]: Plotted tf_ifd
-[2020-04-07 18:20:13,612 {Thread-9    } analyzer.py:602]: Plotted emojiMap
-[2020-04-07 18:20:13,758 {MainThread  } analyzer.py:56]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
-[2020-04-07 18:20:16,358 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
-[2020-04-07 18:20:16,361 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
-[2020-04-07 18:20:16,370 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Lexical Diversity per person.png has been attached
-[2020-04-07 18:20:16,377 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Most used emojis per person.png has been attached
-[2020-04-07 18:20:16,385 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Total weight of chats since you started.png has been attached
-[2020-04-07 18:20:16,411 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Wordcloud.png has been attached
-[2020-04-07 18:20:16,412 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
-[2020-04-07 18:20:16,414 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
-[2020-04-07 18:20:16,416 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
-[2020-04-07 18:20:16,418 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
-[2020-04-07 18:20:16,424 {MainThread  } mailman.py:186]: images/2020-04-07 18:20:07.308463_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
-[2020-04-07 18:20:16,464 {MainThread  } mailman.py:149]: Sending...
-[2020-04-07 18:20:25,369 {MainThread  } mailman.py:151]: Message has been sent successfully
-[2020-04-07 18:20:25,647 {MainThread  } analyzer.py:624]: Ended
-[2020-04-07 18:27:10,306 {MainThread  } <stdin>:1]: s
-[2020-04-07 18:31:10,973 {MainThread  } attachment_loader.py:30]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
-[2020-04-07 18:31:10,973 {MainThread  } attachment_loader.py:30]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
-[2020-04-07 18:31:10,973 {MainThread  } attachment_loader.py:30]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
-[2020-04-07 18:31:11,094 {MainThread  } fileReadUtils.py:60]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
-[2020-04-07 18:31:11,094 {MainThread  } fileReadUtils.py:60]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
-[2020-04-07 18:31:11,094 {MainThread  } fileReadUtils.py:60]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
-[2020-04-07 18:31:11,608 {Thread-1    } analyzer.py:120]: Plotted chat per day
-[2020-04-07 18:31:11,608 {Thread-1    } analyzer.py:120]: Plotted chat per day
-[2020-04-07 18:31:11,608 {Thread-1    } analyzer.py:120]: Plotted chat per day
-[2020-04-07 18:31:11,846 {Thread-2    } analyzer.py:156]: Plotted chat per month
-[2020-04-07 18:31:11,846 {Thread-2    } analyzer.py:156]: Plotted chat per month
-[2020-04-07 18:31:11,846 {Thread-2    } analyzer.py:156]: Plotted chat per month
-[2020-04-07 18:31:12,074 {Thread-3    } analyzer.py:208]: Plotted chat per slot
-[2020-04-07 18:31:12,074 {Thread-3    } analyzer.py:208]: Plotted chat per slot
-[2020-04-07 18:31:12,074 {Thread-3    } analyzer.py:208]: Plotted chat per slot
-[2020-04-07 18:31:12,296 {Thread-4    } analyzer.py:368]: Plotted promptness for Sayan Dey Sonali
-[2020-04-07 18:31:12,296 {Thread-4    } analyzer.py:368]: Plotted promptness for Sayan Dey Sonali
-[2020-04-07 18:31:12,296 {Thread-4    } analyzer.py:368]: Plotted promptness for Sayan Dey Sonali
-[2020-04-07 18:31:16,428 {Thread-5    } analyzer.py:389]: Plotted wordcloud
-[2020-04-07 18:31:16,428 {Thread-5    } analyzer.py:389]: Plotted wordcloud
-[2020-04-07 18:31:16,428 {Thread-5    } analyzer.py:389]: Plotted wordcloud
-[2020-04-07 18:31:16,601 {Thread-6    } analyzer.py:426]: Plotted chat per person
-[2020-04-07 18:31:16,601 {Thread-6    } analyzer.py:426]: Plotted chat per person
-[2020-04-07 18:31:16,601 {Thread-6    } analyzer.py:426]: Plotted chat per person
-[2020-04-07 18:31:16,937 {Thread-7    } analyzer.py:475]: Plotted lang_diversity
-[2020-04-07 18:31:16,937 {Thread-7    } analyzer.py:475]: Plotted lang_diversity
-[2020-04-07 18:31:16,937 {Thread-7    } analyzer.py:475]: Plotted lang_diversity
-[2020-04-07 18:31:17,024 {Thread-8    } analyzer.py:531]: Plotted tf_ifd
-[2020-04-07 18:31:17,024 {Thread-8    } analyzer.py:531]: Plotted tf_ifd
-[2020-04-07 18:31:17,024 {Thread-8    } analyzer.py:531]: Plotted tf_ifd
-[2020-04-07 18:31:17,242 {Thread-9    } analyzer.py:602]: Plotted emojiMap
-[2020-04-07 18:31:17,242 {Thread-9    } analyzer.py:602]: Plotted emojiMap
-[2020-04-07 18:31:17,242 {Thread-9    } analyzer.py:602]: Plotted emojiMap
-[2020-04-07 18:31:17,384 {MainThread  } analyzer.py:56]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
-[2020-04-07 18:31:17,384 {MainThread  } analyzer.py:56]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
-[2020-04-07 18:31:17,384 {MainThread  } analyzer.py:56]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
-[2020-04-07 18:31:22,989 {MainThread  } mailman.py:140]: Logged into SMTP server successfully
-[2020-04-07 18:31:22,989 {MainThread  } mailman.py:140]: Logged into SMTP server successfully
-[2020-04-07 18:31:22,989 {MainThread  } mailman.py:140]: Logged into SMTP server successfully
-[2020-04-07 18:31:22,993 {MainThread  } mailman.py:146]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
-[2020-04-07 18:31:22,993 {MainThread  } mailman.py:146]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
-[2020-04-07 18:31:22,993 {MainThread  } mailman.py:146]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
-[2020-04-07 18:31:23,011 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Lexical Diversity per person.png has been attached
-[2020-04-07 18:31:23,011 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Lexical Diversity per person.png has been attached
-[2020-04-07 18:31:23,011 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Lexical Diversity per person.png has been attached
-[2020-04-07 18:31:23,020 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Most used emojis per person.png has been attached
-[2020-04-07 18:31:23,020 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Most used emojis per person.png has been attached
-[2020-04-07 18:31:23,020 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Most used emojis per person.png has been attached
-[2020-04-07 18:31:23,025 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Total weight of chats since you started.png has been attached
-[2020-04-07 18:31:23,025 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Total weight of chats since you started.png has been attached
-[2020-04-07 18:31:23,025 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Total weight of chats since you started.png has been attached
-[2020-04-07 18:31:23,051 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Wordcloud.png has been attached
-[2020-04-07 18:31:23,051 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Wordcloud.png has been attached
-[2020-04-07 18:31:23,051 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Wordcloud.png has been attached
-[2020-04-07 18:31:23,053 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
-[2020-04-07 18:31:23,053 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
-[2020-04-07 18:31:23,053 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
-[2020-04-07 18:31:23,055 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
-[2020-04-07 18:31:23,055 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
-[2020-04-07 18:31:23,055 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
-[2020-04-07 18:31:23,057 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
-[2020-04-07 18:31:23,057 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
-[2020-04-07 18:31:23,057 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
-[2020-04-07 18:31:23,059 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
-[2020-04-07 18:31:23,059 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
-[2020-04-07 18:31:23,059 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
-[2020-04-07 18:31:23,067 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
-[2020-04-07 18:31:23,067 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
-[2020-04-07 18:31:23,067 {MainThread  } mailman.py:187]: images/2020-04-07 18:31:11.096371_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
-[2020-04-07 18:31:23,106 {MainThread  } mailman.py:150]: Sending...
-[2020-04-07 18:31:23,106 {MainThread  } mailman.py:150]: Sending...
-[2020-04-07 18:31:23,106 {MainThread  } mailman.py:150]: Sending...
-[2020-04-07 18:31:34,947 {MainThread  } mailman.py:152]: Message has been sent successfully
-[2020-04-07 18:31:34,947 {MainThread  } mailman.py:152]: Message has been sent successfully
-[2020-04-07 18:31:34,947 {MainThread  } mailman.py:152]: Message has been sent successfully
-[2020-04-07 18:31:35,277 {MainThread  } analyzer.py:624]: Ended
-[2020-04-07 18:31:35,277 {MainThread  } analyzer.py:624]: Ended
-[2020-04-07 18:31:35,277 {MainThread  } analyzer.py:624]: Ended
-[2020-04-07 20:16:12,948 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
-[2020-04-07 20:16:13,074 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
-[2020-04-07 20:16:13,582 {Thread-1    } analyzer.py:119]: Plotted chat per day
-[2020-04-07 20:16:13,874 {Thread-2    } analyzer.py:155]: Plotted chat per month
-[2020-04-07 20:16:14,118 {Thread-3    } analyzer.py:207]: Plotted chat per slot
-[2020-04-07 20:16:14,345 {Thread-4    } analyzer.py:367]: Plotted promptness for Sayan Dey Sonali
-[2020-04-07 20:16:18,292 {Thread-5    } analyzer.py:388]: Plotted wordcloud
-[2020-04-07 20:16:18,467 {Thread-6    } analyzer.py:425]: Plotted chat per person
-[2020-04-07 20:16:18,804 {Thread-7    } analyzer.py:474]: Plotted lang_diversity
-[2020-04-07 20:16:18,885 {Thread-8    } analyzer.py:530]: Plotted tf_ifd
-[2020-04-07 20:16:19,099 {Thread-9    } analyzer.py:601]: Plotted emojiMap
-[2020-04-07 20:16:19,233 {MainThread  } analyzer.py:55]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
-[2020-04-07 20:16:24,048 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
-[2020-04-07 20:16:24,050 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
-[2020-04-07 20:16:24,063 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Lexical Diversity per person.png has been attached
-[2020-04-07 20:16:24,071 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Most used emojis per person.png has been attached
-[2020-04-07 20:16:24,077 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Total weight of chats since you started.png has been attached
-[2020-04-07 20:16:24,102 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Wordcloud.png has been attached
-[2020-04-07 20:16:24,104 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
-[2020-04-07 20:16:24,106 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
-[2020-04-07 20:16:24,108 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
-[2020-04-07 20:16:24,110 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
-[2020-04-07 20:16:24,115 {MainThread  } mailman.py:186]: images/2020-04-07 20:16:13.076821_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
-[2020-04-07 20:16:24,155 {MainThread  } mailman.py:149]: Sending...
-[2020-04-07 20:16:43,505 {MainThread  } mailman.py:151]: Message has been sent successfully
-[2020-04-07 20:16:43,812 {MainThread  } analyzer.py:623]: Ended
-[2020-04-07 20:19:02,975 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
-[2020-04-07 20:19:03,096 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
-[2020-04-07 20:19:03,687 {Thread-1    } analyzer.py:119]: Plotted chat per day
-[2020-04-07 20:19:03,946 {Thread-2    } analyzer.py:155]: Plotted chat per month
-[2020-04-07 20:19:04,190 {Thread-3    } analyzer.py:207]: Plotted chat per slot
-[2020-04-07 20:19:04,424 {Thread-4    } analyzer.py:367]: Plotted promptness for Sayan Dey Sonali
-[2020-04-07 20:19:08,559 {Thread-5    } analyzer.py:388]: Plotted wordcloud
-[2020-04-07 20:19:08,732 {Thread-6    } analyzer.py:425]: Plotted chat per person
-[2020-04-07 20:19:09,072 {Thread-7    } analyzer.py:474]: Plotted lang_diversity
-[2020-04-07 20:19:09,154 {Thread-8    } analyzer.py:530]: Plotted tf_ifd
-[2020-04-07 20:19:09,364 {Thread-9    } analyzer.py:601]: Plotted emojiMap
-[2020-04-07 20:19:09,494 {MainThread  } analyzer.py:55]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
-[2020-04-07 20:19:12,255 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
-[2020-04-07 20:19:12,257 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
-[2020-04-07 20:19:12,269 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Lexical Diversity per person.png has been attached
-[2020-04-07 20:19:12,277 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Most used emojis per person.png has been attached
-[2020-04-07 20:19:12,286 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Total weight of chats since you started.png has been attached
-[2020-04-07 20:19:12,311 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Wordcloud.png has been attached
-[2020-04-07 20:19:12,312 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
-[2020-04-07 20:19:12,314 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
-[2020-04-07 20:19:12,316 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
-[2020-04-07 20:19:12,318 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
-[2020-04-07 20:19:12,324 {MainThread  } mailman.py:186]: images/2020-04-07 20:19:03.098811_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
-[2020-04-07 20:19:12,364 {MainThread  } mailman.py:149]: Sending...
-[2020-04-07 20:19:22,280 {MainThread  } mailman.py:151]: Message has been sent successfully
-[2020-04-07 20:19:22,689 {MainThread  } analyzer.py:623]: Ended
-[2020-04-07 20:22:55,735 {MainThread  } attachment_loader.py:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
-[2020-04-07 20:22:55,861 {MainThread  } fileReadUtils.py:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
-[2020-04-07 20:22:56,424 {Thread-1    } analyzer.py:119]: Plotted chat per day
-[2020-04-07 20:22:56,674 {Thread-2    } analyzer.py:155]: Plotted chat per month
-[2020-04-07 20:22:56,910 {Thread-3    } analyzer.py:207]: Plotted chat per slot
-[2020-04-07 20:22:57,137 {Thread-4    } analyzer.py:367]: Plotted promptness for Sayan Dey Sonali
-[2020-04-07 20:23:01,185 {Thread-5    } analyzer.py:388]: Plotted wordcloud
-[2020-04-07 20:23:01,359 {Thread-6    } analyzer.py:425]: Plotted chat per person
-[2020-04-07 20:23:01,698 {Thread-7    } analyzer.py:474]: Plotted lang_diversity
-[2020-04-07 20:23:01,779 {Thread-8    } analyzer.py:530]: Plotted tf_ifd
-[2020-04-07 20:23:01,995 {Thread-9    } analyzer.py:601]: Plotted emojiMap
-[2020-04-07 20:23:02,132 {MainThread  } analyzer.py:55]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
-[2020-04-07 20:23:04,870 {MainThread  } mailman.py:139]: Logged into SMTP server successfully
-[2020-04-07 20:23:04,872 {MainThread  } mailman.py:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
-[2020-04-07 20:23:04,883 {MainThread  } mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Lexical Diversity per person.png has been attached
-[2020-04-07 20:23:04,894 {MainThread  } mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Most used emojis per person.png has been attached
-[2020-04-07 20:23:04,904 {MainThread  } mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Total weight of chats since you started.png has been attached
-[2020-04-07 20:23:04,930 {MainThread  } mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Wordcloud.png has been attached
-[2020-04-07 20:23:04,931 {MainThread  } mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
-[2020-04-07 20:23:04,933 {MainThread  } mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
-[2020-04-07 20:23:04,935 {MainThread  } mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
-[2020-04-07 20:23:04,937 {MainThread  } mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
-[2020-04-07 20:23:04,942 {MainThread  } mailman.py:186]: images/2020-04-07 20:22:55.863336_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
-[2020-04-07 20:23:04,982 {MainThread  } mailman.py:149]: Sending...
-[2020-04-07 20:23:15,062 {MainThread  } mailman.py:151]: Message has been sent successfully
-[2020-04-07 20:23:15,388 {MainThread  } analyzer.py:623]: Ended
-[2020-04-07 20:32:29,166 {MainThread  } attachment_loader:28]: Reading attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
-[2020-04-07 20:32:29,289 {MainThread  } fileReadUtils:59]: Successfully read attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
-[2020-04-07 20:32:29,833 {Thread-1    } analyzer:119]: Plotted chat per day
-[2020-04-07 20:32:30,078 {Thread-2    } analyzer:155]: Plotted chat per month
-[2020-04-07 20:32:30,318 {Thread-3    } analyzer:207]: Plotted chat per slot
-[2020-04-07 20:32:30,547 {Thread-4    } analyzer:367]: Plotted promptness for Sayan Dey Sonali
-[2020-04-07 20:32:34,630 {Thread-5    } analyzer:388]: Plotted wordcloud
-[2020-04-07 20:32:34,800 {Thread-6    } analyzer:425]: Plotted chat per person
-[2020-04-07 20:32:35,138 {Thread-7    } analyzer:474]: Plotted lang_diversity
-[2020-04-07 20:32:35,220 {Thread-8    } analyzer:530]: Plotted tf_ifd
-[2020-04-07 20:32:35,430 {Thread-9    } analyzer:601]: Plotted emojiMap
-[2020-04-07 20:32:35,562 {MainThread  } analyzer:55]: ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
-[2020-04-07 20:32:38,561 {MainThread  } mailman:139]: Logged into SMTP server successfully
-[2020-04-07 20:32:38,563 {MainThread  } mailman:145]: Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
-[2020-04-07 20:32:38,577 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Lexical Diversity per person.png has been attached
-[2020-04-07 20:32:38,582 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Most used emojis per person.png has been attached
-[2020-04-07 20:32:38,585 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Total weight of chats since you started.png has been attached
-[2020-04-07 20:32:38,608 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Wordcloud.png has been attached
-[2020-04-07 20:32:38,610 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
-[2020-04-07 20:32:38,611 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
-[2020-04-07 20:32:38,613 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
-[2020-04-07 20:32:38,615 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
-[2020-04-07 20:32:38,620 {MainThread  } mailman:186]: images/2020-04-07 20:32:29.291391_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
-[2020-04-07 20:32:38,658 {MainThread  } mailman:149]: Sending...
-[2020-04-07 20:32:49,078 {MainThread  } mailman:151]: Message has been sent successfully
-[2020-04-07 20:32:49,432 {MainThread  } analyzer:623]: Ended
+[2020-04-08 11:16:49,895 {MainThread  } log:48]: 
+
+
+New Session--------------------------------------------------
+
+
+
+[2020-04-08 11:17:12,573 {MainThread  } log:17]: Traceback (most recent call last):
+[2020-04-08 11:17:12,573 {MainThread  } log:17]:   File "<stdin>", line 1, in <module>
+[2020-04-08 11:17:12,573 {MainThread  } log:17]: FileNotFoundError
+[2020-04-08 11:17:12,574 {MainThread  } log:17]: :
+[2020-04-08 11:17:12,574 {MainThread  } log:17]: jhb
+[2020-04-08 11:17:50,404 {MainThread  } log:48]: 
+
+
+New Session--------------------------------------------------
+
+
+
+[2020-04-08 11:17:52,214 {MainThread  } log:17]: Traceback (most recent call last):
+
+[2020-04-08 11:17:52,214 {MainThread  } log:17]:   File "<stdin>", line 1, in <module>
+
+[2020-04-08 11:17:52,214 {MainThread  } log:17]: FileNotFoundError
+[2020-04-08 11:17:52,214 {MainThread  } log:17]: : 
+[2020-04-08 11:17:52,215 {MainThread  } log:17]: jhb
+[32mINFO    [0m [34m
+
+
+New Session--------------------------------------------------
+
+
+[0m
+[32mINFO    [0m [34mReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>[0m
+[32mINFO    [0m [34mSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt[0m
+[32mINFO    [0m [34mPlotted chat per day[0m
+[32mINFO    [0m [34mPlotted chat per month[0m
+[32mINFO    [0m [34mPlotted chat per slot[0m
+[32mINFO    [0m [34mPlotted promptness for Sayan Dey Sonali[0m
+[31mERROR   [0m [34manalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.[0m
+[31mERROR   [0m [34m  ax=plt.axes()[0m
+[32mINFO    [0m [34mPlotted wordcloud[0m
+[32mINFO    [0m [34mPlotted chat per person[0m
+[32mINFO    [0m [34mPlotted lang_diversity[0m
+[31mERROR   [0m [34m/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.[0m
+[31mERROR   [0m [34m  'stop_words.' % sorted(inconsistent))[0m
+[32mINFO    [0m [34mPlotted tf_ifd[0m
+[32mINFO    [0m [34mPlotted emojiMap[0m
+[31mERROR   [0m [34m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m [34m  font.set_text(s, 0.0, flags=flags)[0m
+[31mERROR   [0m [34m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m [34m  font.load_char(ord(s), flags=flags)[0m
+[32mINFO    [0m [34m["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."][0m
+[32mINFO    [0m [34mLogged into SMTP server successfully[0m
+[32mINFO    [0m [34mMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:18.738965_Sayan Dey/Lexical Diversity per person.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:18.738965_Sayan Dey/Most used emojis per person.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:18.738965_Sayan Dey/Total weight of chats since you started.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:18.738965_Sayan Dey/Wordcloud.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:18.738965_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:18.738965_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:18.738965_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:18.738965_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:18.738965_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached[0m
+[32mINFO    [0m [34mSending to mr.sayan.dey@gmail.com>.....[0m
+[32mINFO    [0m [34mMessage has been sent to mr.sayan.dey@gmail.com> successfully[0m
+[32mINFO    [0m [34mEnded[0m
+[32mINFO    [0m [34m
+
+
+New Session--------------------------------------------------
+
+
+[0m
+[32mINFO    [0m [34mReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>[0m
+[32mINFO    [0m [34mSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt[0m
+[32mINFO    [0m [34mPlotted chat per day[0m
+[32mINFO    [0m [34mPlotted chat per month[0m
+[32mINFO    [0m [34mPlotted chat per slot[0m
+[32mINFO    [0m [34mPlotted promptness for Sayan Dey Sonali[0m
+[31mERROR   [0m [34manalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.[0m
+[31mERROR   [0m [34m  ax=plt.axes()[0m
+[32mINFO    [0m [34mPlotted wordcloud[0m
+[32mINFO    [0m [34mPlotted chat per person[0m
+[32mINFO    [0m [34mPlotted lang_diversity[0m
+[31mERROR   [0m [34m/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.[0m
+[31mERROR   [0m [34m  'stop_words.' % sorted(inconsistent))[0m
+[32mINFO    [0m [34mPlotted tf_ifd[0m
+[32mINFO    [0m [34mPlotted emojiMap[0m
+[31mERROR   [0m [34m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m [34m  font.set_text(s, 0.0, flags=flags)[0m
+[31mERROR   [0m [34m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m [34m  font.load_char(ord(s), flags=flags)[0m
+[32mINFO    [0m [34m["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."][0m
+[32mINFO    [0m [34mLogged into SMTP server successfully[0m
+[32mINFO    [0m [34mMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:52.303431_Sayan Dey/Lexical Diversity per person.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:52.303431_Sayan Dey/Most used emojis per person.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:52.303431_Sayan Dey/Total weight of chats since you started.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:52.303431_Sayan Dey/Wordcloud.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:52.303431_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:52.303431_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:52.303431_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:52.303431_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached[0m
+[32mINFO    [0m [34m../data/images/2020-04-08 11:39:52.303431_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached[0m
+[32mINFO    [0m [34mSending to mr.sayan.dey@gmail.com>.....[0m
+[32mINFO    [0m [34mMessage has been sent to mr.sayan.dey@gmail.com> successfully[0m
+[32mINFO    [0m [34mEnded[0m
+[32mINFO    [0m [32m
+
+
+New Session--------------------------------------------------
+
+
+[0m
+[32mINFO    [0m [32mReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>[0m
+[32mINFO    [0m [32mSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt[0m
+[32mINFO    [0m [32mPlotted chat per day[0m
+[32mINFO    [0m [32mPlotted chat per month[0m
+[32mINFO    [0m [32mPlotted chat per slot[0m
+[32mINFO    [0m [32mPlotted promptness for Sayan Dey Sonali[0m
+[31mERROR   [0m [31manalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.[0m
+[31mERROR   [0m [31m  ax=plt.axes()[0m
+[32mINFO    [0m [32mPlotted wordcloud[0m
+[32mINFO    [0m [32mPlotted chat per person[0m
+[32mINFO    [0m [32mPlotted lang_diversity[0m
+[31mERROR   [0m [31m/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.[0m
+[31mERROR   [0m [31m  'stop_words.' % sorted(inconsistent))[0m
+[32mINFO    [0m [32mPlotted tf_ifd[0m
+[32mINFO    [0m [32mPlotted emojiMap[0m
+[31mERROR   [0m [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m [31m  font.set_text(s, 0.0, flags=flags)[0m
+[31mERROR   [0m [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m [31m  font.load_char(ord(s), flags=flags)[0m
+[32mINFO    [0m [32m["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."][0m
+[32mINFO    [0m [32mLogged into SMTP server successfully[0m
+[32mINFO    [0m [32mMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey[0m
+[32mINFO    [0m [32m../data/images/2020-04-08 11:40:59.635472_Sayan Dey/Lexical Diversity per person.png has been attached[0m
+[32mINFO    [0m [32m../data/images/2020-04-08 11:40:59.635472_Sayan Dey/Most used emojis per person.png has been attached[0m
+[32mINFO    [0m [32m../data/images/2020-04-08 11:40:59.635472_Sayan Dey/Total weight of chats since you started.png has been attached[0m
+[32mINFO    [0m [32m../data/images/2020-04-08 11:40:59.635472_Sayan Dey/Wordcloud.png has been attached[0m
+[32mINFO    [0m [32m../data/images/2020-04-08 11:40:59.635472_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached[0m
+[32mINFO    [0m [32m../data/images/2020-04-08 11:40:59.635472_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached[0m
+[32mINFO    [0m [32m../data/images/2020-04-08 11:40:59.635472_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached[0m
+[32mINFO    [0m [32m../data/images/2020-04-08 11:40:59.635472_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached[0m
+[32mINFO    [0m [32m../data/images/2020-04-08 11:40:59.635472_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached[0m
+[32mINFO    [0m [32mSending to mr.sayan.dey@gmail.com>.....[0m
+[32mINFO    [0m [32mMessage has been sent to mr.sayan.dey@gmail.com> successfully[0m
+[32mINFO    [0m [32mEnded[0m
+[32mINFO[0m[2020-04-08 11:49:47,224 {MainThread  } log:67]: [32m
+
+
+New Session--------------------------------------------------
+
+
+[0m
+[32mINFO[0m[2020-04-08 11:49:47,426 {MainThread  } attachment_loader:29]: [32mReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>[0m
+[32mINFO[0m[2020-04-08 11:49:47,613 {MainThread  } fileReadUtils:63]: [32mSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt[0m
+[32mINFO[0m[2020-04-08 11:49:48,205 {plotChatperD} analyzer:124]: [32mPlotted chat per day[0m
+[32mINFO[0m[2020-04-08 11:49:48,455 {plotChatperM} analyzer:160]: [32mPlotted chat per month[0m
+[32mINFO[0m[2020-04-08 11:49:48,745 {plotChatperS} analyzer:212]: [32mPlotted chat per slot[0m
+[32mINFO[0m[2020-04-08 11:49:48,979 {plotPromptne} analyzer:372]: [32mPlotted promptness for Sayan Dey Sonali[0m
+[31mERROR[0m[2020-04-08 11:49:53,057 {plotWordClou} log:20]: [31manalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.[0m
+[31mERROR[0m[2020-04-08 11:49:53,057 {plotWordClou} log:20]: [31m  ax=plt.axes()[0m
+[32mINFO[0m[2020-04-08 11:49:53,487 {plotWordClou} analyzer:393]: [32mPlotted wordcloud[0m
+[32mINFO[0m[2020-04-08 11:49:53,670 {plotChatPerP} analyzer:430]: [32mPlotted chat per person[0m
+[32mINFO[0m[2020-04-08 11:49:54,024 {plotLangdive} analyzer:479]: [32mPlotted lang_diversity[0m
+[31mERROR[0m[2020-04-08 11:49:54,028 {plot_tf_idf } log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.[0m
+[31mERROR[0m[2020-04-08 11:49:54,028 {plot_tf_idf } log:20]: [31m  'stop_words.' % sorted(inconsistent))[0m
+[32mINFO[0m[2020-04-08 11:49:54,121 {plot_tf_idf } analyzer:535]: [32mPlotted tf_ifd[0m
+[32mINFO[0m[2020-04-08 11:49:54,340 {plotEmoji   } analyzer:606]: [32mPlotted emojiMap[0m
+[31mERROR[0m[2020-04-08 11:49:54,404 {plotEmoji   } log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR[0m[2020-04-08 11:49:54,405 {plotEmoji   } log:20]: [31m  font.set_text(s, 0.0, flags=flags)[0m
+[31mERROR[0m[2020-04-08 11:49:54,408 {plotEmoji   } log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR[0m[2020-04-08 11:49:54,408 {plotEmoji   } log:20]: [31m  font.load_char(ord(s), flags=flags)[0m
+[32mINFO[0m[2020-04-08 11:49:54,501 {MainThread  } analyzer:60]: [32m["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."][0m
+[32mINFO[0m[2020-04-08 11:49:57,432 {MainThread  } mailman:139]: [32mLogged into SMTP server successfully[0m
+[32mINFO[0m[2020-04-08 11:49:57,433 {MainThread  } mailman:145]: [32mMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey[0m
+[32mINFO[0m[2020-04-08 11:49:57,448 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:49:47.616269_Sayan Dey/Lexical Diversity per person.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:49:57,455 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:49:47.616269_Sayan Dey/Most used emojis per person.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:49:57,463 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:49:47.616269_Sayan Dey/Total weight of chats since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:49:57,561 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:49:47.616269_Sayan Dey/Wordcloud.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:49:57,566 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:49:47.616269_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:49:57,569 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:49:47.616269_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:49:57,572 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:49:47.616269_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:49:57,575 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:49:47.616269_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:49:57,583 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:49:47.616269_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:49:57,628 {MainThread  } mailman:149]: [32mSending to mr.sayan.dey@gmail.com>.....[0m
+[32mINFO[0m[2020-04-08 11:50:06,968 {MainThread  } mailman:151]: [32mMessage has been sent to mr.sayan.dey@gmail.com> successfully[0m
+[32mINFO[0m[2020-04-08 11:50:07,241 {MainThread  } analyzer:628]: [32mEnded[0m
+[32mINFO[0m[2020-04-08 11:50:30,048 {MainThread  } log:67]: [32m
+
+
+New Session--------------------------------------------------
+
+
+[0m
+[32mINFO[0m[2020-04-08 11:50:30,260 {MainThread  } attachment_loader:29]: [32mReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>[0m
+[32mINFO[0m[2020-04-08 11:50:30,429 {MainThread  } fileReadUtils:63]: [32mSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt[0m
+[32mINFO[0m[2020-04-08 11:50:30,912 {plotChatperD} analyzer:124]: [32mPlotted chat per day[0m
+[32mINFO[0m[2020-04-08 11:50:31,168 {plotChatperM} analyzer:160]: [32mPlotted chat per month[0m
+[32mINFO[0m[2020-04-08 11:50:31,403 {plotChatperS} analyzer:212]: [32mPlotted chat per slot[0m
+[32mINFO[0m[2020-04-08 11:50:31,621 {plotPromptne} analyzer:372]: [32mPlotted promptness for Sayan Dey Sonali[0m
+[31mERROR[0m[2020-04-08 11:50:35,135 {plotWordClou} log:20]: [31manalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.[0m
+[31mERROR[0m[2020-04-08 11:50:35,136 {plotWordClou} log:20]: [31m  ax=plt.axes()[0m
+[32mINFO[0m[2020-04-08 11:50:35,560 {plotWordClou} analyzer:393]: [32mPlotted wordcloud[0m
+[32mINFO[0m[2020-04-08 11:50:35,747 {plotChatPerP} analyzer:430]: [32mPlotted chat per person[0m
+[32mINFO[0m[2020-04-08 11:50:36,095 {plotLangdive} analyzer:479]: [32mPlotted lang_diversity[0m
+[31mERROR[0m[2020-04-08 11:50:36,098 {plot_tf_idf } log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.[0m
+[31mERROR[0m[2020-04-08 11:50:36,098 {plot_tf_idf } log:20]: [31m  'stop_words.' % sorted(inconsistent))[0m
+[32mINFO[0m[2020-04-08 11:50:36,196 {plot_tf_idf } analyzer:535]: [32mPlotted tf_ifd[0m
+[32mINFO[0m[2020-04-08 11:50:36,426 {plotEmoji   } analyzer:606]: [32mPlotted emojiMap[0m
+[31mERROR[0m[2020-04-08 11:50:36,490 {plotEmoji   } log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR[0m[2020-04-08 11:50:36,491 {plotEmoji   } log:20]: [31m  font.set_text(s, 0.0, flags=flags)[0m
+[31mERROR[0m[2020-04-08 11:50:36,493 {plotEmoji   } log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR[0m[2020-04-08 11:50:36,494 {plotEmoji   } log:20]: [31m  font.load_char(ord(s), flags=flags)[0m
+[32mINFO[0m[2020-04-08 11:50:36,587 {MainThread  } analyzer:60]: [32m["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."][0m
+[32mINFO[0m[2020-04-08 11:50:38,916 {MainThread  } mailman:139]: [32mLogged into SMTP server successfully[0m
+[32mINFO[0m[2020-04-08 11:50:38,918 {MainThread  } mailman:145]: [32mMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey[0m
+[32mINFO[0m[2020-04-08 11:50:38,929 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:50:30.431979_Sayan Dey/Lexical Diversity per person.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:50:38,937 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:50:30.431979_Sayan Dey/Most used emojis per person.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:50:38,946 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:50:30.431979_Sayan Dey/Total weight of chats since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:50:39,027 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:50:30.431979_Sayan Dey/Wordcloud.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:50:39,034 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:50:30.431979_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:50:39,037 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:50:30.431979_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:50:39,040 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:50:30.431979_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:50:39,042 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:50:30.431979_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:50:39,050 {MainThread  } mailman:186]: [32m../data/images/2020-04-08 11:50:30.431979_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:50:39,103 {MainThread  } mailman:149]: [32mSending to mr.sayan.dey@gmail.com>.....[0m
+[32mINFO[0m[2020-04-08 11:50:48,337 {MainThread  } mailman:151]: [32mMessage has been sent to mr.sayan.dey@gmail.com> successfully[0m
+[32mINFO[0m[2020-04-08 11:50:48,612 {MainThread  } analyzer:628]: [32mEnded[0m
+[32mINFO[0m[2020-04-08 11:50:52,038 MainThread log:67]: [32m
+
+
+New Session--------------------------------------------------
+
+
+[0m
+[32mINFO[0m[2020-04-08 11:50:52,229 MainThread attachment_loader:29]: [32mReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>[0m
+[32mINFO[0m[2020-04-08 11:50:52,386 MainThread fileReadUtils:63]: [32mSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt[0m
+[32mINFO[0m[2020-04-08 11:50:52,849 plotChatperDay analyzer:124]: [32mPlotted chat per day[0m
+[32mINFO[0m[2020-04-08 11:50:53,094 plotChatperMonth analyzer:160]: [32mPlotted chat per month[0m
+[32mINFO[0m[2020-04-08 11:50:53,328 plotChatperSlot analyzer:212]: [32mPlotted chat per slot[0m
+[32mINFO[0m[2020-04-08 11:50:53,555 plotPromptness analyzer:372]: [32mPlotted promptness for Sayan Dey Sonali[0m
+[31mERROR[0m[2020-04-08 11:50:57,082 plotWordCloud log:20]: [31manalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.[0m
+[31mERROR[0m[2020-04-08 11:50:57,082 plotWordCloud log:20]: [31m  ax=plt.axes()[0m
+[32mINFO[0m[2020-04-08 11:50:57,501 plotWordCloud analyzer:393]: [32mPlotted wordcloud[0m
+[32mINFO[0m[2020-04-08 11:50:57,674 plotChatPerPerson analyzer:430]: [32mPlotted chat per person[0m
+[32mINFO[0m[2020-04-08 11:50:58,012 plotLangdiversity analyzer:479]: [32mPlotted lang_diversity[0m
+[31mERROR[0m[2020-04-08 11:50:58,015 plot_tf_idf log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.[0m
+[31mERROR[0m[2020-04-08 11:50:58,016 plot_tf_idf log:20]: [31m  'stop_words.' % sorted(inconsistent))[0m
+[32mINFO[0m[2020-04-08 11:50:58,103 plot_tf_idf analyzer:535]: [32mPlotted tf_ifd[0m
+[32mINFO[0m[2020-04-08 11:50:58,320 plotEmoji analyzer:606]: [32mPlotted emojiMap[0m
+[31mERROR[0m[2020-04-08 11:50:58,382 plotEmoji log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR[0m[2020-04-08 11:50:58,382 plotEmoji log:20]: [31m  font.set_text(s, 0.0, flags=flags)[0m
+[31mERROR[0m[2020-04-08 11:50:58,385 plotEmoji log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR[0m[2020-04-08 11:50:58,385 plotEmoji log:20]: [31m  font.load_char(ord(s), flags=flags)[0m
+[32mINFO[0m[2020-04-08 11:50:58,475 MainThread analyzer:60]: [32m["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."][0m
+[32mINFO[0m[2020-04-08 11:51:01,240 MainThread mailman:139]: [32mLogged into SMTP server successfully[0m
+[32mINFO[0m[2020-04-08 11:51:01,241 MainThread mailman:145]: [32mMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey[0m
+[32mINFO[0m[2020-04-08 11:51:01,254 MainThread mailman:186]: [32m../data/images/2020-04-08 11:50:52.388815_Sayan Dey/Lexical Diversity per person.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:51:01,262 MainThread mailman:186]: [32m../data/images/2020-04-08 11:50:52.388815_Sayan Dey/Most used emojis per person.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:51:01,271 MainThread mailman:186]: [32m../data/images/2020-04-08 11:50:52.388815_Sayan Dey/Total weight of chats since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:51:01,303 MainThread mailman:186]: [32m../data/images/2020-04-08 11:50:52.388815_Sayan Dey/Wordcloud.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:51:01,305 MainThread mailman:186]: [32m../data/images/2020-04-08 11:50:52.388815_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:51:01,307 MainThread mailman:186]: [32m../data/images/2020-04-08 11:50:52.388815_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:51:01,310 MainThread mailman:186]: [32m../data/images/2020-04-08 11:50:52.388815_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:51:01,313 MainThread mailman:186]: [32m../data/images/2020-04-08 11:50:52.388815_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:51:01,319 MainThread mailman:186]: [32m../data/images/2020-04-08 11:50:52.388815_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached[0m
+[32mINFO[0m[2020-04-08 11:51:01,360 MainThread mailman:149]: [32mSending to mr.sayan.dey@gmail.com>.....[0m
+[32mINFO[0m[2020-04-08 11:51:10,865 MainThread mailman:151]: [32mMessage has been sent to mr.sayan.dey@gmail.com> successfully[0m
+[32mINFO[0m[2020-04-08 11:51:11,147 MainThread analyzer:628]: [32mEnded[0m
+[32mINFO    [0m[2020-04-08 11:51:13,729 MainThread log:67]: [32m
+
+
+New Session--------------------------------------------------
+
+
+[0m
+[32mINFO    [0m[2020-04-08 11:51:13,928 MainThread attachment_loader:29]: [32mReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>[0m
+[32mINFO    [0m[2020-04-08 11:51:14,099 MainThread fileReadUtils:63]: [32mSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt[0m
+[32mINFO    [0m[2020-04-08 11:51:14,588 plotChatperDay analyzer:124]: [32mPlotted chat per day[0m
+[32mINFO    [0m[2020-04-08 11:51:14,851 plotChatperMonth analyzer:160]: [32mPlotted chat per month[0m
+[32mINFO    [0m[2020-04-08 11:51:15,097 plotChatperSlot analyzer:212]: [32mPlotted chat per slot[0m
+[32mINFO    [0m[2020-04-08 11:51:15,320 plotPromptness analyzer:372]: [32mPlotted promptness for Sayan Dey Sonali[0m
+[31mERROR   [0m[2020-04-08 11:51:18,889 plotWordCloud log:20]: [31manalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.[0m
+[31mERROR   [0m[2020-04-08 11:51:18,889 plotWordCloud log:20]: [31m  ax=plt.axes()[0m
+[32mINFO    [0m[2020-04-08 11:51:19,301 plotWordCloud analyzer:393]: [32mPlotted wordcloud[0m
+[32mINFO    [0m[2020-04-08 11:51:19,482 plotChatPerPerson analyzer:430]: [32mPlotted chat per person[0m
+[32mINFO    [0m[2020-04-08 11:51:19,816 plotLangdiversity analyzer:479]: [32mPlotted lang_diversity[0m
+[31mERROR   [0m[2020-04-08 11:51:19,819 plot_tf_idf log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.[0m
+[31mERROR   [0m[2020-04-08 11:51:19,819 plot_tf_idf log:20]: [31m  'stop_words.' % sorted(inconsistent))[0m
+[32mINFO    [0m[2020-04-08 11:51:19,904 plot_tf_idf analyzer:535]: [32mPlotted tf_ifd[0m
+[32mINFO    [0m[2020-04-08 11:51:20,118 plotEmoji analyzer:606]: [32mPlotted emojiMap[0m
+[31mERROR   [0m[2020-04-08 11:51:20,180 plotEmoji log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m[2020-04-08 11:51:20,181 plotEmoji log:20]: [31m  font.set_text(s, 0.0, flags=flags)[0m
+[31mERROR   [0m[2020-04-08 11:51:20,183 plotEmoji log:20]: [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m[2020-04-08 11:51:20,184 plotEmoji log:20]: [31m  font.load_char(ord(s), flags=flags)[0m
+[32mINFO    [0m[2020-04-08 11:51:20,270 MainThread analyzer:60]: [32m["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."][0m
+[32mINFO    [0m[2020-04-08 11:51:22,539 MainThread mailman:139]: [32mLogged into SMTP server successfully[0m
+[32mINFO    [0m[2020-04-08 11:51:22,541 MainThread mailman:145]: [32mMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey[0m
+[32mINFO    [0m[2020-04-08 11:51:22,548 MainThread mailman:186]: [32m../data/images/2020-04-08 11:51:14.101609_Sayan Dey/Lexical Diversity per person.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:22,549 MainThread mailman:186]: [32m../data/images/2020-04-08 11:51:14.101609_Sayan Dey/Most used emojis per person.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:22,552 MainThread mailman:186]: [32m../data/images/2020-04-08 11:51:14.101609_Sayan Dey/Total weight of chats since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:22,575 MainThread mailman:186]: [32m../data/images/2020-04-08 11:51:14.101609_Sayan Dey/Wordcloud.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:22,577 MainThread mailman:186]: [32m../data/images/2020-04-08 11:51:14.101609_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:22,580 MainThread mailman:186]: [32m../data/images/2020-04-08 11:51:14.101609_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:22,583 MainThread mailman:186]: [32m../data/images/2020-04-08 11:51:14.101609_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:22,586 MainThread mailman:186]: [32m../data/images/2020-04-08 11:51:14.101609_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:22,593 MainThread mailman:186]: [32m../data/images/2020-04-08 11:51:14.101609_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:22,653 MainThread mailman:149]: [32mSending to mr.sayan.dey@gmail.com>.....[0m
+[32mINFO    [0m[2020-04-08 11:51:31,550 MainThread mailman:151]: [32mMessage has been sent to mr.sayan.dey@gmail.com> successfully[0m
+[32mINFO    [0m[2020-04-08 11:51:31,824 MainThread analyzer:628]: [32mEnded[0m
+[32mINFO    [0m[2020-04-08 11:51:41,406 MainThread log:67]-8 [32m
+
+
+New Session--------------------------------------------------
+
+
+[0m
+[32mINFO    [0m[2020-04-08 11:51:41,624 MainThread attachment_loader:29]-8 [32mReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>[0m
+[32mINFO    [0m[2020-04-08 11:51:41,790 MainThread fileReadUtils:63]-8 [32mSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt[0m
+[32mINFO    [0m[2020-04-08 11:51:42,320 plotChatperDay analyzer:124]-8 [32mPlotted chat per day[0m
+[32mINFO    [0m[2020-04-08 11:51:42,598 plotChatperMonth analyzer:160]-8 [32mPlotted chat per month[0m
+[32mINFO    [0m[2020-04-08 11:51:42,865 plotChatperSlot analyzer:212]-8 [32mPlotted chat per slot[0m
+[32mINFO    [0m[2020-04-08 11:51:43,134 plotPromptness analyzer:372]-8 [32mPlotted promptness for Sayan Dey Sonali[0m
+[31mERROR   [0m[2020-04-08 11:51:47,305 plotWordCloud log:20]-8 [31manalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.[0m
+[31mERROR   [0m[2020-04-08 11:51:47,305 plotWordCloud log:20]-8 [31m  ax=plt.axes()[0m
+[32mINFO    [0m[2020-04-08 11:51:47,870 plotWordCloud analyzer:393]-8 [32mPlotted wordcloud[0m
+[32mINFO    [0m[2020-04-08 11:51:48,132 plotChatPerPerson analyzer:430]-8 [32mPlotted chat per person[0m
+[32mINFO    [0m[2020-04-08 11:51:48,573 plotLangdiversity analyzer:479]-8 [32mPlotted lang_diversity[0m
+[31mERROR   [0m[2020-04-08 11:51:48,577 plot_tf_idf log:20]-8 [31m/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.[0m
+[31mERROR   [0m[2020-04-08 11:51:48,577 plot_tf_idf log:20]-8 [31m  'stop_words.' % sorted(inconsistent))[0m
+[32mINFO    [0m[2020-04-08 11:51:48,686 plot_tf_idf analyzer:535]-8 [32mPlotted tf_ifd[0m
+[32mINFO    [0m[2020-04-08 11:51:48,952 plotEmoji analyzer:606]-8 [32mPlotted emojiMap[0m
+[31mERROR   [0m[2020-04-08 11:51:49,039 plotEmoji log:20]-8 [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m[2020-04-08 11:51:49,040 plotEmoji log:20]-8 [31m  font.set_text(s, 0.0, flags=flags)[0m
+[31mERROR   [0m[2020-04-08 11:51:49,043 plotEmoji log:20]-8 [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m[2020-04-08 11:51:49,044 plotEmoji log:20]-8 [31m  font.load_char(ord(s), flags=flags)[0m
+[32mINFO    [0m[2020-04-08 11:51:49,201 MainThread analyzer:60]-8 [32m["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."][0m
+[32mINFO    [0m[2020-04-08 11:51:51,767 MainThread mailman:139]-8 [32mLogged into SMTP server successfully[0m
+[32mINFO    [0m[2020-04-08 11:51:51,769 MainThread mailman:145]-8 [32mMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey[0m
+[32mINFO    [0m[2020-04-08 11:51:51,782 MainThread mailman:186]-8 [32m../data/images/2020-04-08 11:51:41.793421_Sayan Dey/Lexical Diversity per person.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:51,790 MainThread mailman:186]-8 [32m../data/images/2020-04-08 11:51:41.793421_Sayan Dey/Most used emojis per person.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:51,795 MainThread mailman:186]-8 [32m../data/images/2020-04-08 11:51:41.793421_Sayan Dey/Total weight of chats since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:51,829 MainThread mailman:186]-8 [32m../data/images/2020-04-08 11:51:41.793421_Sayan Dey/Wordcloud.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:51,831 MainThread mailman:186]-8 [32m../data/images/2020-04-08 11:51:41.793421_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:51,835 MainThread mailman:186]-8 [32m../data/images/2020-04-08 11:51:41.793421_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:51,839 MainThread mailman:186]-8 [32m../data/images/2020-04-08 11:51:41.793421_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:51,843 MainThread mailman:186]-8 [32m../data/images/2020-04-08 11:51:41.793421_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:51,853 MainThread mailman:186]-8 [32m../data/images/2020-04-08 11:51:41.793421_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:51:51,920 MainThread mailman:149]-8 [32mSending to mr.sayan.dey@gmail.com>.....[0m
+[32mINFO    [0m[2020-04-08 11:52:00,865 MainThread mailman:151]-8 [32mMessage has been sent to mr.sayan.dey@gmail.com> successfully[0m
+[32mINFO    [0m[2020-04-08 11:52:01,125 MainThread analyzer:628]-8 [32mEnded[0m
+[32mINFO    [0m[2020-04-08 11:53:08,798 MainThread log:67      ] [32m
+
+
+New Session--------------------------------------------------
+
+
+[0m
+[32mINFO    [0m[2020-04-08 11:53:09,015 MainThread attachment_loader:29      ] [32mReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>[0m
+[32mINFO    [0m[2020-04-08 11:53:09,192 MainThread fileReadUtils:63      ] [32mSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt[0m
+[32mINFO    [0m[2020-04-08 11:53:09,703 plotChatperDay analyzer:124     ] [32mPlotted chat per day[0m
+[32mINFO    [0m[2020-04-08 11:53:09,980 plotChatperMonth analyzer:160     ] [32mPlotted chat per month[0m
+[32mINFO    [0m[2020-04-08 11:53:10,251 plotChatperSlot analyzer:212     ] [32mPlotted chat per slot[0m
+[32mINFO    [0m[2020-04-08 11:53:10,510 plotPromptness analyzer:372     ] [32mPlotted promptness for Sayan Dey Sonali[0m
+[31mERROR   [0m[2020-04-08 11:53:14,451 plotWordCloud log:20      ] [31manalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.[0m
+[31mERROR   [0m[2020-04-08 11:53:14,451 plotWordCloud log:20      ] [31m  ax=plt.axes()[0m
+[32mINFO    [0m[2020-04-08 11:53:14,963 plotWordCloud analyzer:393     ] [32mPlotted wordcloud[0m
+[32mINFO    [0m[2020-04-08 11:53:15,185 plotChatPerPerson analyzer:430     ] [32mPlotted chat per person[0m
+[32mINFO    [0m[2020-04-08 11:53:15,687 plotLangdiversity analyzer:479     ] [32mPlotted lang_diversity[0m
+[31mERROR   [0m[2020-04-08 11:53:15,692 plot_tf_idf log:20      ] [31m/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.[0m
+[31mERROR   [0m[2020-04-08 11:53:15,692 plot_tf_idf log:20      ] [31m  'stop_words.' % sorted(inconsistent))[0m
+[32mINFO    [0m[2020-04-08 11:53:15,807 plot_tf_idf analyzer:535     ] [32mPlotted tf_ifd[0m
+[32mINFO    [0m[2020-04-08 11:53:16,074 plotEmoji analyzer:606     ] [32mPlotted emojiMap[0m
+[31mERROR   [0m[2020-04-08 11:53:16,158 plotEmoji log:20      ] [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m[2020-04-08 11:53:16,158 plotEmoji log:20      ] [31m  font.set_text(s, 0.0, flags=flags)[0m
+[31mERROR   [0m[2020-04-08 11:53:16,162 plotEmoji log:20      ] [31m/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m[2020-04-08 11:53:16,162 plotEmoji log:20      ] [31m  font.load_char(ord(s), flags=flags)[0m
+[32mINFO    [0m[2020-04-08 11:53:16,278 MainThread analyzer:60      ] [32m["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."][0m
+[32mINFO    [0m[2020-04-08 11:53:19,071 MainThread mailman:139     ] [32mLogged into SMTP server successfully[0m
+[32mINFO    [0m[2020-04-08 11:53:19,072 MainThread mailman:145     ] [32mMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey[0m
+[32mINFO    [0m[2020-04-08 11:53:19,078 MainThread mailman:186     ] [32m../data/images/2020-04-08 11:53:09.195176_Sayan Dey/Lexical Diversity per person.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:53:19,081 MainThread mailman:186     ] [32m../data/images/2020-04-08 11:53:09.195176_Sayan Dey/Most used emojis per person.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:53:19,086 MainThread mailman:186     ] [32m../data/images/2020-04-08 11:53:09.195176_Sayan Dey/Total weight of chats since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:53:19,124 MainThread mailman:186     ] [32m../data/images/2020-04-08 11:53:09.195176_Sayan Dey/Wordcloud.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:53:19,127 MainThread mailman:186     ] [32m../data/images/2020-04-08 11:53:09.195176_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:53:19,132 MainThread mailman:186     ] [32m../data/images/2020-04-08 11:53:09.195176_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:53:19,136 MainThread mailman:186     ] [32m../data/images/2020-04-08 11:53:09.195176_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:53:19,141 MainThread mailman:186     ] [32m../data/images/2020-04-08 11:53:09.195176_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:53:19,152 MainThread mailman:186     ] [32m../data/images/2020-04-08 11:53:09.195176_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:53:19,213 MainThread mailman:149     ] [32mSending to mr.sayan.dey@gmail.com>.....[0m
+[32mINFO    [0m[2020-04-08 11:53:28,287 MainThread mailman:151     ] [32mMessage has been sent to mr.sayan.dey@gmail.com> successfully[0m
+[32mINFO    [0m[2020-04-08 11:53:28,551 MainThread analyzer:628     ] [32mEnded[0m
+[32mINFO    [0m[2020-04-08 11:54:24,966 MainThread log:67] [32m   
+
+
+New Session--------------------------------------------------
+
+
+[0m
+[32mINFO    [0m[2020-04-08 11:54:25,227 MainThread attachment_loader:29] [32m   Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>[0m
+[32mINFO    [0m[2020-04-08 11:54:25,425 MainThread fileReadUtils:63] [32m   Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt[0m
+[32mINFO    [0m[2020-04-08 11:54:26,011 plotChatperDay analyzer:124] [32m   Plotted chat per day[0m
+[32mINFO    [0m[2020-04-08 11:54:26,329 plotChatperMonth analyzer:160] [32m   Plotted chat per month[0m
+[32mINFO    [0m[2020-04-08 11:54:26,596 plotChatperSlot analyzer:212] [32m   Plotted chat per slot[0m
+[32mINFO    [0m[2020-04-08 11:54:26,924 plotPromptness analyzer:372] [32m   Plotted promptness for Sayan Dey Sonali[0m
+[31mERROR   [0m[2020-04-08 11:54:31,903 plotWordCloud log:20] [31m   analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.[0m
+[31mERROR   [0m[2020-04-08 11:54:31,903 plotWordCloud log:20] [31m     ax=plt.axes()[0m
+[32mINFO    [0m[2020-04-08 11:54:32,562 plotWordCloud analyzer:393] [32m   Plotted wordcloud[0m
+[32mINFO    [0m[2020-04-08 11:54:32,819 plotChatPerPerson analyzer:430] [32m   Plotted chat per person[0m
+[32mINFO    [0m[2020-04-08 11:54:33,358 plotLangdiversity analyzer:479] [32m   Plotted lang_diversity[0m
+[31mERROR   [0m[2020-04-08 11:54:33,361 plot_tf_idf log:20] [31m   /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.[0m
+[31mERROR   [0m[2020-04-08 11:54:33,362 plot_tf_idf log:20] [31m     'stop_words.' % sorted(inconsistent))[0m
+[32mINFO    [0m[2020-04-08 11:54:33,492 plot_tf_idf analyzer:535] [32m   Plotted tf_ifd[0m
+[32mINFO    [0m[2020-04-08 11:54:33,782 plotEmoji analyzer:606] [32m   Plotted emojiMap[0m
+[31mERROR   [0m[2020-04-08 11:54:33,863 plotEmoji log:20] [31m   /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m[2020-04-08 11:54:33,864 plotEmoji log:20] [31m     font.set_text(s, 0.0, flags=flags)[0m
+[31mERROR   [0m[2020-04-08 11:54:33,868 plotEmoji log:20] [31m   /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.[0m
+[31mERROR   [0m[2020-04-08 11:54:33,868 plotEmoji log:20] [31m     font.load_char(ord(s), flags=flags)[0m
+[32mINFO    [0m[2020-04-08 11:54:34,047 MainThread analyzer:60] [32m   ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."][0m
+[32mINFO    [0m[2020-04-08 11:54:36,246 MainThread mailman:139] [32m   Logged into SMTP server successfully[0m
+[32mINFO    [0m[2020-04-08 11:54:36,248 MainThread mailman:145] [32m   Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey[0m
+[32mINFO    [0m[2020-04-08 11:54:36,265 MainThread mailman:186] [32m   ../data/images/2020-04-08 11:54:25.427981_Sayan Dey/Lexical Diversity per person.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:54:36,274 MainThread mailman:186] [32m   ../data/images/2020-04-08 11:54:25.427981_Sayan Dey/Most used emojis per person.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:54:36,281 MainThread mailman:186] [32m   ../data/images/2020-04-08 11:54:25.427981_Sayan Dey/Total weight of chats since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:54:36,319 MainThread mailman:186] [32m   ../data/images/2020-04-08 11:54:25.427981_Sayan Dey/Wordcloud.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:54:36,322 MainThread mailman:186] [32m   ../data/images/2020-04-08 11:54:25.427981_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:54:36,326 MainThread mailman:186] [32m   ../data/images/2020-04-08 11:54:25.427981_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:54:36,329 MainThread mailman:186] [32m   ../data/images/2020-04-08 11:54:25.427981_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:54:36,331 MainThread mailman:186] [32m   ../data/images/2020-04-08 11:54:25.427981_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:54:36,340 MainThread mailman:186] [32m   ../data/images/2020-04-08 11:54:25.427981_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached[0m
+[32mINFO    [0m[2020-04-08 11:54:36,399 MainThread mailman:149] [32m   Sending to mr.sayan.dey@gmail.com>.....[0m
+[32mINFO    [0m[2020-04-08 11:54:47,751 MainThread mailman:151] [32m   Message has been sent to mr.sayan.dey@gmail.com> successfully[0m
+[32mINFO    [0m[2020-04-08 11:54:48,032 MainThread analyzer:628] [32m   Ended[0m
+INFO    [2020-04-08 12:00:39,102 MainThread attachment_loader:29] -8sReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO    [2020-04-08 12:00:39,329 MainThread fileReadUtils:63] -8sSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO    [2020-04-08 12:00:39,991 plotChatperDay analyzer:124] -8sPlotted chat per day
+INFO    [2020-04-08 12:00:40,412 plotChatperMonth analyzer:160] -8sPlotted chat per month
+INFO    [2020-04-08 12:00:40,704 plotChatperSlot analyzer:212] -8sPlotted chat per slot
+INFO    [2020-04-08 12:00:40,991 plotPromptness analyzer:372] -8sPlotted promptness for Sayan Dey Sonali
+ERROR   [2020-04-08 12:00:46,565 plotWordCloud log:20] -8sanalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR   [2020-04-08 12:00:46,565 plotWordCloud log:20] -8s  ax=plt.axes()
+INFO    [2020-04-08 12:00:47,247 plotWordCloud analyzer:393] -8sPlotted wordcloud
+INFO    [2020-04-08 12:00:47,508 plotChatPerPerson analyzer:430] -8sPlotted chat per person
+INFO    [2020-04-08 12:00:48,060 plotLangdiversity analyzer:479] -8sPlotted lang_diversity
+ERROR   [2020-04-08 12:00:48,068 plot_tf_idf log:20] -8s/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR   [2020-04-08 12:00:48,068 plot_tf_idf log:20] -8s  'stop_words.' % sorted(inconsistent))
+INFO    [2020-04-08 12:00:48,221 plot_tf_idf analyzer:535] -8sPlotted tf_ifd
+INFO    [2020-04-08 12:00:48,541 plotEmoji analyzer:606] -8sPlotted emojiMap
+ERROR   [2020-04-08 12:00:48,635 plotEmoji log:20] -8s/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR   [2020-04-08 12:00:48,635 plotEmoji log:20] -8s  font.set_text(s, 0.0, flags=flags)
+ERROR   [2020-04-08 12:00:48,639 plotEmoji log:20] -8s/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR   [2020-04-08 12:00:48,640 plotEmoji log:20] -8s  font.load_char(ord(s), flags=flags)
+INFO    [2020-04-08 12:00:48,757 MainThread analyzer:60] -8s["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO    [2020-04-08 12:00:52,099 MainThread mailman:139] -8sLogged into SMTP server successfully
+INFO    [2020-04-08 12:00:52,100 MainThread mailman:145] -8sMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO    [2020-04-08 12:00:52,103 MainThread mailman:186] -8s../data/images/2020-04-08 12:00:39.332595_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO    [2020-04-08 12:00:52,104 MainThread mailman:186] -8s../data/images/2020-04-08 12:00:39.332595_Sayan Dey/Most used emojis per person.png has been attached
+INFO    [2020-04-08 12:00:52,105 MainThread mailman:186] -8s../data/images/2020-04-08 12:00:39.332595_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO    [2020-04-08 12:00:52,140 MainThread mailman:186] -8s../data/images/2020-04-08 12:00:39.332595_Sayan Dey/Wordcloud.png has been attached
+INFO    [2020-04-08 12:00:52,145 MainThread mailman:186] -8s../data/images/2020-04-08 12:00:39.332595_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO    [2020-04-08 12:00:52,148 MainThread mailman:186] -8s../data/images/2020-04-08 12:00:39.332595_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO    [2020-04-08 12:00:52,151 MainThread mailman:186] -8s../data/images/2020-04-08 12:00:39.332595_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO    [2020-04-08 12:00:52,155 MainThread mailman:186] -8s../data/images/2020-04-08 12:00:39.332595_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO    [2020-04-08 12:00:52,170 MainThread mailman:186] -8s../data/images/2020-04-08 12:00:39.332595_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO    [2020-04-08 12:00:52,240 MainThread mailman:149] -8sSending to mr.sayan.dey@gmail.com>.....
+INFO    [2020-04-08 12:01:01,725 MainThread mailman:151] -8sMessage has been sent to mr.sayan.dey@gmail.com> successfully
+INFO    [2020-04-08 12:01:01,994 MainThread analyzer:628] -8sEnded
+INFO    [2020-04-08 12:01:47,912 MainThread attachment_loader:29] -8sReading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO    [2020-04-08 12:01:48,236 MainThread fileReadUtils:63] -8sSuccessfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO    [2020-04-08 12:01:48,841 plotChatperDay analyzer:124] -8sPlotted chat per day
+INFO    [2020-04-08 12:01:49,291 plotChatperMonth analyzer:160] -8sPlotted chat per month
+INFO    [2020-04-08 12:01:49,594 plotChatperSlot analyzer:212] -8sPlotted chat per slot
+INFO    [2020-04-08 12:01:49,891 plotPromptness analyzer:372] -8sPlotted promptness for Sayan Dey Sonali
+ERROR   [2020-04-08 12:01:54,555 plotWordCloud log:20] -8sanalyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR   [2020-04-08 12:01:54,556 plotWordCloud log:20] -8s  ax=plt.axes()
+INFO    [2020-04-08 12:01:55,300 plotWordCloud analyzer:393] -8sPlotted wordcloud
+INFO    [2020-04-08 12:01:55,529 plotChatPerPerson analyzer:430] -8sPlotted chat per person
+INFO    [2020-04-08 12:01:55,988 plotLangdiversity analyzer:479] -8sPlotted lang_diversity
+ERROR   [2020-04-08 12:01:55,994 plot_tf_idf log:20] -8s/home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR   [2020-04-08 12:01:55,994 plot_tf_idf log:20] -8s  'stop_words.' % sorted(inconsistent))
+INFO    [2020-04-08 12:01:56,197 plot_tf_idf analyzer:535] -8sPlotted tf_ifd
+INFO    [2020-04-08 12:01:56,494 plotEmoji analyzer:606] -8sPlotted emojiMap
+ERROR   [2020-04-08 12:01:56,578 plotEmoji log:20] -8s/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR   [2020-04-08 12:01:56,578 plotEmoji log:20] -8s  font.set_text(s, 0.0, flags=flags)
+ERROR   [2020-04-08 12:01:56,582 plotEmoji log:20] -8s/home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR   [2020-04-08 12:01:56,582 plotEmoji log:20] -8s  font.load_char(ord(s), flags=flags)
+INFO    [2020-04-08 12:01:56,703 MainThread analyzer:60] -8s["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO    [2020-04-08 12:01:59,071 MainThread mailman:139] -8sLogged into SMTP server successfully
+INFO    [2020-04-08 12:01:59,072 MainThread mailman:145] -8sMailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO    [2020-04-08 12:01:59,086 MainThread mailman:186] -8s../data/images/2020-04-08 12:01:48.239482_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO    [2020-04-08 12:01:59,093 MainThread mailman:186] -8s../data/images/2020-04-08 12:01:48.239482_Sayan Dey/Most used emojis per person.png has been attached
+INFO    [2020-04-08 12:01:59,101 MainThread mailman:186] -8s../data/images/2020-04-08 12:01:48.239482_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO    [2020-04-08 12:01:59,216 MainThread mailman:186] -8s../data/images/2020-04-08 12:01:48.239482_Sayan Dey/Wordcloud.png has been attached
+INFO    [2020-04-08 12:01:59,220 MainThread mailman:186] -8s../data/images/2020-04-08 12:01:48.239482_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO    [2020-04-08 12:01:59,224 MainThread mailman:186] -8s../data/images/2020-04-08 12:01:48.239482_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO    [2020-04-08 12:01:59,228 MainThread mailman:186] -8s../data/images/2020-04-08 12:01:48.239482_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO    [2020-04-08 12:01:59,232 MainThread mailman:186] -8s../data/images/2020-04-08 12:01:48.239482_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO    [2020-04-08 12:01:59,242 MainThread mailman:186] -8s../data/images/2020-04-08 12:01:48.239482_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO    [2020-04-08 12:01:59,305 MainThread mailman:149] -8sSending to mr.sayan.dey@gmail.com>.....
+INFO    [2020-04-08 12:02:08,492 MainThread mailman:151] -8sMessage has been sent to mr.sayan.dey@gmail.com> successfully
+INFO    [2020-04-08 12:02:08,764 MainThread analyzer:628] -8sEnded
+INFO         [2020-04-08 12:07:24,238 MainThread attachment_loader:29]        Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO         [2020-04-08 12:07:24,434 MainThread fileReadUtils:63]        Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO         [2020-04-08 12:07:25,076 plotChatperDay analyzer:124]        Plotted chat per day
+INFO         [2020-04-08 12:07:25,495 plotChatperMonth analyzer:160]        Plotted chat per month
+INFO         [2020-04-08 12:07:25,875 plotChatperSlot analyzer:212]        Plotted chat per slot
+INFO         [2020-04-08 12:07:26,276 plotPromptness analyzer:372]        Plotted promptness for Sayan Dey Sonali
+ERROR         [2020-04-08 12:07:31,831 plotWordCloud log:20]        analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR         [2020-04-08 12:07:31,832 plotWordCloud log:20]          ax=plt.axes()
+INFO         [2020-04-08 12:07:32,442 plotWordCloud analyzer:393]        Plotted wordcloud
+INFO         [2020-04-08 12:07:32,672 plotChatPerPerson analyzer:430]        Plotted chat per person
+INFO         [2020-04-08 12:07:33,183 plotLangdiversity analyzer:479]        Plotted lang_diversity
+ERROR         [2020-04-08 12:07:33,188 plot_tf_idf log:20]        /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR         [2020-04-08 12:07:33,188 plot_tf_idf log:20]          'stop_words.' % sorted(inconsistent))
+INFO         [2020-04-08 12:07:33,302 plot_tf_idf analyzer:535]        Plotted tf_ifd
+INFO         [2020-04-08 12:07:33,583 plotEmoji analyzer:606]        Plotted emojiMap
+ERROR         [2020-04-08 12:07:33,664 plotEmoji log:20]        /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR         [2020-04-08 12:07:33,665 plotEmoji log:20]          font.set_text(s, 0.0, flags=flags)
+ERROR         [2020-04-08 12:07:33,669 plotEmoji log:20]        /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR         [2020-04-08 12:07:33,669 plotEmoji log:20]          font.load_char(ord(s), flags=flags)
+INFO         [2020-04-08 12:07:33,787 MainThread analyzer:60]        ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO         [2020-04-08 12:07:36,118 MainThread mailman:139]        Logged into SMTP server successfully
+INFO         [2020-04-08 12:07:36,120 MainThread mailman:145]        Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO         [2020-04-08 12:07:36,133 MainThread mailman:186]        ../data/images/2020-04-08 12:07:24.437483_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO         [2020-04-08 12:07:36,144 MainThread mailman:186]        ../data/images/2020-04-08 12:07:24.437483_Sayan Dey/Most used emojis per person.png has been attached
+INFO         [2020-04-08 12:07:36,149 MainThread mailman:186]        ../data/images/2020-04-08 12:07:24.437483_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO         [2020-04-08 12:07:36,184 MainThread mailman:186]        ../data/images/2020-04-08 12:07:24.437483_Sayan Dey/Wordcloud.png has been attached
+INFO         [2020-04-08 12:07:36,187 MainThread mailman:186]        ../data/images/2020-04-08 12:07:24.437483_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO         [2020-04-08 12:07:36,191 MainThread mailman:186]        ../data/images/2020-04-08 12:07:24.437483_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO         [2020-04-08 12:07:36,193 MainThread mailman:186]        ../data/images/2020-04-08 12:07:24.437483_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO         [2020-04-08 12:07:36,195 MainThread mailman:186]        ../data/images/2020-04-08 12:07:24.437483_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO         [2020-04-08 12:07:36,202 MainThread mailman:186]        ../data/images/2020-04-08 12:07:24.437483_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO         [2020-04-08 12:07:36,259 MainThread mailman:149]        Sending to mr.sayan.dey@gmail.com>.....
+INFO         [2020-04-08 12:07:45,334 MainThread mailman:151]        Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO         [2020-04-08 12:07:45,608 MainThread analyzer:628]        Ended
+2020-04-08 12:14:41,274 root            MainThread INFO     Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+2020-04-08 12:14:41,434 root            MainThread INFO     Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+2020-04-08 12:14:41,921 root            plotChatperDay INFO     Plotted chat per day
+2020-04-08 12:14:42,232 root            plotChatperMonth INFO     Plotted chat per month
+2020-04-08 12:14:42,480 root            plotChatperSlot INFO     Plotted chat per slot
+2020-04-08 12:14:42,715 root            plotPromptness INFO     Plotted promptness for Sayan Dey Sonali
+2020-04-08 12:14:46,447 root            plotWordCloud ERROR    analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+2020-04-08 12:14:46,448 root            plotWordCloud ERROR      ax=plt.axes()
+2020-04-08 12:14:46,891 root            plotWordCloud INFO     Plotted wordcloud
+2020-04-08 12:14:47,177 root            plotChatPerPerson INFO     Plotted chat per person
+2020-04-08 12:14:47,520 root            plotLangdiversity INFO     Plotted lang_diversity
+2020-04-08 12:14:47,524 root            plot_tf_idf ERROR    /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+2020-04-08 12:14:47,524 root            plot_tf_idf ERROR      'stop_words.' % sorted(inconsistent))
+2020-04-08 12:14:47,608 root            plot_tf_idf INFO     Plotted tf_ifd
+2020-04-08 12:14:47,821 root            plotEmoji  INFO     Plotted emojiMap
+2020-04-08 12:14:47,881 root            plotEmoji  ERROR    /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+2020-04-08 12:14:47,882 root            plotEmoji  ERROR      font.set_text(s, 0.0, flags=flags)
+2020-04-08 12:14:47,885 root            plotEmoji  ERROR    /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+2020-04-08 12:14:47,885 root            plotEmoji  ERROR      font.load_char(ord(s), flags=flags)
+2020-04-08 12:14:47,971 root            MainThread INFO     ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+2020-04-08 12:14:51,090 root            MainThread INFO     Logged into SMTP server successfully
+2020-04-08 12:14:51,092 root            MainThread INFO     Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+2020-04-08 12:14:51,110 root            MainThread INFO     ../data/images/2020-04-08 12:14:41.436361_Sayan Dey/Lexical Diversity per person.png has been attached
+2020-04-08 12:14:51,117 root            MainThread INFO     ../data/images/2020-04-08 12:14:41.436361_Sayan Dey/Most used emojis per person.png has been attached
+2020-04-08 12:14:51,124 root            MainThread INFO     ../data/images/2020-04-08 12:14:41.436361_Sayan Dey/Total weight of chats since you started.png has been attached
+2020-04-08 12:14:51,153 root            MainThread INFO     ../data/images/2020-04-08 12:14:41.436361_Sayan Dey/Wordcloud.png has been attached
+2020-04-08 12:14:51,155 root            MainThread INFO     ../data/images/2020-04-08 12:14:41.436361_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+2020-04-08 12:14:51,157 root            MainThread INFO     ../data/images/2020-04-08 12:14:41.436361_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+2020-04-08 12:14:51,160 root            MainThread INFO     ../data/images/2020-04-08 12:14:41.436361_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+2020-04-08 12:14:51,162 root            MainThread INFO     ../data/images/2020-04-08 12:14:41.436361_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+2020-04-08 12:14:51,170 root            MainThread INFO     ../data/images/2020-04-08 12:14:41.436361_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+2020-04-08 12:14:51,213 root            MainThread INFO     Sending to mr.sayan.dey@gmail.com>.....
+2020-04-08 12:15:00,920 root            MainThread INFO     Message has been sent to mr.sayan.dey@gmail.com> successfully
+2020-04-08 12:15:01,196 root            MainThread INFO     Ended
+2020-04-08 12:17:46,604 root            MainThread INFO     Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+2020-04-08 12:17:46,757 root            MainThread INFO     Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+2020-04-08 12:17:47,246 root            plotChatperDay INFO     Plotted chat per day
+2020-04-08 12:17:47,511 root            plotChatperMonth INFO     Plotted chat per month
+2020-04-08 12:17:47,744 root            plotChatperSlot INFO     Plotted chat per slot
+2020-04-08 12:17:47,985 root            plotPromptness INFO     Plotted promptness for Sayan Dey Sonali
+2020-04-08 12:17:51,737 root            plotWordCloud ERROR    analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+2020-04-08 12:17:51,737 root            plotWordCloud ERROR      ax=plt.axes()
+2020-04-08 12:17:52,166 root            plotWordCloud INFO     Plotted wordcloud
+2020-04-08 12:17:52,347 root            plotChatPerPerson INFO     Plotted chat per person
+2020-04-08 12:17:52,687 root            plotLangdiversity INFO     Plotted lang_diversity
+2020-04-08 12:17:52,690 root            plot_tf_idf ERROR    /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+2020-04-08 12:17:52,690 root            plot_tf_idf ERROR      'stop_words.' % sorted(inconsistent))
+2020-04-08 12:17:52,776 root            plot_tf_idf INFO     Plotted tf_ifd
+2020-04-08 12:17:52,989 root            plotEmoji  INFO     Plotted emojiMap
+2020-04-08 12:17:53,056 root            plotEmoji  ERROR    /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+2020-04-08 12:17:53,056 root            plotEmoji  ERROR      font.set_text(s, 0.0, flags=flags)
+2020-04-08 12:17:53,059 root            plotEmoji  ERROR    /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+2020-04-08 12:17:53,060 root            plotEmoji  ERROR      font.load_char(ord(s), flags=flags)
+2020-04-08 12:17:53,150 root            MainThread INFO     ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+2020-04-08 12:17:55,919 root            MainThread INFO     Logged into SMTP server successfully
+2020-04-08 12:17:55,921 root            MainThread INFO     Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+2020-04-08 12:17:55,937 root            MainThread INFO     ../data/images/2020-04-08 12:17:46.759719_Sayan Dey/Lexical Diversity per person.png has been attached
+2020-04-08 12:17:55,944 root            MainThread INFO     ../data/images/2020-04-08 12:17:46.759719_Sayan Dey/Most used emojis per person.png has been attached
+2020-04-08 12:17:55,954 root            MainThread INFO     ../data/images/2020-04-08 12:17:46.759719_Sayan Dey/Total weight of chats since you started.png has been attached
+2020-04-08 12:17:56,021 root            MainThread INFO     ../data/images/2020-04-08 12:17:46.759719_Sayan Dey/Wordcloud.png has been attached
+2020-04-08 12:17:56,023 root            MainThread INFO     ../data/images/2020-04-08 12:17:46.759719_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+2020-04-08 12:17:56,028 root            MainThread INFO     ../data/images/2020-04-08 12:17:46.759719_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+2020-04-08 12:17:56,030 root            MainThread INFO     ../data/images/2020-04-08 12:17:46.759719_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+2020-04-08 12:17:56,035 root            MainThread INFO     ../data/images/2020-04-08 12:17:46.759719_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+2020-04-08 12:17:56,042 root            MainThread INFO     ../data/images/2020-04-08 12:17:46.759719_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+2020-04-08 12:17:56,095 root            MainThread INFO     Sending to mr.sayan.dey@gmail.com>.....
+2020-04-08 12:18:05,032 root            MainThread INFO     Message has been sent to mr.sayan.dey@gmail.com> successfully
+2020-04-08 12:18:05,311 root            MainThread INFO     Ended
+INFO     2020-04-08 12:18:08,722 attachment_loader:29MainThread  Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO     2020-04-08 12:18:08,876 fileReadUtils:63MainThread  Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO     2020-04-08 12:18:09,359 analyzer:124plotChatperDay  Plotted chat per day
+INFO     2020-04-08 12:18:09,605 analyzer:160plotChatperMonth  Plotted chat per month
+INFO     2020-04-08 12:18:09,841 analyzer:212plotChatperSlot  Plotted chat per slot
+INFO     2020-04-08 12:18:10,068 analyzer:372plotPromptness  Plotted promptness for Sayan Dey Sonali
+ERROR    2020-04-08 12:18:13,651 log:20plotWordCloud  analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR    2020-04-08 12:18:13,651 log:20plotWordCloud    ax=plt.axes()
+INFO     2020-04-08 12:18:14,077 analyzer:393plotWordCloud  Plotted wordcloud
+INFO     2020-04-08 12:18:14,253 analyzer:430plotChatPerPerson  Plotted chat per person
+INFO     2020-04-08 12:18:14,592 analyzer:479plotLangdiversity  Plotted lang_diversity
+ERROR    2020-04-08 12:18:14,595 log:20plot_tf_idf  /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR    2020-04-08 12:18:14,595 log:20plot_tf_idf    'stop_words.' % sorted(inconsistent))
+INFO     2020-04-08 12:18:14,679 analyzer:535plot_tf_idf  Plotted tf_ifd
+INFO     2020-04-08 12:18:14,891 analyzer:606plotEmoji   Plotted emojiMap
+ERROR    2020-04-08 12:18:14,950 log:20plotEmoji   /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:18:14,950 log:20plotEmoji     font.set_text(s, 0.0, flags=flags)
+ERROR    2020-04-08 12:18:14,953 log:20plotEmoji   /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:18:14,953 log:20plotEmoji     font.load_char(ord(s), flags=flags)
+INFO     2020-04-08 12:18:15,043 analyzer:60MainThread  ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO     2020-04-08 12:18:17,587 mailman:139MainThread  Logged into SMTP server successfully
+INFO     2020-04-08 12:18:17,588 mailman:145MainThread  Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO     2020-04-08 12:18:17,600 mailman:186MainThread  ../data/images/2020-04-08 12:18:08.878076_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO     2020-04-08 12:18:17,607 mailman:186MainThread  ../data/images/2020-04-08 12:18:08.878076_Sayan Dey/Most used emojis per person.png has been attached
+INFO     2020-04-08 12:18:17,620 mailman:186MainThread  ../data/images/2020-04-08 12:18:08.878076_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO     2020-04-08 12:18:17,712 mailman:186MainThread  ../data/images/2020-04-08 12:18:08.878076_Sayan Dey/Wordcloud.png has been attached
+INFO     2020-04-08 12:18:17,715 mailman:186MainThread  ../data/images/2020-04-08 12:18:08.878076_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO     2020-04-08 12:18:17,719 mailman:186MainThread  ../data/images/2020-04-08 12:18:08.878076_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO     2020-04-08 12:18:17,722 mailman:186MainThread  ../data/images/2020-04-08 12:18:08.878076_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO     2020-04-08 12:18:17,726 mailman:186MainThread  ../data/images/2020-04-08 12:18:08.878076_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO     2020-04-08 12:18:17,733 mailman:186MainThread  ../data/images/2020-04-08 12:18:08.878076_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO     2020-04-08 12:18:17,780 mailman:149MainThread  Sending to mr.sayan.dey@gmail.com>.....
+INFO     2020-04-08 12:18:27,151 mailman:151MainThread  Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO     2020-04-08 12:18:27,426 analyzer:628MainThread  Ended
+INFO     2020-04-08 12:19:43,791 attachment_loader:29MainThread  Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO     2020-04-08 12:19:43,973 fileReadUtils:63MainThread  Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO     2020-04-08 12:19:44,575 analyzer:124plotChatperDay  Plotted chat per day
+INFO     2020-04-08 12:19:44,855 analyzer:160plotChatperMonth  Plotted chat per month
+INFO     2020-04-08 12:19:45,166 analyzer:212plotChatperSlot  Plotted chat per slot
+INFO     2020-04-08 12:19:45,422 analyzer:372plotPromptness  Plotted promptness for Sayan Dey Sonali
+ERROR    2020-04-08 12:19:49,825 log:20plotWordCloud  analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR    2020-04-08 12:19:49,825 log:20plotWordCloud    ax=plt.axes()
+INFO     2020-04-08 12:19:50,318 analyzer:393plotWordCloud  Plotted wordcloud
+INFO     2020-04-08 12:19:50,515 analyzer:430plotChatPerPerson  Plotted chat per person
+INFO     2020-04-08 12:19:50,956 analyzer:479plotLangdiversity  Plotted lang_diversity
+ERROR    2020-04-08 12:19:50,960 log:20plot_tf_idf  /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR    2020-04-08 12:19:50,961 log:20plot_tf_idf    'stop_words.' % sorted(inconsistent))
+INFO     2020-04-08 12:19:51,061 analyzer:535plot_tf_idf  Plotted tf_ifd
+INFO     2020-04-08 12:19:51,325 analyzer:606plotEmoji   Plotted emojiMap
+ERROR    2020-04-08 12:19:51,400 log:20plotEmoji   /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:19:51,400 log:20plotEmoji     font.set_text(s, 0.0, flags=flags)
+ERROR    2020-04-08 12:19:51,403 log:20plotEmoji   /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:19:51,403 log:20plotEmoji     font.load_char(ord(s), flags=flags)
+INFO     2020-04-08 12:19:51,500 analyzer:60MainThread  ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO     2020-04-08 12:19:53,984 mailman:139MainThread  Logged into SMTP server successfully
+INFO     2020-04-08 12:19:53,986 mailman:145MainThread  Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO     2020-04-08 12:19:54,004 mailman:186MainThread  ../data/images/2020-04-08 12:19:43.975695_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO     2020-04-08 12:19:54,013 mailman:186MainThread  ../data/images/2020-04-08 12:19:43.975695_Sayan Dey/Most used emojis per person.png has been attached
+INFO     2020-04-08 12:19:54,022 mailman:186MainThread  ../data/images/2020-04-08 12:19:43.975695_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO     2020-04-08 12:19:54,053 mailman:186MainThread  ../data/images/2020-04-08 12:19:43.975695_Sayan Dey/Wordcloud.png has been attached
+INFO     2020-04-08 12:19:54,054 mailman:186MainThread  ../data/images/2020-04-08 12:19:43.975695_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO     2020-04-08 12:19:54,056 mailman:186MainThread  ../data/images/2020-04-08 12:19:43.975695_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO     2020-04-08 12:19:54,058 mailman:186MainThread  ../data/images/2020-04-08 12:19:43.975695_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO     2020-04-08 12:19:54,060 mailman:186MainThread  ../data/images/2020-04-08 12:19:43.975695_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO     2020-04-08 12:19:54,067 mailman:186MainThread  ../data/images/2020-04-08 12:19:43.975695_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO     2020-04-08 12:19:54,113 mailman:149MainThread  Sending to mr.sayan.dey@gmail.com>.....
+INFO     2020-04-08 12:20:02,789 mailman:151MainThread  Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO     2020-04-08 12:20:03,102 analyzer:628MainThread  Ended
+INFO     2020-04-08 12:21:55,534 MainThread     attachment_loader:29 Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO     2020-04-08 12:21:55,688 MainThread     fileReadUtils:63 Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO     2020-04-08 12:21:56,189 plotChatperDay analyzer:124 Plotted chat per day
+INFO     2020-04-08 12:21:56,441 plotChatperMonth analyzer:160 Plotted chat per month
+INFO     2020-04-08 12:21:56,677 plotChatperSlot analyzer:212 Plotted chat per slot
+INFO     2020-04-08 12:21:56,908 plotPromptness analyzer:372 Plotted promptness for Sayan Dey Sonali
+ERROR    2020-04-08 12:22:00,517 plotWordCloud  log:20 analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR    2020-04-08 12:22:00,517 plotWordCloud  log:20   ax=plt.axes()
+INFO     2020-04-08 12:22:00,946 plotWordCloud  analyzer:393 Plotted wordcloud
+INFO     2020-04-08 12:22:01,130 plotChatPerPerson analyzer:430 Plotted chat per person
+INFO     2020-04-08 12:22:01,478 plotLangdiversity analyzer:479 Plotted lang_diversity
+ERROR    2020-04-08 12:22:01,481 plot_tf_idf    log:20 /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR    2020-04-08 12:22:01,481 plot_tf_idf    log:20   'stop_words.' % sorted(inconsistent))
+INFO     2020-04-08 12:22:01,565 plot_tf_idf    analyzer:535 Plotted tf_ifd
+INFO     2020-04-08 12:22:01,808 plotEmoji      analyzer:606 Plotted emojiMap
+ERROR    2020-04-08 12:22:01,869 plotEmoji      log:20 /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:22:01,869 plotEmoji      log:20   font.set_text(s, 0.0, flags=flags)
+ERROR    2020-04-08 12:22:01,872 plotEmoji      log:20 /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:22:01,872 plotEmoji      log:20   font.load_char(ord(s), flags=flags)
+INFO     2020-04-08 12:22:01,961 MainThread     analyzer:60 ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO     2020-04-08 12:22:04,274 MainThread     mailman:139 Logged into SMTP server successfully
+INFO     2020-04-08 12:22:04,275 MainThread     mailman:145 Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO     2020-04-08 12:22:04,285 MainThread     mailman:186 ../data/images/2020-04-08 12:21:55.690897_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO     2020-04-08 12:22:04,291 MainThread     mailman:186 ../data/images/2020-04-08 12:21:55.690897_Sayan Dey/Most used emojis per person.png has been attached
+INFO     2020-04-08 12:22:04,297 MainThread     mailman:186 ../data/images/2020-04-08 12:21:55.690897_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO     2020-04-08 12:22:04,378 MainThread     mailman:186 ../data/images/2020-04-08 12:21:55.690897_Sayan Dey/Wordcloud.png has been attached
+INFO     2020-04-08 12:22:04,381 MainThread     mailman:186 ../data/images/2020-04-08 12:21:55.690897_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO     2020-04-08 12:22:04,384 MainThread     mailman:186 ../data/images/2020-04-08 12:21:55.690897_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO     2020-04-08 12:22:04,387 MainThread     mailman:186 ../data/images/2020-04-08 12:21:55.690897_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO     2020-04-08 12:22:04,390 MainThread     mailman:186 ../data/images/2020-04-08 12:21:55.690897_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO     2020-04-08 12:22:04,398 MainThread     mailman:186 ../data/images/2020-04-08 12:21:55.690897_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO     2020-04-08 12:22:04,447 MainThread     mailman:149 Sending to mr.sayan.dey@gmail.com>.....
+INFO     2020-04-08 12:22:13,156 MainThread     mailman:151 Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO     2020-04-08 12:22:13,495 MainThread     analyzer:628 Ended
+INFO     2020-04-08 12:22:51,713 MainThread     attachment_loader:29 Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO     2020-04-08 12:22:51,880 MainThread     fileReadUtils:63 Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO     2020-04-08 12:22:52,381 plotChatperDay analyzer:124 Plotted chat per day
+INFO     2020-04-08 12:22:52,652 plotChatperMonth analyzer:160 Plotted chat per month
+INFO     2020-04-08 12:22:52,896 plotChatperSlot analyzer:212 Plotted chat per slot
+INFO     2020-04-08 12:22:53,147 plotPromptness analyzer:372 Plotted promptness for Sayan Dey Sonali
+ERROR    2020-04-08 12:22:57,284 plotWordCloud  log:20 analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR    2020-04-08 12:22:57,284 plotWordCloud  log:20   ax=plt.axes()
+INFO     2020-04-08 12:22:57,772 plotWordCloud  analyzer:393 Plotted wordcloud
+INFO     2020-04-08 12:22:57,985 plotChatPerPerson analyzer:430 Plotted chat per person
+INFO     2020-04-08 12:22:58,409 plotLangdiversity analyzer:479 Plotted lang_diversity
+ERROR    2020-04-08 12:22:58,412 plot_tf_idf    log:20 /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR    2020-04-08 12:22:58,413 plot_tf_idf    log:20   'stop_words.' % sorted(inconsistent))
+INFO     2020-04-08 12:22:58,516 plot_tf_idf    analyzer:535 Plotted tf_ifd
+INFO     2020-04-08 12:22:58,758 plotEmoji      analyzer:606 Plotted emojiMap
+ERROR    2020-04-08 12:22:58,821 plotEmoji      log:20 /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:22:58,822 plotEmoji      log:20   font.set_text(s, 0.0, flags=flags)
+ERROR    2020-04-08 12:22:58,825 plotEmoji      log:20 /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:22:58,825 plotEmoji      log:20   font.load_char(ord(s), flags=flags)
+INFO     2020-04-08 12:22:58,915 MainThread     analyzer:60 ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO     2020-04-08 12:23:01,118 MainThread     mailman:139 Logged into SMTP server successfully
+INFO     2020-04-08 12:23:01,119 MainThread     mailman:145 Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO     2020-04-08 12:23:01,123 MainThread     mailman:186 ../data/images/2020-04-08 12:22:51.882807_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO     2020-04-08 12:23:01,125 MainThread     mailman:186 ../data/images/2020-04-08 12:22:51.882807_Sayan Dey/Most used emojis per person.png has been attached
+INFO     2020-04-08 12:23:01,127 MainThread     mailman:186 ../data/images/2020-04-08 12:22:51.882807_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO     2020-04-08 12:23:01,156 MainThread     mailman:186 ../data/images/2020-04-08 12:22:51.882807_Sayan Dey/Wordcloud.png has been attached
+INFO     2020-04-08 12:23:01,158 MainThread     mailman:186 ../data/images/2020-04-08 12:22:51.882807_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO     2020-04-08 12:23:01,161 MainThread     mailman:186 ../data/images/2020-04-08 12:22:51.882807_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO     2020-04-08 12:23:01,163 MainThread     mailman:186 ../data/images/2020-04-08 12:22:51.882807_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO     2020-04-08 12:23:01,167 MainThread     mailman:186 ../data/images/2020-04-08 12:22:51.882807_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO     2020-04-08 12:23:01,177 MainThread     mailman:186 ../data/images/2020-04-08 12:22:51.882807_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO     2020-04-08 12:23:01,237 MainThread     mailman:149 Sending to mr.sayan.dey@gmail.com>.....
+INFO     2020-04-08 12:23:10,412 MainThread     mailman:151 Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO     2020-04-08 12:23:10,696 MainThread     analyzer:628 Ended
+INFO     2020-04-08 12:24:11,507 MainThread     attachment_loader:29 Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO     2020-04-08 12:24:11,666 MainThread     fileReadUtils:63 Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO     2020-04-08 12:24:12,166 plotChatperDay analyzer:124 Plotted chat per day
+INFO     2020-04-08 12:24:12,431 plotChatperMonth analyzer:160 Plotted chat per month
+INFO     2020-04-08 12:24:12,670 plotChatperSlot analyzer:212 Plotted chat per slot
+INFO     2020-04-08 12:24:12,917 plotPromptness analyzer:372 Plotted promptness for Sayan Dey Sonali
+ERROR    2020-04-08 12:24:16,689 plotWordCloud  log:20 analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR    2020-04-08 12:24:16,690 plotWordCloud  log:20   ax=plt.axes()
+INFO     2020-04-08 12:24:17,359 plotWordCloud  analyzer:393 Plotted wordcloud
+INFO     2020-04-08 12:24:17,669 plotChatPerPerson analyzer:430 Plotted chat per person
+INFO     2020-04-08 12:24:18,215 plotLangdiversity analyzer:479 Plotted lang_diversity
+ERROR    2020-04-08 12:24:18,219 plot_tf_idf    log:20 /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR    2020-04-08 12:24:18,219 plot_tf_idf    log:20   'stop_words.' % sorted(inconsistent))
+INFO     2020-04-08 12:24:18,304 plot_tf_idf    analyzer:535 Plotted tf_ifd
+INFO     2020-04-08 12:24:18,536 plotEmoji      analyzer:606 Plotted emojiMap
+ERROR    2020-04-08 12:24:18,594 plotEmoji      log:20 /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:24:18,594 plotEmoji      log:20   font.set_text(s, 0.0, flags=flags)
+ERROR    2020-04-08 12:24:18,596 plotEmoji      log:20 /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:24:18,597 plotEmoji      log:20   font.load_char(ord(s), flags=flags)
+INFO     2020-04-08 12:24:18,682 MainThread     analyzer:60 ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO     2020-04-08 12:24:20,901 MainThread     mailman:139 Logged into SMTP server successfully
+INFO     2020-04-08 12:24:20,901 MainThread     mailman:145 Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO     2020-04-08 12:24:20,904 MainThread     mailman:186 ../data/images/2020-04-08 12:24:11.668330_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO     2020-04-08 12:24:20,905 MainThread     mailman:186 ../data/images/2020-04-08 12:24:11.668330_Sayan Dey/Most used emojis per person.png has been attached
+INFO     2020-04-08 12:24:20,908 MainThread     mailman:186 ../data/images/2020-04-08 12:24:11.668330_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO     2020-04-08 12:24:20,930 MainThread     mailman:186 ../data/images/2020-04-08 12:24:11.668330_Sayan Dey/Wordcloud.png has been attached
+INFO     2020-04-08 12:24:20,932 MainThread     mailman:186 ../data/images/2020-04-08 12:24:11.668330_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO     2020-04-08 12:24:20,934 MainThread     mailman:186 ../data/images/2020-04-08 12:24:11.668330_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO     2020-04-08 12:24:20,936 MainThread     mailman:186 ../data/images/2020-04-08 12:24:11.668330_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO     2020-04-08 12:24:20,938 MainThread     mailman:186 ../data/images/2020-04-08 12:24:11.668330_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO     2020-04-08 12:24:20,946 MainThread     mailman:186 ../data/images/2020-04-08 12:24:11.668330_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO     2020-04-08 12:24:20,996 MainThread     mailman:149 Sending to mr.sayan.dey@gmail.com>.....
+INFO     2020-04-08 12:24:29,944 MainThread     mailman:151 Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO     2020-04-08 12:24:30,216 MainThread     analyzer:628 Ended
+INFO     2020-04-08 12:24:33,007 MainThread     attachment_loader:29 Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO     2020-04-08 12:24:33,211 MainThread     fileReadUtils:63 Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO     2020-04-08 12:24:33,714 plotChatperDay analyzer:124 Plotted chat per day
+INFO     2020-04-08 12:24:33,983 plotChatperMonth analyzer:160 Plotted chat per month
+INFO     2020-04-08 12:24:34,298 plotChatperSlot analyzer:212 Plotted chat per slot
+INFO     2020-04-08 12:24:34,540 plotPromptness analyzer:372 Plotted promptness for Sayan Dey Sonali
+ERROR    2020-04-08 12:24:38,199 plotWordCloud  log:20 analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR    2020-04-08 12:24:38,199 plotWordCloud  log:20   ax=plt.axes()
+INFO     2020-04-08 12:24:38,616 plotWordCloud  analyzer:393 Plotted wordcloud
+INFO     2020-04-08 12:24:38,794 plotChatPerPerson analyzer:430 Plotted chat per person
+INFO     2020-04-08 12:24:39,138 plotLangdiversity analyzer:479 Plotted lang_diversity
+ERROR    2020-04-08 12:24:39,141 plot_tf_idf    log:20 /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR    2020-04-08 12:24:39,141 plot_tf_idf    log:20   'stop_words.' % sorted(inconsistent))
+INFO     2020-04-08 12:24:39,231 plot_tf_idf    analyzer:535 Plotted tf_ifd
+INFO     2020-04-08 12:24:39,445 plotEmoji      analyzer:606 Plotted emojiMap
+ERROR    2020-04-08 12:24:39,506 plotEmoji      log:20 /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:24:39,507 plotEmoji      log:20   font.set_text(s, 0.0, flags=flags)
+ERROR    2020-04-08 12:24:39,509 plotEmoji      log:20 /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:24:39,510 plotEmoji      log:20   font.load_char(ord(s), flags=flags)
+INFO     2020-04-08 12:24:39,595 MainThread     analyzer:60 ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO     2020-04-08 12:24:41,877 MainThread     mailman:139 Logged into SMTP server successfully
+INFO     2020-04-08 12:24:41,879 MainThread     mailman:145 Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO     2020-04-08 12:24:41,891 MainThread     mailman:186 ../data/images/2020-04-08 12:24:33.213299_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO     2020-04-08 12:24:41,898 MainThread     mailman:186 ../data/images/2020-04-08 12:24:33.213299_Sayan Dey/Most used emojis per person.png has been attached
+INFO     2020-04-08 12:24:41,907 MainThread     mailman:186 ../data/images/2020-04-08 12:24:33.213299_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO     2020-04-08 12:24:41,938 MainThread     mailman:186 ../data/images/2020-04-08 12:24:33.213299_Sayan Dey/Wordcloud.png has been attached
+INFO     2020-04-08 12:24:41,940 MainThread     mailman:186 ../data/images/2020-04-08 12:24:33.213299_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO     2020-04-08 12:24:41,942 MainThread     mailman:186 ../data/images/2020-04-08 12:24:33.213299_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO     2020-04-08 12:24:41,944 MainThread     mailman:186 ../data/images/2020-04-08 12:24:33.213299_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO     2020-04-08 12:24:41,946 MainThread     mailman:186 ../data/images/2020-04-08 12:24:33.213299_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO     2020-04-08 12:24:41,953 MainThread     mailman:186 ../data/images/2020-04-08 12:24:33.213299_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO     2020-04-08 12:24:42,027 MainThread     mailman:149 Sending to mr.sayan.dey@gmail.com>.....
+INFO     2020-04-08 12:24:51,011 MainThread     mailman:151 Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO     2020-04-08 12:24:51,280 MainThread     analyzer:628 Ended
+INFO     2020-04-08 12:29:06,791 MainThread     attachment_loader:29{
+}s Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO     2020-04-08 12:29:06,997 MainThread     fileReadUtils:63{
+}s Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO     2020-04-08 12:29:07,548 plotChatperDay analyzer:124{
+}s Plotted chat per day
+INFO     2020-04-08 12:29:07,823 plotChatperMonth analyzer:160{
+}s Plotted chat per month
+INFO     2020-04-08 12:29:08,107 plotChatperSlot analyzer:212{
+}s Plotted chat per slot
+INFO     2020-04-08 12:29:08,466 plotPromptness analyzer:372{
+}s Plotted promptness for Sayan Dey Sonali
+ERROR    2020-04-08 12:29:12,140 plotWordCloud  log:20{
+}s analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR    2020-04-08 12:29:12,140 plotWordCloud  log:20{
+}s   ax=plt.axes()
+INFO     2020-04-08 12:29:12,580 plotWordCloud  analyzer:393{
+}s Plotted wordcloud
+INFO     2020-04-08 12:29:12,768 plotChatPerPerson analyzer:430{
+}s Plotted chat per person
+INFO     2020-04-08 12:29:13,185 plotLangdiversity analyzer:479{
+}s Plotted lang_diversity
+ERROR    2020-04-08 12:29:13,189 plot_tf_idf    log:20{
+}s /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR    2020-04-08 12:29:13,189 plot_tf_idf    log:20{
+}s   'stop_words.' % sorted(inconsistent))
+INFO     2020-04-08 12:29:13,292 plot_tf_idf    analyzer:535{
+}s Plotted tf_ifd
+INFO     2020-04-08 12:29:13,521 plotEmoji      analyzer:606{
+}s Plotted emojiMap
+ERROR    2020-04-08 12:29:13,586 plotEmoji      log:20{
+}s /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:29:13,587 plotEmoji      log:20{
+}s   font.set_text(s, 0.0, flags=flags)
+ERROR    2020-04-08 12:29:13,590 plotEmoji      log:20{
+}s /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:29:13,590 plotEmoji      log:20{
+}s   font.load_char(ord(s), flags=flags)
+INFO     2020-04-08 12:29:13,683 MainThread     analyzer:60{
+}s ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO     2020-04-08 12:29:16,048 MainThread     mailman:139{
+}s Logged into SMTP server successfully
+INFO     2020-04-08 12:29:16,050 MainThread     mailman:145{
+}s Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO     2020-04-08 12:29:16,068 MainThread     mailman:186{
+}s ../data/images/2020-04-08 12:29:06.999786_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO     2020-04-08 12:29:16,074 MainThread     mailman:186{
+}s ../data/images/2020-04-08 12:29:06.999786_Sayan Dey/Most used emojis per person.png has been attached
+INFO     2020-04-08 12:29:16,078 MainThread     mailman:186{
+}s ../data/images/2020-04-08 12:29:06.999786_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO     2020-04-08 12:29:16,103 MainThread     mailman:186{
+}s ../data/images/2020-04-08 12:29:06.999786_Sayan Dey/Wordcloud.png has been attached
+INFO     2020-04-08 12:29:16,106 MainThread     mailman:186{
+}s ../data/images/2020-04-08 12:29:06.999786_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO     2020-04-08 12:29:16,110 MainThread     mailman:186{
+}s ../data/images/2020-04-08 12:29:06.999786_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO     2020-04-08 12:29:16,113 MainThread     mailman:186{
+}s ../data/images/2020-04-08 12:29:06.999786_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO     2020-04-08 12:29:16,115 MainThread     mailman:186{
+}s ../data/images/2020-04-08 12:29:06.999786_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO     2020-04-08 12:29:16,125 MainThread     mailman:186{
+}s ../data/images/2020-04-08 12:29:06.999786_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO     2020-04-08 12:29:16,175 MainThread     mailman:149{
+}s Sending to mr.sayan.dey@gmail.com>.....
+INFO     2020-04-08 12:29:24,650 MainThread     mailman:151{
+}s Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO     2020-04-08 12:29:24,942 MainThread     analyzer:628{
+}s Ended
+INFO     2020-04-08 12:30:02,557 MainThread     attachment_loader:29
+ Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO     2020-04-08 12:30:02,738 MainThread     fileReadUtils:63
+ Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO     2020-04-08 12:30:03,294 plotChatperDay analyzer:124
+ Plotted chat per day
+INFO     2020-04-08 12:30:03,577 plotChatperMonth analyzer:160
+ Plotted chat per month
+INFO     2020-04-08 12:30:03,834 plotChatperSlot analyzer:212
+ Plotted chat per slot
+INFO     2020-04-08 12:30:04,109 plotPromptness analyzer:372
+ Plotted promptness for Sayan Dey Sonali
+ERROR    2020-04-08 12:30:08,518 plotWordCloud  log:20
+ analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR    2020-04-08 12:30:08,518 plotWordCloud  log:20
+   ax=plt.axes()
+INFO     2020-04-08 12:30:09,076 plotWordCloud  analyzer:393
+ Plotted wordcloud
+INFO     2020-04-08 12:30:09,315 plotChatPerPerson analyzer:430
+ Plotted chat per person
+INFO     2020-04-08 12:30:09,899 plotLangdiversity analyzer:479
+ Plotted lang_diversity
+ERROR    2020-04-08 12:30:09,902 plot_tf_idf    log:20
+ /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR    2020-04-08 12:30:09,902 plot_tf_idf    log:20
+   'stop_words.' % sorted(inconsistent))
+INFO     2020-04-08 12:30:10,002 plot_tf_idf    analyzer:535
+ Plotted tf_ifd
+INFO     2020-04-08 12:30:10,239 plotEmoji      analyzer:606
+ Plotted emojiMap
+ERROR    2020-04-08 12:30:10,313 plotEmoji      log:20
+ /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:30:10,313 plotEmoji      log:20
+   font.set_text(s, 0.0, flags=flags)
+ERROR    2020-04-08 12:30:10,317 plotEmoji      log:20
+ /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:30:10,317 plotEmoji      log:20
+   font.load_char(ord(s), flags=flags)
+INFO     2020-04-08 12:30:10,415 MainThread     analyzer:60
+ ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO     2020-04-08 12:30:12,986 MainThread     mailman:139
+ Logged into SMTP server successfully
+INFO     2020-04-08 12:30:12,988 MainThread     mailman:145
+ Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO     2020-04-08 12:30:13,003 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:02.741394_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO     2020-04-08 12:30:13,008 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:02.741394_Sayan Dey/Most used emojis per person.png has been attached
+INFO     2020-04-08 12:30:13,012 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:02.741394_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO     2020-04-08 12:30:13,041 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:02.741394_Sayan Dey/Wordcloud.png has been attached
+INFO     2020-04-08 12:30:13,043 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:02.741394_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO     2020-04-08 12:30:13,047 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:02.741394_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO     2020-04-08 12:30:13,050 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:02.741394_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO     2020-04-08 12:30:13,053 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:02.741394_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO     2020-04-08 12:30:13,059 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:02.741394_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO     2020-04-08 12:30:13,121 MainThread     mailman:149
+ Sending to mr.sayan.dey@gmail.com>.....
+INFO     2020-04-08 12:30:22,817 MainThread     mailman:151
+ Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO     2020-04-08 12:30:23,092 MainThread     analyzer:628
+ Ended
+INFO     2020-04-08 12:30:41,474 MainThread     attachment_loader:29
+ Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO     2020-04-08 12:30:41,641 MainThread     fileReadUtils:63
+ Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO     2020-04-08 12:30:42,156 plotChatperDay analyzer:124
+ Plotted chat per day
+INFO     2020-04-08 12:30:42,413 plotChatperMonth analyzer:160
+ Plotted chat per month
+INFO     2020-04-08 12:30:42,665 plotChatperSlot analyzer:212
+ Plotted chat per slot
+INFO     2020-04-08 12:30:42,892 plotPromptness analyzer:372
+ Plotted promptness for Sayan Dey Sonali
+ERROR    2020-04-08 12:30:46,500 plotWordCloud  log:20
+ analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR    2020-04-08 12:30:46,500 plotWordCloud  log:20
+   ax=plt.axes()
+INFO     2020-04-08 12:30:46,927 plotWordCloud  analyzer:393
+ Plotted wordcloud
+INFO     2020-04-08 12:30:47,116 plotChatPerPerson analyzer:430
+ Plotted chat per person
+INFO     2020-04-08 12:30:47,458 plotLangdiversity analyzer:479
+ Plotted lang_diversity
+ERROR    2020-04-08 12:30:47,461 plot_tf_idf    log:20
+ /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR    2020-04-08 12:30:47,461 plot_tf_idf    log:20
+   'stop_words.' % sorted(inconsistent))
+INFO     2020-04-08 12:30:47,551 plot_tf_idf    analyzer:535
+ Plotted tf_ifd
+INFO     2020-04-08 12:30:47,768 plotEmoji      analyzer:606
+ Plotted emojiMap
+ERROR    2020-04-08 12:30:47,835 plotEmoji      log:20
+ /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:30:47,835 plotEmoji      log:20
+   font.set_text(s, 0.0, flags=flags)
+ERROR    2020-04-08 12:30:47,838 plotEmoji      log:20
+ /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:30:47,838 plotEmoji      log:20
+   font.load_char(ord(s), flags=flags)
+INFO     2020-04-08 12:30:47,936 MainThread     analyzer:60
+ ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO     2020-04-08 12:30:50,071 MainThread     mailman:139
+ Logged into SMTP server successfully
+INFO     2020-04-08 12:30:50,072 MainThread     mailman:145
+ Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO     2020-04-08 12:30:50,089 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:41.643187_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO     2020-04-08 12:30:50,094 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:41.643187_Sayan Dey/Most used emojis per person.png has been attached
+INFO     2020-04-08 12:30:50,100 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:41.643187_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO     2020-04-08 12:30:50,133 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:41.643187_Sayan Dey/Wordcloud.png has been attached
+INFO     2020-04-08 12:30:50,135 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:41.643187_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO     2020-04-08 12:30:50,137 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:41.643187_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO     2020-04-08 12:30:50,140 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:41.643187_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO     2020-04-08 12:30:50,142 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:41.643187_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO     2020-04-08 12:30:50,151 MainThread     mailman:186
+ ../data/images/2020-04-08 12:30:41.643187_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO     2020-04-08 12:30:50,202 MainThread     mailman:149
+ Sending to mr.sayan.dey@gmail.com>.....
+INFO     2020-04-08 12:30:59,274 MainThread     mailman:151
+ Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO     2020-04-08 12:30:59,559 MainThread     analyzer:628
+ Ended
+INFO     2020-04-08 12:31:44,649 MainThread     attachment_loader:29
+ Reading ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>
+INFO     2020-04-08 12:31:44,810 MainThread     fileReadUtils:63
+ Successfully read ../data/attachments/2020:04:04_20:28:04.776668_Sayan Dey <mr.sayan.dey@gmail.com>/2020:04:07_06:15:35.702854_with_Sonali.txt
+INFO     2020-04-08 12:31:45,294 plotChatperDay analyzer:124
+ Plotted chat per day
+INFO     2020-04-08 12:31:45,542 plotChatperMonth analyzer:160
+ Plotted chat per month
+INFO     2020-04-08 12:31:45,783 plotChatperSlot analyzer:212
+ Plotted chat per slot
+INFO     2020-04-08 12:31:46,012 plotPromptness analyzer:372
+ Plotted promptness for Sayan Dey Sonali
+ERROR    2020-04-08 12:31:49,674 plotWordCloud  log:20
+ analyzer.py:386: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+ERROR    2020-04-08 12:31:49,674 plotWordCloud  log:20
+   ax=plt.axes()
+INFO     2020-04-08 12:31:50,099 plotWordCloud  analyzer:393
+ Plotted wordcloud
+INFO     2020-04-08 12:31:50,282 plotChatPerPerson analyzer:430
+ Plotted chat per person
+INFO     2020-04-08 12:31:50,622 plotLangdiversity analyzer:479
+ Plotted lang_diversity
+ERROR    2020-04-08 12:31:50,625 plot_tf_idf    log:20
+ /home/sayan/.local/lib/python3.6/site-packages/sklearn/feature_extraction/text.py:300: UserWarning: Your stop_words may be inconsistent with your preprocessing. Tokenizing the stop words generated tokens ['mon'] not in stop_words.
+ERROR    2020-04-08 12:31:50,625 plot_tf_idf    log:20
+   'stop_words.' % sorted(inconsistent))
+INFO     2020-04-08 12:31:50,720 plot_tf_idf    analyzer:535
+ Plotted tf_ifd
+INFO     2020-04-08 12:31:50,940 plotEmoji      analyzer:606
+ Plotted emojiMap
+ERROR    2020-04-08 12:31:51,010 plotEmoji      log:20
+ /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:211: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:31:51,010 plotEmoji      log:20
+   font.set_text(s, 0.0, flags=flags)
+ERROR    2020-04-08 12:31:51,013 plotEmoji      log:20
+ /home/sayan/.local/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py:176: RuntimeWarning: Glyph 129303 missing from current font.
+ERROR    2020-04-08 12:31:51,013 plotEmoji      log:20
+   font.load_char(ord(s), flags=flags)
+INFO     2020-04-08 12:31:51,114 MainThread     analyzer:60
+ ["We handle one-to-one chats only, so we are looking for same name of yours in the files, if you have different names the results won't be as expected."]
+INFO     2020-04-08 12:31:53,541 MainThread     mailman:139
+ Logged into SMTP server successfully
+INFO     2020-04-08 12:31:53,542 MainThread     mailman:145
+ Mailid extracted: mr.sayan.dey@gmail.com> for recipient Sayan Dey
+INFO     2020-04-08 12:31:53,546 MainThread     mailman:186
+ ../data/images/2020-04-08 12:31:44.812034_Sayan Dey/Lexical Diversity per person.png has been attached
+INFO     2020-04-08 12:31:53,547 MainThread     mailman:186
+ ../data/images/2020-04-08 12:31:44.812034_Sayan Dey/Most used emojis per person.png has been attached
+INFO     2020-04-08 12:31:53,549 MainThread     mailman:186
+ ../data/images/2020-04-08 12:31:44.812034_Sayan Dey/Total weight of chats since you started.png has been attached
+INFO     2020-04-08 12:31:53,568 MainThread     mailman:186
+ ../data/images/2020-04-08 12:31:44.812034_Sayan Dey/Wordcloud.png has been attached
+INFO     2020-04-08 12:31:53,570 MainThread     mailman:186
+ ../data/images/2020-04-08 12:31:44.812034_Sayan Dey/Words uniquely used by person significantly more than others.png has been attached
+INFO     2020-04-08 12:31:53,573 MainThread     mailman:186
+ ../data/images/2020-04-08 12:31:44.812034_Sayan Dey/Your WhatsApp chat frequency with Sonali versus day since you started.png has been attached
+INFO     2020-04-08 12:31:53,575 MainThread     mailman:186
+ ../data/images/2020-04-08 12:31:44.812034_Sayan Dey/Your WhatsApp chat frequency with Sonali versus month since you started.png has been attached
+INFO     2020-04-08 12:31:53,577 MainThread     mailman:186
+ ../data/images/2020-04-08 12:31:44.812034_Sayan Dey/Your WhatsApp chat frequency with Sonali versus per daytime slot since you started.png has been attached
+INFO     2020-04-08 12:31:53,584 MainThread     mailman:186
+ ../data/images/2020-04-08 12:31:44.812034_Sayan Dey/Your WhatsApp chat response promptness with Sonali.png has been attached
+INFO     2020-04-08 12:31:53,666 MainThread     mailman:149
+ Sending to mr.sayan.dey@gmail.com>.....
+INFO     2020-04-08 12:32:03,175 MainThread     mailman:151
+ Message has been sent to mr.sayan.dey@gmail.com> successfully
+INFO     2020-04-08 12:32:03,438 MainThread     analyzer:628
+ Ended

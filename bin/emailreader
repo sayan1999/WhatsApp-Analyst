@@ -1,2 +1,3 @@
 #!/bin/bash
+cd ../whatsAppAnalyst
 python3 getmail.py
