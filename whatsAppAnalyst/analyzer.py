@@ -129,7 +129,7 @@ class Analyst:
         plt.tick_params(axis='x', which='both', bottom=False, labelcolor='white')
         plt.tick_params(axis='y', which='both', left=False, labelcolor = 'white')
         plt.grid(b=True, axis= 'y', color='green')
-        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col, bbox_inches='tight')
         log.info("Plotted chat per day")
         # plt.show()      
         
@@ -165,7 +165,7 @@ class Analyst:
         plt.ylabel("Chats Per Month", color='white', size = 14)
         plt.tick_params(axis='x', which='both', bottom=False, labelcolor='white')
         plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
-        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col, bbox_inches='tight')
         log.info("Plotted chat per month")
         # plt.show()
         
@@ -217,7 +217,7 @@ class Analyst:
         plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
         ax.set_xticks(range(len(timeticks)))
         ax.set_xticklabels(timetickstr)
-        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col, bbox_inches='tight')
         log.info("Plotted chat per slot")
         # plt.show()
 
@@ -377,7 +377,7 @@ class Analyst:
             plt.tick_params(axis='y', which='both', left=False, labelcolor = 'white')
             plt.grid(b=True, axis= 'y', color='green')
             ax.legend()
-            plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+            plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col, bbox_inches='tight')
             log.info("Plotted promptness for " + " ".join(persons))
             # plt.show()
 
@@ -397,7 +397,7 @@ class Analyst:
         plt.imshow(wordcloud.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
         plt.axis("off") 
         plt.tight_layout(pad = 0) 
-        plt.savefig(self.__directry+'/'+'Wordcloud.png', facecolor=background_col)      
+        plt.savefig(self.__directry+'/'+'Wordcloud.png', facecolor=background_col, bbox_inches='tight')      
         log.info("Plotted wordcloud")
         # plt.show()   
       
@@ -434,7 +434,7 @@ class Analyst:
         plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
         ax.set_xticks(range(1, no_of_persons+1))
         ax.set_xticklabels(chatperPerson.keys())
-        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col, bbox_inches='tight')
         log.info("Plotted chat per person")
         # plt.show()      
 
@@ -483,7 +483,7 @@ class Analyst:
         plt.tick_params(axis='y', which='both', left=False, labelright=True, labelcolor = 'white')
         ax.set_xticks(range(no_of_persons))
         ax.set_xticklabels(wordperPerson.keys())
-        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col, bbox_inches='tight')
         log.info("Plotted lang_diversity")
         # plt.show() 
 
@@ -514,6 +514,8 @@ class Analyst:
             log.info(self.__directryToAttch + ": No data for tf_idf")
             return
         fig, ax = plt.subplots(no_of_plots)
+        fig.set_figwidth(15)
+        fig.set_figheight(5*no_of_plots)
         if no_of_plots==1:
             ax=np.array([ax])
         backgorund_col='#1e272e'
@@ -538,11 +540,11 @@ class Analyst:
             plt.tick_params(axis='y', left=False, labelcolor = 'white')
 
          #Label graph         
-        title=plt.suptitle('Words uniquely used by person significantly more than others', color='white', size = 10)
-        fig.text(0.5, 0.02, s="Coefficient of usage", color='white', size = 14, ha='center')
+        title=plt.suptitle('Words uniquely used by person significantly more than others', color='white', size = 15)
+        fig.text(0.5, 0.02, s="Coefficient of usage", color='white', size = 15, ha='center')
                 
         log.info("Plotted tf_ifd")
-        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col, bbox_inches='tight')
         # plt.show() 
         
 
@@ -580,6 +582,8 @@ class Analyst:
             log.info(self.__directryToAttch + ": No data for tf_idf")
             return
         fig, ax = plt.subplots(no_of_plots)
+        fig.set_figwidth(15)
+        fig.set_figheight(5*no_of_plots)
         if no_of_plots==1:
             ax=np.array([ax])
         backgorund_col='#1e272e'
@@ -610,11 +614,11 @@ class Analyst:
             plt.tick_params(axis='y', left=False, labelcolor = 'white')
 
          #Label graph         
-        title=plt.suptitle('Most used emojis per person', color='white', size = 10)
-        fig.text(0.5, 0.02, s="Frequency", color='white', size = 14, ha='center')
+        title=plt.suptitle('Most used emojis per person', color='white', size = 15)
+        fig.text(0.5, 0.02, s="Frequency", color='white', size = 15, ha='center')
                 
         log.info("Plotted emojiMap")
-        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col)
+        plt.savefig(self.__directry+'/'+title.get_text()+'.png', facecolor=backgorund_col, bbox_inches='tight')
         # plt.show()         
 
 

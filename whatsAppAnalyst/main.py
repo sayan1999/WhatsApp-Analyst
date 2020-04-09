@@ -59,6 +59,6 @@ start_new_thread(checkNewDir, ())
 
 while True:
 
-    sleep(999999999)
+    sleep(100)
 
 
