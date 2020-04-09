@@ -5,6 +5,8 @@ from colorlog import ColoredFormatter
 import traceback
 from functools import partial
 import warnings
+from pytz import timezone, utc
+import datetime
 
 toSuppressWarns=[
     'font.load_char(ord(s), flags=flags)',
@@ -13,6 +15,12 @@ toSuppressWarns=[
     'sorted(inconsistent))',
     'font.set_text(s, 0.0, flags=flags)'
 ]
+
+def customTime(*args):
+    utc_dt = utc.localize(datetime.datetime.utcnow())
+    my_tz = timezone("Asia/Calcutta")
+    converted = utc_dt.astimezone(my_tz)
+    return converted.timetuple()
 
 class WarnStreamToLogger(object):
 
@@ -81,11 +89,13 @@ class Logger():
         secondary_log_colors={},
         style='%'
     )
+        logFormatterforConsole.converter = customTime
         consoleHandler = logging.StreamHandler(sys.stdout)
         consoleHandler.setFormatter(logFormatterforConsole)
         mainlogger.addHandler(consoleHandler)
 
         logFormatterforFile=logging.Formatter('%(levelname)-8s %(asctime)s %(threadName)-14s %(funcName)s in %(module)s:%(lineno)d\n %(message)s')    
+        logFormatterforFile.converter = customTime
         fileHandler = logging.FileHandler("{0}/{1}.logging".format("../logs", "log"))
         fileHandler.setFormatter(logFormatterforFile)
         mainlogger.addHandler(fileHandler)
@@ -98,6 +108,8 @@ class Logger():
 
         mainlogger.setLevel(logging.INFO)
         Logger.log=mainlogger
+
+        
 
 if __name__ == '__main__':
     raise ValueError
