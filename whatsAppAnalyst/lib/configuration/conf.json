@@ -3,7 +3,7 @@
     "IMAP4_PORT" : 993,
     "SMTP_SERVER" : "smtp.gmail.com",
     "SMTP_PORT" : 587,
-    "MAILPOLLINGTIMEOUT" : 200,
-    "DIRECTORYCHECKINGTIMEOUT" : 200,
+    "MAILPOLLINGTIMEOUT" : 100,
+    "DIRECTORYCHECKINGTIMEOUT" : 100,
     "KEYFILE" : "keys/key.key"
 }

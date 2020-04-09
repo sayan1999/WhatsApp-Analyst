@@ -6,6 +6,7 @@ from random import randint
 from threading import Thread
 from sys import argv
 from os.path import isfile, isdir
+from os import makedirs
 from sklearn.feature_extraction.text import TfidfVectorizer
 from matplotlib.font_manager import FontProperties
 from os.path import join as pathjoin
@@ -34,7 +35,10 @@ class Analyst:
     
     def __init__(self, path):
         
-        self.__directryToAttch=pathjoin('../data/attachments', path)
+        attachmentdir='../data/attachments'
+        if not isdir(attachmentdir):
+            makedirs(attachmentdir)
+        self.__directryToAttch=pathjoin(attachmentdir, path)
         self.__content = Chat_loader(self.__directryToAttch).getData()
         self.__msg = Msg(self.__content["Response"])
         self.__mailid = self.__content["MailID"]

@@ -7,6 +7,8 @@ from functools import partial
 import warnings
 from pytz import timezone, utc
 import datetime
+from os.path import isdir
+from os import makedirs
 
 toSuppressWarns=[
     'font.load_char(ord(s), flags=flags)',
@@ -94,6 +96,8 @@ class Logger():
         consoleHandler.setFormatter(logFormatterforConsole)
         mainlogger.addHandler(consoleHandler)
 
+        if not isdir("../logs"):
+            makedirs("../logs")
         logFormatterforFile=logging.Formatter('%(levelname)-8s %(asctime)s %(threadName)-14s %(funcName)s in %(module)s:%(lineno)d\n %(message)s')    
         logFormatterforFile.converter = customTime
         fileHandler = logging.FileHandler("{0}/{1}.logging".format("../logs", "log"))
