@@ -1,5 +1,6 @@
 from lib.mail.mailman import MailReader
-from lib.maillogger.log import log
+from lib.logger.log import log
 
-reader=MailReader(config='lib/mail/mail.json', logger=log)
-reader.readmail()
+reader=MailReader()
+while True:
+    reader.readmail()

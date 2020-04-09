@@ -1,6 +1,6 @@
 import datetime
 from os import makedirs
-from ..mainlogger.log import log
+from ..logger.log import log
 from ..message_class.msg_class import Msg
 import emoji
 

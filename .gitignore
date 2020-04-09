@@ -1,10 +1,11 @@
 attachments
 images
+backup
+testdata
+logs
+
 __pycache__
 .ipynb_checkpoints
 .vscode
-backup
-test
-mail.json
-testdata
-logs
+
+key.key

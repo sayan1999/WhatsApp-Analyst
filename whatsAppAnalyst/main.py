@@ -4,14 +4,17 @@ from os.path import isdir, join as pathjoin, isfile
 from _thread import start_new_thread
 import cProfile
 import time
-from lib.mainlogger.log import log
+import json
+from lib.logger.log import log
 import sys
 from lib.mail.mailman import MailReader
 from analyzer import Analyst
+from lib.configuration.cfgRead import DIRECTORYCHECKINGTIMEOUT
 
 def mailreader():
-    reader=MailReader(config='lib/mail/mail.json', logger=log)
-    reader.readmail()
+    reader=MailReader()
+    while True:
+        reader.readmail()
 
 def analyze(dirpath):
 
@@ -21,8 +24,8 @@ def analyze(dirpath):
 
 def checkNewDir():
 
-    newentry=True
-    TIMEOUT=5
+    newentry=True    
+    TIMEOUT=DIRECTORYCHECKINGTIMEOUT
 
     attachmentdir = '../data/attachments'
     pastdirs = set(listdir(attachmentdir))
@@ -40,14 +43,14 @@ def checkNewDir():
             
             if newdir not in pastdirs:
                 newentry=True
-                print('New entry in ' + attachmentdir + ':   ' + newdir)
+                log.info('New entry in ' + attachmentdir + ':   ' + newdir)
                 while(not(isfile(pathjoin(attachmentdir, newdir, 'ends')))):
-                    print("'ends' file not found in " + pathjoin(attachmentdir, newdir))
+                    log.info("'ends' file not found in " + pathjoin(attachmentdir, newdir))
                     
                 start = time.time()    
                 analyze(newdir)
-                end = time.time() 
-                print("Time consumed: {} seconds" .format(end-start))
+                end = time.time()
+                log.info("Time consumed: {} seconds" .format(end-start))
         pastdirs=newdirs
 
 start_new_thread(mailreader, ())

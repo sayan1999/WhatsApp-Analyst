@@ -4,7 +4,7 @@ from os.path import isdir, join as pathjoin, isfile
 from _thread import start_new_thread
 import cProfile
 import time
-from lib.mainlogger.log import log
+from lib.logger.log import log
 
 newentry=True
 TIMEOUT=5

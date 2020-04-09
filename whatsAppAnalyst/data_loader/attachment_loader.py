@@ -1,6 +1,6 @@
 from collections import Counter, OrderedDict
 from nltk.corpus import stopwords
-from lib.mainlogger.log import log
+from lib.logger.log import log
 from os import scandir, listdir
 from os.path import isdir
 from lib.utils.fileReadUtils import elementsOf

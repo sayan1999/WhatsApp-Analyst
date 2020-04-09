@@ -19,7 +19,7 @@ from lib.utils.fileReadUtils import makedirectory
 from lib.utils.datetimeUtils import dateTodtime
 from lib.mail.mailman import MailSender
 from lib.message_class.msg_class import Msg
-from lib.mainlogger.log import log
+from lib.logger.log import log
 
 
 # datetime converter for a matplotlib plotting method
@@ -35,7 +35,6 @@ class Analyst:
     def __init__(self, path):
         
         self.__directryToAttch=pathjoin('../data/attachments', path)
-                
         self.__content = Chat_loader(self.__directryToAttch).getData()
         self.__msg = Msg(self.__content["Response"])
         self.__mailid = self.__content["MailID"]
@@ -50,7 +49,7 @@ class Analyst:
 
     def __del__(self):
 
-        plt.clf()
+        plt.close('all')
         log.info("Exiting analyzer.")
 
     def getdir(self):
@@ -63,7 +62,7 @@ class Analyst:
 
     def __mailToUser(self):
         log.info(self.__msg.get_msg())
-        m=MailSender(config='lib/mail/mail.json', logger=log)
+        m=MailSender()
         m.sendmail(self.__user, self.__mailid, self.__directry, msg=self.__msg.get_msg())                
         
     def start(self):
@@ -491,6 +490,7 @@ class Analyst:
             return
 
         vectorizer = TfidfVectorizer(stop_words=stopwords)
+        
         vectors = vectorizer.fit_transform(self.__perPersonDoc.values())
         features = vectorizer.get_feature_names()
 
@@ -590,6 +590,7 @@ class Analyst:
                 continue
 
             bars=ax[i].barh(range(len(emojimap[persons[i]])), emojimap[persons[i]].values(), height=0.7)
+            
             gradientbarsHor(bars, ax[i], max(emojimap[persons[i]].values()), 20)
 
             ax[i].set_yticks(range(len(emojimap[persons[i]])))
