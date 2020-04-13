@@ -3,10 +3,18 @@ from os import makedirs
 from ..logger.log import log
 from ..message_class.msg_class import Msg
 import emoji
+from ..encryption import encryption
 
 def readfile(textfile):
     file = open(textfile, 'r')
     text = file.readlines()
+    file.close()
+    return text  
+
+def readEncryptedfile(textfile):
+    file = open(textfile, 'rb')
+    decrypted=encryption.decryptBytes(file.read()).decode('utf-8')
+    text = decrypted.split('\n')
     file.close()
     return text    
 
@@ -46,7 +54,7 @@ def format(line, dtimefmt):
 def elementsOf(textfile, msg, dtimefmt='%m/%d/%y %I:%M %p', trial=0):
     opt_dtimefmt=['%d/%m/%y %I:%M %p', '%m/%d/%y %H:%M', '%d/%m/%Y %I:%M %p', '%m/%d/%Y %I:%M %p', '%m/%d/%Y %H:%M']
     data=[]
-    for line in readfile(textfile):
+    for line in readEncryptedfile(textfile):
         formatted = format(line, dtimefmt)
         if formatted == 'changed':
             trial+=1

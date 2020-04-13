@@ -5,5 +5,5 @@
     "SMTP_PORT" : 587,
     "MAILPOLLINGTIMEOUT" : 100,
     "DIRECTORYCHECKINGTIMEOUT" : 100,
-    "KEYFILE" : "keys/key.key"
+    "CREDENTIALFILE" : "lib/mail/credentials.txt"
 }

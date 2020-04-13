@@ -1,3 +1,4 @@
+from lib.encryption import encryption
 from os import listdir, system
 from time import sleep
 from os.path import isdir, join as pathjoin, isfile

@@ -17,8 +17,9 @@ import smtplib
 import json
 from os.path import join as pathjoin
 from .credential import getCred
-from ..configuration.cfgRead import *
+from ..configuration.cfgRead import IMAP4_SERVER, IMAP4_PORT, MAILPOLLINGTIMEOUT, SMTP_SERVER, SMTP_PORT
 from lib.logger.log import log
+from ..encryption import encryption
 
 def extractAddr(fullAddr):
     if '<' in fullAddr:
@@ -33,10 +34,12 @@ def curtime():
 
 class Mailer:
 
+    done=False
     def __init__(self):
         
-        keyfile=KEYFILE
-        self.USER, self.PASSWORD = getCred(keyfile)   
+        if not Mailer.done:
+            Mailer.USER, Mailer.PASSWORD = getCred() 
+            Mailer.done=True  
 
 class MailReader(Mailer):
 
@@ -51,7 +54,7 @@ class MailReader(Mailer):
     def __IMAPlogin(self):
         
         self.__mail = imaplib.IMAP4_SSL(self.IMAP4_SERVER, self.IMAP4_PORT)
-        self.__mail.login(self.USER, self.PASSWORD)
+        self.__mail.login(super(MailReader, self).USER, super(MailReader, self).PASSWORD)
         log.info("Logged into IMAP4 server successfully")
 
     def __storeIntoFile(self, filename, content):
@@ -61,7 +64,7 @@ class MailReader(Mailer):
         
         filepath=pathjoin(self.__dirpath, filename)
         with open(filepath, 'wb+') as outfile:
-            outfile.write(content)
+            outfile.write(encryption.encryptBytes(content))
         log.info("Contents written in " + filepath)        
 
     def __leave_trace(self, sender):
@@ -88,7 +91,7 @@ class MailReader(Mailer):
                     if encoding:
                         filename=filename.decode(encoding)
                     if (filename.endswith('.txt') and filename.startswith('WhatsApp Chat with ')):
-                        log.info("The file attachment as per naming conventions of WhatsApp chat exports")
+                        log.info("The file attachment is as per naming conventions of WhatsApp chat exports")
                         chatFileWith=filename[19:]
                         filename=(curtime()+'_with_'+chatFileWith).replace('/', ':')
                         self.__storeIntoFile(filename, part.get_payload(decode=True))
@@ -136,7 +139,7 @@ class MailSender(Mailer):
 
         self.__session = smtplib.SMTP(self.SMTP_SERVER, self.SMTP_PORT)
         self.__session.starttls()
-        self.__session.login(self.USER, self.PASSWORD)
+        self.__session.login(super(MailSender, self).USER, super(MailSender, self).PASSWORD)
         log.info("Logged into SMTP server successfully")
         
 

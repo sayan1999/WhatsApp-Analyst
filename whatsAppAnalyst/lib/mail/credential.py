@@ -1,14 +1,46 @@
 from cryptography.fernet import Fernet
 import json
+from ..configuration.cfgRead import CREDENTIALFILE
 
-def getCred(keyfile):
+from cryptography.fernet import Fernet
+import base64
+import os
+import getpass
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
-    file = open(keyfile, 'rb')
-    key = file.read()
-    file.close()
+def getKey():
+    
+    password_provided = getpass.getpass(prompt="Enter mail encryption password: ", stream=None)
+    password = password_provided.encode()
+    salt = b'K]V\xfe\x14T\xc1\x04e\xdb\xd1\xdd\xab\x95\xbe\x0c'
+    kdf = PBKDF2HMAC(
+        algorithm=hashes.SHA256(),
+        length=32,
+        salt=salt,
+        iterations=100000,
+        backend=default_backend()
+    )
+    key = Fernet(base64.urlsafe_b64encode(kdf.derive(password)))
+    return key
 
-    f = Fernet(key)
-    encrypted = b'gAAAAABejoBBiwTw9QDbYyLlfrBiG_w93vQpr597hLyIFP-Y11d-gmwL9svpKQx-vsWP1PMFwR2CXMi0iec5bvvoKPa6Axr9GD1Z2jpzEAv3fPvxFXZ5JQ3scXVInFGX0Q4-84vZwYaWCtHLTURGG0_b_MM-vpHrkvmALAAr6BjSrUFpXfTAd5s='
-    decrypted = f.decrypt(encrypted)
+def getCred():
+
+    file = open(CREDENTIALFILE, 'rb')
+    encrypted = file.read()
+    file.close()    
+    
+    while True:
+        key = getKey()
+        try:
+            decrypted=key.decrypt(encrypted)
+        except BaseException as e:
+            print(e)
+            print("Wrong password!!")
+            continue
+        break
+
     obj = json.loads(decrypted.decode('utf-8'))
     return obj['USER'], obj['PASSWORD']
+    

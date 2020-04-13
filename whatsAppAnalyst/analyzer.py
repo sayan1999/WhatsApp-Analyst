@@ -35,6 +35,7 @@ class Analyst:
     
     def __init__(self, path):
         
+        log.info("\n\n\n------------------------------------Starting Analyzer-------------------------------------\n\n\n")
         attachmentdir='../data/attachments'
         if not isdir(attachmentdir):
             makedirs(attachmentdir)
@@ -54,7 +55,7 @@ class Analyst:
     def __del__(self):
 
         plt.close('all')
-        log.info("Exiting analyzer.")
+        log.info("\n\n\n------------------------------------Exiting Analyzer-------------------------------------\n\n\n")
 
     def getdir(self):
         return self.__directry

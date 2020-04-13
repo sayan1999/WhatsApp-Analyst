@@ -1,4 +1,0 @@
-#!/bin/bash
-cd ../whatsAppAnalyst
-gnome-terminal -- bash -c 'python3 getmail.py'
-gnome-terminal --wait -- bash -c 'python3 checknrun.py'
