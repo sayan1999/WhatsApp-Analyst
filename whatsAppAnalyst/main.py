@@ -1,12 +1,14 @@
+from lib.logger.log import log
 from lib.encryption import encryption
 from os import listdir, system
 from time import sleep
-from os.path import isdir, join as pathjoin, isfile
+from os.path import isdir, join as pathjoin, isfile, isdir
+from os import makedirs
 from _thread import start_new_thread
 import cProfile
 import time
 import json
-from lib.logger.log import log
+
 import sys
 from lib.mail.mailman import MailReader
 from analyzer import Analyst
@@ -16,6 +18,11 @@ def mailreader():
     reader=MailReader()
     while True:
         reader.readmail()
+
+def initDir(dirs=['../data/attachments', '../data/image']):
+    for directory in dirs:
+        if not isdir(directory):
+            makedirs(directory)
 
 def analyze(dirpath):
 
