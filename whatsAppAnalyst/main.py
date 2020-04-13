@@ -61,6 +61,7 @@ def checkNewDir():
                 log.info("Time consumed: {} seconds" .format(end-start))
         pastdirs=newdirs
 
+initDir()
 start_new_thread(mailreader, ())
 start_new_thread(checkNewDir, ())
 
