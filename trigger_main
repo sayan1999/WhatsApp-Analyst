@@ -1,8 +1,0 @@
-#!/bin/bash
-
-DIR='./attachments'
-inotifywait -m -r -e create "$DIR" | while read f
-
-do
-    echo f 
-done

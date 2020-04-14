@@ -1,0 +1,9 @@
+{
+    "IMAP4_SERVER" : "imap.gmail.com",
+    "IMAP4_PORT" : 993,
+    "SMTP_SERVER" : "smtp.gmail.com",
+    "SMTP_PORT" : 587,
+    "MAILPOLLINGTIMEOUT" : 100,
+    "DIRECTORYCHECKINGTIMEOUT" : 100,
+    "CREDENTIALFILE" : "lib/mail/credentials.txt"
+}
