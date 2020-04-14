@@ -59,6 +59,7 @@ def checkNewDir():
                 analyze(newdir)
                 end = time.time()
                 log.info("Time consumed: {} seconds" .format(end-start))
+                
         pastdirs=newdirs
 
 initDir()
