@@ -5,21 +5,24 @@ from time import sleep
 from os.path import isdir, join as pathjoin, isfile, isdir
 from os import makedirs
 from _thread import start_new_thread
+from threading import Semaphore
 import cProfile
 import time
 import json
 
-import sys
+import sys, multiprocessing
 from lib.mail.mailman import MailReader
 from analyzer import Analyst
-from lib.configuration.cfgRead import DIRECTORYCHECKINGTIMEOUT
+from lib.configuration.cfgRead import DIRECTORYCHECKINGTIMEOUT, MAXANALYZERTHREADS
+
+semaphore=Semaphore(MAXANALYZERTHREADS)
 
 def mailreader():
     reader=MailReader()
     while True:
         reader.readmail()
 
-def initDir(dirs=['../data/attachments', '../data/image']):
+def initDir(dirs=['../data/attachments', '../data/images']):
     for directory in dirs:
         if not isdir(directory):
             makedirs(directory)
@@ -29,6 +32,25 @@ def analyze(dirpath):
     analyzer=Analyst(dirpath)
     analyzer.start()
     log.info("Ended")
+
+def startAnalyzer(newdir):
+     
+    global semaphore
+    semaphore.acquire()
+    start = time.time()  
+
+    print("\n\n\n--------------------------Total analyzers running: {}-----------------------------\n\n\n" .format(MAXANALYZERTHREADS-semaphore._value))
+
+    proc=multiprocessing.Process(target=analyze, args=(newdir,))
+    proc.start()
+    proc.join()
+
+    end = time.time()
+    log.info("Time consumed: {} seconds" .format(end-start))
+    print("\n\n\n--------------------------Total analyzers running: {}-----------------------------\n\n\n" .format(MAXANALYZERTHREADS-semaphore._value-1))
+
+    semaphore.release()
+    
 
 def checkNewDir():
 
@@ -55,20 +77,13 @@ def checkNewDir():
                 while(not(isfile(pathjoin(attachmentdir, newdir, 'ends')))):
                     log.info("'ends' file not found in " + pathjoin(attachmentdir, newdir))
                     
-                start = time.time()    
-                analyze(newdir)
-                end = time.time()
-                log.info("Time consumed: {} seconds" .format(end-start))
+                start_new_thread(startAnalyzer, (newdir,))
                 
         pastdirs=newdirs
 
-initDir()
-start_new_thread(mailreader, ())
-start_new_thread(checkNewDir, ())
+if __name__ == '__main__':
 
-
-while True:
-
-    sleep(100)
-
+    initDir()
+    start_new_thread(mailreader, ())
+    checkNewDir()
 

@@ -15,7 +15,9 @@ toSuppressWarns=[
     'missing from current font',
     'Tokenizing the stop words generated tokens',
     'sorted(inconsistent))',
-    'font.set_text(s, 0.0, flags=flags)'
+    'font.set_text(s, 0.0, flags=flags)',
+    'Attempting to set identical bottom == top == 0',
+    'extent=[x,x+w,y,y+h], aspect="auto"'
 ]
 
 def customTime(*args):

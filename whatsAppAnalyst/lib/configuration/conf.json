@@ -3,7 +3,8 @@
     "IMAP4_PORT" : 993,
     "SMTP_SERVER" : "smtp.gmail.com",
     "SMTP_PORT" : 587,
-    "MAILPOLLINGTIMEOUT" : 100,
-    "DIRECTORYCHECKINGTIMEOUT" : 100,
-    "CREDENTIALFILE" : "lib/mail/credentials.txt"
+    "MAILPOLLINGTIMEOUT" : 1,
+    "DIRECTORYCHECKINGTIMEOUT" : 1,
+    "CREDENTIALFILE" : "lib/mail/credentials.txt",
+    "MAXANALYZERTHREADS" : 2
 }
